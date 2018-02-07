@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="msgs_astart_after">SMBSyncは残り %s 秒で同期を開始します。</string>
+    <string name="msgs_astart_canceling">自動同期起動をキャンセル中。</string>
+    <string name="msgs_astart_cancelled">自動同期起動がキャンセルされました。</string>
+    <string name="msgs_astart_expired_del">自動同期起動タイマーが満了しました。</string>
+    <string name="msgs_astart_started">自動同期起動を開始しました。</string>
+    
+    <string name="msgs_astart_abort_external_storage_not_mounted">ストレージがマウントされていないため自動同期起動が中止されました。</string>
+    <string name="msgs_astart_abort_wifi_option_not_satisfied">無線LANオプションの条件が成立しないため自動同期起動が中止されました。</string>
+    
+</resources>

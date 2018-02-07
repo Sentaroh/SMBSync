@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/maint_last_mod_list_dlg_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/maint_last_mod_list_dlg_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/maint_last_mod_list_dlg_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="@string/msgs_local_file_modified_maint_title"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <include layout="@layout/divider_line1_turquoise" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/maint_last_mod_list_dlg_msg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffff0000"
+	    android:layout_marginLeft="5dp"
+    	android:layout_marginRight="5dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+
+    <ListView
+        android:id="@+id/maint_last_mod_list_dlg_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+	    android:layout_marginLeft="5dp"
+    	android:layout_marginRight="5dp"
+	    android:layout_marginTop="15dp"
+    	android:layout_marginBottom="15dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal">
+	    <Button
+	        android:id="@+id/maint_last_mod_list_dlg_delete_btn"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:text="@string/msgs_local_file_modified_maint_delete_btn" 
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+	    	    
+    	<Button
+	        android:id="@+id/maint_last_mod_list_dlg_init_btn"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:text="@string/msgs_local_file_modified_maint_init_btn" 
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+	    <Button
+	        android:id="@+id/maint_last_mod_list_dlg_reset_btn"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:text="@string/msgs_local_file_modified_maint_reset_btn" 
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout> 
+    <Button
+        android:id="@+id/maint_last_mod_list_dlg_cleanup_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+	    android:layout_marginTop="5dp"
+    	android:layout_marginBottom="5dp"
+        android:text="@string/msgs_local_file_modified_maint_cleanup_btn" 
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+    <Button
+        android:id="@+id/maint_last_mod_list_dlg_close_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/msgs_local_file_modified_maint_close_btn" 
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</LinearLayout>

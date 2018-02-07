@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/edit_profile_local_dlg_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:ignore="SpUsage" >
+
+    <LinearLayout
+        android:id="@+id/edit_profile_local_dlg_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/edit_profile_local_dlg_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/edit_profile_local_dlg_title_sub"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <include layout="@layout/divider_line1_turquoise" />
+
+    </LinearLayout>
+    
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fadeScrollbars="false" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/edit_profile_local_dlg_msg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ffff0000" />
+
+            <CheckedTextView
+                android:id="@+id/edit_profile_local_dlg_ctv_active"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                android:gravity="center_vertical"
+                android:text="@string/msgs_local_profile_dlg_active"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+            <!-- android:checkMark="?android:attr/textCheckMark" -->
+            <!-- android:checkMark="?android:attr/listChoiceIndicatorMultiple" -->
+
+           <EditText
+               android:id="@+id/edit_profile_local_dlg_profile_name"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:hint="@string/msgs_local_profile_dlg_profile"
+               android:textAppearance="?android:attr/textAppearanceMedium"
+               android:inputType="text"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="1dp"
+                    android:text="@string/msgs_local_profile_dlg_local_mount_point"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:layout_width="15dp"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/edit_profile_local_dlg_lmp_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:minHeight="38dp"
+                    android:paddingLeft="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/msgs_local_profile_dlg_local_mount_point" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/edit_profile_local_dlg_list_dir_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/msgs_local_profile_dlg_dirlist" />
+
+                <EditText
+                    android:id="@+id/edit_profile_local_dlg_dir"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.54"
+                    android:hint="@string/msgs_local_profile_dlg_directory"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:inputType="text"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/edit_profile_local_ok_cancel"/>
+
+</LinearLayout>

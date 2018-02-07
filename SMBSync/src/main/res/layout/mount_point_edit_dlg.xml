@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mount_point_edit_dlg_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="TextFields,HardcodedText,ContentDescription,NewApi" >
+
+    <LinearLayout
+        android:id="@+id/mount_point_edit_dlg_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageButton
+                android:id="@+id/mount_point_edit_dlg_btn_done"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="0dp"
+                android:background="#00000000"
+                android:scaleType="fitCenter"
+                android:src="@drawable/abc_ic_ab_back_mtrl_am_alpha" />
+
+            <TextView
+                android:id="@+id/mount_point_edit_dlg_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left|center_vertical"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        </LinearLayout>
+
+        <include layout="@layout/divider_line1_turquoise" />
+        
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/mount_point_edit_dlg_msg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ff0000"
+        android:layout_marginLeft="5dp"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <ListView
+        android:id="@+id/mount_point_edit_dlg_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1" >
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp" >
+
+        <Button
+            android:id="@+id/mount_point_edit_dlg_add_path"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/msgs_edit_mp_dialog_btn_add"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/mount_point_edit_dlg_new_path"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/msgs_edit_mp_dialog_hint_new_path"
+            android:inputType="text" >
+
+        </EditText>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/mount_point_edit_dlg_context_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/context_view_edit_lmp" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/mount_point_edit_dlg_ok_cancel" />
+
+</LinearLayout>

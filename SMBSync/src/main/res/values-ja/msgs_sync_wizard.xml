@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="msgs_sync_wizard_ok_btn">作成</string>
+    <string name="msgs_sync_wizard_cancel_btn">キャンセル</string>
+    <string name="msgs_sync_wizard_back_btn">戻る</string>
+    <string name="msgs_sync_wizard_next_btn">次へ</string>
+    
+    <string name="msgs_sync_wizard_title_type_overall">全般</string>
+    <string name="msgs_sync_wizard_title_type_master">マスター</string>
+    <string name="msgs_sync_wizard_title_type_target">ターゲット</string>
+    <string name="msgs_sync_wizard_title_type_sync">同期</string>
+    
+    <string name="msgs_sync_wizard_title">同期作成ウィザード</string>
+    
+    <string name="msgs_sync_wizard_sync_direction">同期方向</string>
+    <string name="msgs_sync_wizard_sync_direction_not_selected">選択されていません</string>
+    <string name="msgs_sync_wizard_sync_direction_remote_to_local">リモートからローカルに同期する</string>
+    <string name="msgs_sync_wizard_sync_direction_local_to_remote">ローカルからリモートに同期する</string>
+    <string name="msgs_sync_wizard_sync_direction_local_to_local">ローカルフォルダーからローカルフォルダーに同期する</string>
+    
+    <string name="msgs_sync_wizard_sync_audio">オーディオファイル</string>
+    <string name="msgs_sync_wizard_sync_image">イメージファイル</string>
+    <string name="msgs_sync_wizard_sync_video">ビデオファイル</string>
+    <string name="msgs_sync_wizard_sync_desc_file_ext">下記の拡張子のファイルを処理対象とします。</string>
+    <string name="msgs_sync_wizard_sync_all_files">全てのファイルを処理対象にする</string>
+    <string name="msgs_sync_wizard_sync_select_processed_file">処理するファイルを選択してください</string>
+    
+    <string name="msgs_sync_wizard_specify_sync_direction">同期方向を選択してください</string>
+	<string name="msgs_sync_wizard_profname_invalid">既に名前が使用されています, 新しい名前を指定してください</string>    
+	<string name="msgs_sync_wizard_specify_profname">プロファイル名を入力してください</string>
+	<string name="msgs_sync_wizard_title_profname">プロファイル名</string>
+	
+	<string name="msgs_sync_wizard_specify_local_dir">ローカル ディレクトリーを入力するか、次へボタンを押してください</string>
+	<string name="msgs_sync_wizard_specify_another_local_dir">ローカル ディレクトリーはマスターとして使用されています、違うローカル ディレクトリーを指定してください</string>
+	
+	<string name="msgs_sync_wizard_specify_server">サーバー名またはサーバーIPアドレスを入力するか、検索ボタンを押してください</string>
+	<string name="msgs_sync_wizard_specify_user_pass">ユーザー名およびパスワードを入力してください</string>
+	<string name="msgs_sync_wizard_logon_required">ログオンボタンを押してログオンしてください</string>
+	<string name="msgs_sync_wizard_specify_remote_share">共有名の一覧表示ボタンを押してください</string>
+	<string name="msgs_sync_wizard_specify_remote_dir">リモート ディレクトリーを指定するか、次へボタンを押してください</string>
+	
+	<string name="msgs_sync_wizard_specify_other_option">オプションを指定するか作成ボタンを押してください</string>
+	
+	
+	<string name="msgs_sync_wizard_press_next">次ボタンを押してください</string>
+	
+
+	<string name="msgs_sync_wizard_confirm_title">下記の内容でプロファイルを作成しますか？\n</string>
+	<string name="msgs_sync_wizard_confirm_profile_created">プロファイルを作成しました。</string>
+	<string name="msgs_sync_wizard_confirm_list_remote_serverid">リモートサーバー:%s</string>
+	<string name="msgs_sync_wizard_confirm_list_remote_userid">ユーザー名:%s</string>
+	<string name="msgs_sync_wizard_confirm_list_remote_share">共有名:%s</string>
+	<string name="msgs_sync_wizard_confirm_list_remote_directory">ディレクトリー名:%s</string>
+	<string name="msgs_sync_wizard_confirm_list_local_mount_point">マウントポイント:%s</string>
+	<string name="msgs_sync_wizard_confirm_list_local_directory">ディレクトリー名:%s</string>
+	<string name="del_msgs_sync_wizard_confirm_list_sync_prof_name">同期プロファイル名:%s</string>
+	<string name="msgs_sync_wizard_confirm_list_sync_master_name" formatted="false">マスタープロファイル名:%s\n%s</string>
+	<string name="msgs_sync_wizard_confirm_list_sync_target_name" formatted="false">ターゲットプロファイル名:%s\n%s</string>
+	<string name="del_msgs_sync_wizard_confirm_list_sync_direction">同期方向:%s</string>
+	<string name="msgs_sync_wizard_confirm_list_sync_type">同期方式:%s</string>
+	<string name="msgs_sync_wizard_confirm_list_sync_file_filter">ファイルフィルター</string>
+	<string name="msgs_sync_wizard_confirm_list_sync_dir_filter">ディレクトリーフィルター</string>
+			
+</resources>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/msgs_sync_profile_sync_options"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical" >
+
+        <CheckedTextView
+            android:id="@+id/sync_profile_ctv_sync_master_root_dir_file"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center_vertical"
+            android:text="@string/msgs_sync_profile_sync_master_root_dir_file"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+		<include layout="@layout/divider_line1" />
+        <CheckedTextView
+            android:id="@+id/sync_profile_ctv_sync_sub_dir"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center_vertical"
+            android:text="@string/msgs_sync_profile_sync_sub_dir"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+		<include layout="@layout/divider_line1" />
+        <CheckedTextView
+            android:id="@+id/sync_profile_ctv_confirm"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center_vertical"
+            android:text="@string/msgs_sync_profile_confirm_required"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+		<include layout="@layout/divider_line1" />
+        <CheckedTextView
+            android:id="@+id/sync_profile_ctv_not_use_last_modified_remote_file_for_diff"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center_vertical"
+            android:text="@string/msgs_sync_profile_not_set_remote_file_last_modified"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+		<include layout="@layout/divider_line1" />
+        <CheckedTextView
+            android:id="@+id/sync_profile_ctv_last_modified"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center_vertical"
+            android:text="@string/msgs_sync_profile_last_modified_smbsync"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+		<include layout="@layout/divider_line1" />
+        <CheckedTextView
+            android:id="@+id/sync_profile_ctv_retry_if_error_occured"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center_vertical"
+            android:text="@string/msgs_sync_profile_retry_if_error_occured"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+		<include layout="@layout/divider_line1" />
+        <CheckedTextView
+            android:id="@+id/sync_profile_ctv_sync_empty_directory"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center_vertical"
+            android:text="@string/msgs_sync_profile_sync_empty_directory"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+		<include layout="@layout/divider_line1" />
+        <CheckedTextView
+            android:id="@+id/sync_profile_ctv_sync_hidden_directory"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+            android:gravity="center_vertical"
+            android:text="@string/msgs_sync_profile_sync_hidden_directory"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+		<include layout="@layout/divider_line1" />
+		<CheckedTextView
+		    android:id="@+id/sync_profile_ctv_sync_hidden_file"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="5dp"
+		    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+		    android:gravity="center_vertical"
+		    android:text="@string/msgs_sync_profile_sync_hidden_file"
+		    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+		<include layout="@layout/divider_line1" />
+		<CheckedTextView
+		    android:id="@+id/sync_profile_ctv_sync_use_remote_small_io_area"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="5dp"
+		    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+		    android:gravity="center_vertical"
+		    android:text="@string/msgs_sync_profile_sync_use_small_ioarea"
+		    android:textAppearance="?android:attr/textAppearanceMedium" />
+				
+    </LinearLayout>
+
+</LinearLayout>

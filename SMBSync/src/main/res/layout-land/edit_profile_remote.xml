@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/edit_profile_remote_dlg_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:ignore="SpUsage,InefficientWeight" >
+
+    <LinearLayout
+        android:id="@+id/edit_profile_remote_dlg_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/edit_profile_remote_dlg_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/edit_profile_remote_dlg_title_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </LinearLayout>
+
+        <include layout="@layout/divider_line1_turquoise" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fadeScrollbars="false" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/edit_profile_remote_dlg_msg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="#ffff0000" />
+
+		    <CheckedTextView
+		        android:id="@+id/edit_profile_remote_dlg_ctv_active"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="5dp"
+		        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+		        android:gravity="center_vertical"
+		        android:text="@string/msgs_remote_profile_dlg_active"
+		        android:textAppearance="?android:attr/textAppearanceSmall"
+		        />
+            
+            <EditText
+                android:id="@+id/edit_profile_remote_dlg_profile_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/msgs_remote_profile_dlg_profile"
+                android:inputType="text"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:scrollHorizontally="true">
+
+                <requestFocus />
+            </EditText>
+            
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal" >
+
+	            <Button
+	                android:id="@+id/edit_profile_remote_dlg_search_remote_host"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/msgs_remote_profile_dlg_search_remote_list"
+	                android:textAppearance="?android:attr/textAppearanceSmall" />
+                
+                <EditText
+                    android:id="@+id/edit_profile_remote_dlg_remote_server"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:hint="@string/msgs_remote_profile_dlg_remote_server"
+                    android:inputType="text"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/edit_profile_remote_dlg_port_option_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:orientation="horizontal" >
+
+			    <CheckedTextView
+			        android:id="@+id/edit_profile_remote_dlg_ctv_use_remote_port_number"
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+		        	android:layout_marginLeft="5dp"
+			        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+			        android:gravity="center_vertical"
+			        android:text="@string/msgs_remote_profile_dlg_use_port_number"
+			        android:textAppearance="?android:attr/textAppearanceSmall"
+			        />
+                
+
+                <EditText
+                    android:id="@+id/edit_profile_remote_dlg_remote_port"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="@string/msgs_remote_profile_dlg_port"
+                    android:inputType="number" 
+                    android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+            </LinearLayout>
+
+		    <CheckedTextView
+		        android:id="@+id/edit_profile_remote_dlg_ctv_use_user_pass"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="5dp"
+		        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+		        android:gravity="center_vertical"
+		        android:text="@string/msgs_remote_profile_dlg_use_user_pass"
+		        android:textAppearance="?android:attr/textAppearanceSmall"
+		        />
+            
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edit_profile_remote_dlg_remote_user"
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:hint="@string/msgs_remote_profile_dlg_username"
+                    android:inputType="text"/>
+
+                <EditText
+                    android:id="@+id/edit_profile_remote_dlg_remote_pass"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:hint="@string/msgs_remote_profile_dlg_password"
+                    android:inputType="textPassword"/>
+                
+	            <Button
+	                android:id="@+id/edit_profile_remote_dlg_logon_btn"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:textAppearance="?android:attr/textAppearanceSmall"
+	                android:text="@string/msgs_remote_profile_dlg_logon" />
+                
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/edit_profile_remote_dlg_list_share_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/msgs_remote_profile_dlg_sharelist" />
+
+                <EditText
+                    android:id="@+id/edit_profile_remote_dlg_share_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:hint="@string/msgs_remote_profile_dlg_share"
+                    android:inputType="text"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/edit_profile_remote_dlg_list_directory_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/msgs_remote_profile_dlg_dirlist" />
+
+                <EditText
+                    android:id="@+id/edit_profile_remote_dlg_dir"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:hint="@string/msgs_remote_profile_dlg_directory"
+                    android:inputType="text"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/edit_profile_remote_ok_cancel"/>
+
+</LinearLayout>

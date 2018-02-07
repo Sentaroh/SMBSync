@@ -1,0 +1,2774 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<title>SMBSync Description</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"ＭＳ ゴシック";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;}
+@font-face
+	{font-family:"\@ＭＳ ゴシック";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:"\@ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+h1
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:21.25pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-before:always;
+	page-break-after:avoid;
+	word-break:break-all;
+	font-size:16.0pt;
+	font-family:"Arial","sans-serif";
+	font-weight:normal;
+	text-decoration:underline;}
+h2
+	{mso-style-link:"見出し 2 \(文字\)";
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial","sans-serif";
+	font-weight:normal;
+	text-decoration:underline;}
+h3
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial","sans-serif";
+	font-weight:normal;
+	text-decoration:underline;}
+h4
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+h5
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Arial","sans-serif";
+	font-weight:normal;}
+h6
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:10.5pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:21.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	layout-grid-mode:char;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	layout-grid-mode:char;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"吹き出し \(文字\)";
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:9.0pt;
+	font-family:"Arial","sans-serif";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:42.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.148mm, li.148mm, div.148mm
+	{mso-style-name:"スタイル 左 \:  14\.8 mm";
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:42.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:12.0pt;
+	font-family:"Century","serif";}
+p.2Century, li.2Century, div.2Century
+	{mso-style-name:"スタイル 見出し 2 + \(英数字\) Century \(日\) ＭＳ 明朝";
+	mso-style-link:"スタイル 見出し 2 + \(英数字\) Century \(日\) ＭＳ 明朝 \(文字\)";
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Century","serif";
+	text-decoration:underline;}
+span.2
+	{mso-style-name:"見出し 2 \(文字\)";
+	mso-style-link:"見出し 2";
+	font-family:"Arial","sans-serif";
+	text-decoration:underline;}
+span.2Century0
+	{mso-style-name:"スタイル 見出し 2 + \(英数字\) Century \(日\) ＭＳ 明朝 \(文字\)";
+	mso-style-link:"スタイル 見出し 2 + \(英数字\) Century \(日\) ＭＳ 明朝";
+	font-family:"Century","serif";
+	text-decoration:underline;}
+span.a
+	{mso-style-name:"吹き出し \(文字\)";
+	mso-style-link:吹き出し;
+	font-family:"Arial","sans-serif";}
+.MsoChpDefault
+	{font-size:10.0pt;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:49.65pt 30.0mm 49.65pt 30.0mm;
+	layout-grid:18.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0mm;}
+ul
+	{margin-bottom:0mm;}
+-->
+</style>
+
+</head>
+
+<body bgcolor=white lang=JA link=blue vlink=purple style='text-justify-trim:
+punctuation'>
+
+<div class=WordSection1 style='layout-grid:18.0pt'>
+
+<h1 style='margin-top:18.0pt;margin-right:0mm;margin-bottom:0mm;margin-left:
+0mm;margin-bottom:.0001pt'><a name="_Toc386445730"><span style='font-family:
+"ＭＳ ゴシック"'>更新履歴</span></a></h1>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2016-11-29 Ver2.51</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>パスワード付プロファイルの取り込みで失敗するバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2016-03-17 Ver2.50</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Android6.0</span><span style='font-family:"ＭＳ 明朝","serif"'>での外部</span><span
+lang=EN-US>SDCARD(/storage/xxxx-xxxx)</span><span style='font-family:"ＭＳ 明朝","serif"'>に対応</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>プロファイルの取り込みで強制終了するバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2016-02-23 Ver2.49</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>外部</span><span
+lang=EN-US>SDCARD(/mnt/extSdCard)</span><span style='font-family:"ＭＳ 明朝","serif"'>で強制終了する状況に対応</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2016-01-26 Ver2.48</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Android6.0</span><span style='font-family:"ＭＳ 明朝","serif"'>でリモートサーバの検索ができないバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-12-23 Ver2.47</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>/mnt/extSdCard</span><span style='font-family:
+"ＭＳ 明朝","serif"'>が外部</span><span lang=EN-US>SDCARD</span><span
+style='font-family:"ＭＳ 明朝","serif"'>として認識できないバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>ローカルプロファイル追加時にマウントポイント変更が反映されないバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-11-06 Ver2.45</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>SDCARD</span><span style='font-family:"ＭＳ 明朝","serif"'>選択時に</span><span
+lang=EN-US>SDCARD</span><span style='font-family:"ＭＳ 明朝","serif"'>に存在するディレクトリを選択すると強制終了するバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-11-03 Ver2.44</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>プロファイル取り込みができないバグを解決。</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-11-02 Ver2.43</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Windows server 2008</span><span
+style='font-family:"ＭＳ 明朝","serif"'>でエラー対応として、リモートファイル書き込み時のバッファーを</span><span
+lang=EN-US>16KB</span><span style='font-family:"ＭＳ 明朝","serif"'>に制限するオプションを同期プロファイルに追加。</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-10-20 Ver2.42</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Android6.0</span><span style='font-family:"ＭＳ 明朝","serif"'>でスケジュールした時間に同期が開始されないバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-09-09 Ver2.41</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>外部</span><span
+lang=EN-US>SDCARD</span><span style='font-family:"ＭＳ 明朝","serif"'>が選択できないバグを解決</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-08-11 Ver2.40</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>外部</span><span
+lang=EN-US>SDCARD</span><span style='font-family:"ＭＳ 明朝","serif"'>への書き込みパフォーマンス向上</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>外部</span><span
+lang=EN-US>SDCARD</span><span style='font-family:"ＭＳ 明朝","serif"'>の選択ダイアログでキャンセルできない状況を解消</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-06-23 Ver2.39</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>ビルド時のエラーを訂正</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-06-23 Ver2.38</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>一部の機種で起動時に強制終了する現象に対応</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-06-22 Ver2.37</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>同期キャンセルで確認を行うようにした。</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Android5.0</span><span style='font-family:"ＭＳ 明朝","serif"'>以降で外部</span><span
+lang=EN-US>SDCARD</span><span style='font-family:"ＭＳ 明朝","serif"'>に書き込みを可能とした。</span><span
+lang=EN-US>(/sdcard1/Sync</span><span style='font-family:"ＭＳ 明朝","serif"'>や</span><span
+lang=EN-US>/storage/sdcard1/test</span><span style='font-family:"ＭＳ 明朝","serif"'>等</span><span
+lang=EN-US>)</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-05-17 Ver2.36</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>ディレクトリーフィルター編集画面の表示で強制終了するバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-04-26 Ver2.35</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Android 2.1-2.3</span><span style='font-family:
+"ＭＳ 明朝","serif"'>で画面テーマが即時に反映されないバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-04-22 Ver2.34</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>同期プロファイルの追加・編集で表示が乱れるバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-04-22 Ver2.33</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>メッセージ表示でまれに強制終了するバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-04-18 Ver2.32</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>ライトテーマでのチェックマークを見やすくした</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-04-01 Ver2.31</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>同期開始時にキーガードが設定されていない場合に画面が点灯されるバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-03-15 Ver2.30</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>文字色の調整</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-03-10 Ver2.29 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>ライトテーマでの文字色の調整</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>同期終了時に稀に強制終了するバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-03-05 Ver2.28 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>スワイプでのタブ切り替え</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>ライトテーマの追加</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-02-06 Ver2.27 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>ローカルファイルの最終更新時間を管理しているファイルの初期化やリセットができないバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>マウントポイントの追加・削除を行えるようにした</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-01-27 Ver2.26 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>(Android 4.4)</span><span style='font-family:
+"ＭＳ 明朝","serif"'>一部の機種で同期中に通知がフラッシュし表示されないバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-01-24 Ver2.25 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>(Android 4.0/4.1/4.2)WiFi</span><span
+style='font-family:"ＭＳ 明朝","serif"'>がアクセスポイントに接続していない時に同期を開始できてしまうバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-12-16 Ver2.24 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>画面ロック時に</span><span
+lang=EN-US>Schedule</span><span style='font-family:"ＭＳ 明朝","serif"'>起動された時に同期が開始されない事があるバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-12-11 Ver2.23 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>メニューとプロファイルタブボタンの二重起動を防止</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;font-family:"ＭＳ 明朝","serif"'>隠し</span><span
+lang=EN-US style='font-size:10.0pt;font-family:Consolas'>Directory/File</span><span
+style='font-size:10.0pt;font-family:"ＭＳ 明朝","serif"'>を同期しないにするとミラーができないバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;font-family:"ＭＳ 明朝","serif"'>同期中でもタブを切り替えできるようにした</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.0pt;font-family:"ＭＳ 明朝","serif"'>最終同期日時と結果を同期プロファイルに表示するようにした</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-11-14 Ver2.22 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>同期開始時やローカルプロファイル編集時に強制終了する事があるバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-11-12 Ver2.21 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>アプリケーション固有ディレクトリーをマウントポイントに追加</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>タブの体裁を</span><span
+lang=EN-US>Action Bar</span><span style='font-family:"ＭＳ 明朝","serif"'>風に変更</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>同期開始前のアクセス権限確認を行う際にマウントポイントだけでなくディレクトリーを含めるように変更</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-10-30 Ver2.20 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>スケジュール起動でスリープ状態から復旧できない事があるバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>同期プロファイルがコピーできないバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-10-20 Ver2.19 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Local-to</span><span style='font-family:"ＭＳ 明朝","serif"'>－</span><span
+lang=EN-US>Local</span><span style='font-family:"ＭＳ 明朝","serif"'>で同期方法のミラーがコピーになってしまうバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>他アプリケーションからの起動要求が短い時間に複数要求されると強制終了する事があるバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>同期ボタンを画面上部に移動するオプションを追加（設定</span><span
+lang=EN-US>-&gt;UI</span><span style='font-family:"ＭＳ 明朝","serif"'>）</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-10-17 Ver2.18 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>UI</span><span style='font-family:"ＭＳ 明朝","serif"'>改善</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-10-08 Ver2.17 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>起動時に稀に強制終了する事があるバグの解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-10-07 Ver2.16 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Android2.3</span><span style='font-family:"ＭＳ 明朝","serif"'>で端末の回転時に強制終了する事があるバグの解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>長い</span><span
+lang=EN-US>File/Dir</span><span style='font-family:"ＭＳ 明朝","serif"'>フィルターを指定すると強制終了する事があるバグの解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-10-03 Ver2.15 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Android2.3</span><span style='font-family:"ＭＳ 明朝","serif"'>で同期終了後のプロファイルタブ下部のアイコン表示が間違っているバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-10-03 Ver2.14 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>プロファイル取り込みで暗号化を解除すると</span><span
+lang=EN-US>OK</span><span style='font-family:"ＭＳ 明朝","serif"'>ボタンが押せないバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>コンテキストメニューの</span><span
+lang=EN-US>UI</span><span style='font-family:"ＭＳ 明朝","serif"'>を改善</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-09-27 Ver2.13 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>パスワード保護されたプロファイルを取り込みできないバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>UI</span><span style='font-family:"ＭＳ 明朝","serif"'>の改善</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:"ＭＳ 明朝","serif"'>プロファイルタブのコンテキストメニューで同期を常に表示（同期できない場合はグレーで表示し、選択不可にした）</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:"ＭＳ 明朝","serif"'>プロファイルタブと履歴タブで右端のチェックボックスをタップすると選択・非選択を切り替え</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:"ＭＳ 明朝","serif"'>項目が選択されている時に行をタップすると選択・非選択を切り替え</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:"ＭＳ 明朝","serif"'>項目が選択されている時に戻るボタンを押すと全選択を解除</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:"ＭＳ 明朝","serif"'>複数項目が選択されている時に選択されている個所を長押しすると複数選択コンテキストメニューを表示</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:"ＭＳ 明朝","serif"'>複数項目が選択されている時に選択されていない個所を長押しすると複数選択が取り消され長押しした個所を選択され単一選択コンテキストメニューを表示</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:"ＭＳ 明朝","serif"'>項目が選択されていない時に項目をタップすると</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:84.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image005.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>プロファイルタブでは編集画面に移動</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:84.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image005.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>履歴表示ではログ表示画面に移動</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Local-to-Local</span><span style='font-family:
+"ＭＳ 明朝","serif"'>でコピーしたファイルが</span><span lang=EN-US>Media Scan</span><span
+style='font-family:"ＭＳ 明朝","serif"'>されないバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-09-18 Ver2.12 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>同期オプションを同期プロファイルに追加</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:"ＭＳ 明朝","serif"'>同期中のエラーリトライ</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left'><span
+style='font-family:"ＭＳ 明朝","serif"'>エラー発生時に</span><span lang=EN-US>30</span><span
+style='font-family:"ＭＳ 明朝","serif"'>秒経過後リトライを</span><span lang=EN-US>3</span><span
+style='font-family:"ＭＳ 明朝","serif"'>回行う</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:"ＭＳ 明朝","serif"'>空ディレクトリーの同期・非同期</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:"ＭＳ 明朝","serif"'>隠しディレクトリーの同期</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:"ＭＳ 明朝","serif"'>隠しファイルの同期</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:"ＭＳ 明朝","serif"'>サブディレクトリーの同期</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-09-13 Ver2.11 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>アプリケーション終了時、稀に強制終了するバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-09-11 Ver2.10 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Local/Remote</span><span style='font-family:
+"ＭＳ 明朝","serif"'>プロファイルでディレクトリーを設定していない時にディレクトリフィルターを指定した場合にコピーされない場合があるバグを修正。安全のためにアプリケーションが更新された後の最初の起動時に同期プロファイルの「確認」を強制的に有効にします。</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>プロファイル取り込みで設定パラメーターとスケジュールを分離して取り込めるようにした</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Profile</span><span style='font-family:"ＭＳ 明朝","serif"'>の取り込みでスケジュール設定が正しく取り込めないバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-09-09 Ver2.09 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Local</span><span style='font-family:"ＭＳ 明朝","serif"'>への同期でファイルがコピーされないバグを解決（</span><span
+lang=EN-US>Ver2.08</span><span style='font-family:"ＭＳ 明朝","serif"'>のみ）</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-09-08 Ver2.08 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Local directory</span><span style='font-family:
+"ＭＳ 明朝","serif"'>作成失敗時にエラーメッセージを表示するようにした。</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-09-07 Ver2.07 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>.android_secure</span><span style='font-family:
+"ＭＳ 明朝","serif"'>フォルダーを無視するように変更</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-09-06 Ver2.06 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>曜日指定のスケジュール起動でループしてしまうバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-09-05 Ver2.05 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>スケジュール起動に</span><span
+lang=EN-US>Wi-Fi</span><span style='font-family:"ＭＳ 明朝","serif"'>のオン・オフを追加</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>SMB</span><span style='font-family:"ＭＳ 明朝","serif"'>オプションから省略時ユーザー、パスワード、アドレスを削除</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>スクリーンロックからスクリーン消灯に名称変更とオプション追加</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:"ＭＳ 明朝","serif"'>同期中のスクリーン消灯を許可する</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:"ＭＳ 明朝","serif"'>同期中のスクリーン消灯を許可しない（</span><span lang=EN-US>Ver2.04</span><span
+style='font-family:"ＭＳ 明朝","serif"'>と同等）</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+style='font-family:"ＭＳ 明朝","serif"'>スクリーンがロックされていないときに同期を開始した場合は同期終了までスクリーン消灯を許可しない</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-08-29 Ver2.04 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>アプリケーションがバックグラウンドで強制終了後にスケジュールまたは外部アプリケーションで起動したときに強制終了するバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-08-28 Ver2.03 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>自動起動</span><span
+lang=EN-US>/</span><span style='font-family:"ＭＳ 明朝","serif"'>停止のボタンサイズの最適化</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>スケジューリングが有効になっている場合はプロファイルタブに次の同期情報（同期する日時とプロファイル）を表示</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-08-20 Ver2.02 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>リモートサーバーの検索で強制終了することがあるバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-07-16 Ver2.01 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>自動同期起動を有効にしても自動同期起動ができないバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-07-12 Ver2.00 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>スケジュール同期機能の追加</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>外部アプリケーション</span><span
+lang=EN-US>(Tasker</span><span style='font-family:"ＭＳ 明朝","serif"'>や</span><span
+lang=EN-US>AutoMagic</span><span style='font-family:"ＭＳ 明朝","serif"'>など</span><span
+lang=EN-US>)</span><span style='font-family:"ＭＳ 明朝","serif"'>からの起動パラメーターを追加</span><span
+lang=EN-US>(StartupParms)</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-06-25 Ver1.97 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Remote profile</span><span style='font-family:
+"ＭＳ 明朝","serif"'>編集画面の最適化</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Profile</span><span style='font-family:"ＭＳ 明朝","serif"'>取り込みで重複が発生する事があるバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-06-18 Ver1.96 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>プロファイルが無いとウィザードを起動するようにした</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-06-18 Ver1.95 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Local-To-Local</span><span style='font-family:
+"ＭＳ 明朝","serif"'>の同期がエラーになるバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-06-18 Ver1.94 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>同期作成ウィザードでリモートへのログオンで強制終了するバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-06-17 Ver1.93 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>ネットワーク接続エラー時にフォーマットエラーになるバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-06-05 Ver1.92 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>リモートネットワークスキャンの時間短縮</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>同期プロファイルでマスターとターゲットを入れ替えるボタンを追加</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Local-to-Local</span><span style='font-family:
+"ＭＳ 明朝","serif"'>で同じ物理ファイルをアクセスしていないかをチェックするようにした</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>リモートプロファイルでリモート</span><span
+lang=EN-US>SMB</span><span style='font-family:"ＭＳ 明朝","serif"'>ホストのポート番号を指定できるようにした</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-05-31 Ver1.91 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>リモートネットワークスキャンの</span><span
+lang=EN-US>UI</span><span style='font-family:"ＭＳ 明朝","serif"'>を改善</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>“Direct hosting of SMB”</span><span
+style='font-family:"ＭＳ 明朝","serif"'>がサポートされていないサーバと同期できないバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>同期プロファイル追加・編集で強制終了するバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-05-29 Ver1.89-90 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>SMB </span><span style='font-family:"ＭＳ 明朝","serif"'>パラメーターが変更された場合にアプリをリスタートするように警告を表示</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-05-27 Ver1.88 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>リモートの設定でホスト</span><span
+lang=EN-US>IP</span><span style='font-family:"ＭＳ 明朝","serif"'>アドレスが使用できないバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>プロファイル取り込みでパスワード保護されたファイルを読み込めないバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-05-24 Ver1.87 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>ローカルへのコピーにて、一時ファイルにコピー終了後にファイル名を改名する方法を選択できるようにした。（これまでは直接上書きのみ）</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>プロファイル保存で一部の設定パラメーターが保存されないバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>コピーする際に使用する一時ファイルの名前を</span><span
+lang=EN-US>”SMBSync.work.tmp”</span><span style='font-family:"ＭＳ 明朝","serif"'>に変更</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>同期プロファイルに「リモートファイルの差分判定に最終更新時間を使用しない」を追加（一部の</span><span
+lang=EN-US>NAS</span><span style='font-family:"ＭＳ 明朝","serif"'>でリモートファイルへの最終更新時間設定がアクセス違反によりできない問題への対応）</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-05-20 Ver1.86 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>リモートへのコピーにて、一時ファイルにコピー終了後にファイル名を改名する方法を選択できるようにした。（これまでは直接上書きのみ）</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-05-18 Ver1.85 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>スタックトレースをエラーメッセージに表示するようにした。</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-05-18 Ver1.84 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>IP</span><span style='font-family:"ＭＳ 明朝","serif"'>アドレススキャンは複数ネットワークが存在する場合は</span><span
+lang=EN-US>Wi-Fi</span><span style='font-family:"ＭＳ 明朝","serif"'>を優先する</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Host</span><span style='font-family:"ＭＳ 明朝","serif"'>名と</span><span
+lang=EN-US>IP</span><span style='font-family:"ＭＳ 明朝","serif"'>アドレスの取り扱いが誤っている場合があるバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>フィルターで</span><span
+lang=EN-US>&quot;lost+found&quot;</span><span style='font-family:"ＭＳ 明朝","serif"'>が機能しないバグを解決</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>プロファイルが空のときに同期プロファイルを追加しようとすると強制終了するバグを解決。</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-05-13 Ver1.83 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>言語変更（</span><span
+lang=EN-US>JA-&gt;EN</span><span style='font-family:"ＭＳ 明朝","serif"'>または</span><span
+lang=EN-US>EN-&gt;JA</span><span style='font-family:"ＭＳ 明朝","serif"'>）でアプリケーションが再起動されないようにした。ただし、表示しているタイトルやメッセージはアプリケーションを再起動するまで反映されない。</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>同期プロファイル編集からターゲットプロファイル編集でターゲットがローカルの場合に編集結果がエラーになるバグを解決。</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-04-26 Ver1.82 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>リモートプロファイル追加・編集で共有名一覧が表示されないバグを解決</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-04-25 Ver1.81 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>同期プロファイルの追加・編集での</span><span
+lang=EN-US>Master/Target</span><span style='font-family:"ＭＳ 明朝","serif"'>プロファイル選択を</span><span
+lang=EN-US>Spinner</span><span style='font-family:"ＭＳ 明朝","serif"'>に変更し、各プロファイルを直接編集できるようにした</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>TAB</span><span style='font-family:"ＭＳ 明朝","serif"'>の体裁を修正</span><span
+lang=EN-US> -</span><span style='font-family:"ＭＳ 明朝","serif"'>ログファイルを起動毎に起動時の時間を付けて別ファイルとして作成するようにした。（同一日は同一の世代として扱う）</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Notification</span><span style='font-family:
+"ＭＳ 明朝","serif"'>を起動時に表示するようにした。（以前はバックグラウンドに移動したときに表示、フォアグラウンドに復帰したときに非表示）</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>ヘルプに他のアプリケーションから起動するときのパラメータとサンプルを追加</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>同期中の</span><span
+lang=EN-US>Notification </span><span style='font-family:"ＭＳ 明朝","serif"'>アイコンを変更</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>外部メディアに書き出すプロファイルのパスワード保護</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>終了確認を行わないようにした</span> </p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>同期中に</span><span
+lang=EN-US>WiFi</span><span style='font-family:"ＭＳ 明朝","serif"'>ロックを取得できるようにした</span><span
+lang=EN-US>(</span><span style='font-family:"ＭＳ 明朝","serif"'>設定</span><span
+lang=EN-US>-&gt;</span><span style='font-family:"ＭＳ 明朝","serif"'>同期</span><span
+lang=EN-US>) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-03-02 Ver1.79 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>最終更新日時の判定方法がエラーになる事があるバグを解決</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-02-10 Ver1.78 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>バックグラウンドから復帰したときに</span><span
+lang=EN-US>MSG</span><span style='font-family:"ＭＳ 明朝","serif"'>表示が最下部になるようにした</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-01-06 Ver1.77 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Wizard</span><span style='font-family:"ＭＳ 明朝","serif"'>に処理対象ファイル選択を追加</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2013-12-24 Ver1.76 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>同期中にスクリーン消灯させないオプションを追加。</span><span
+lang=EN-US>(</span><span style='font-family:"ＭＳ 明朝","serif"'>設定</span><span
+lang=EN-US>-&gt;</span><span style='font-family:"ＭＳ 明朝","serif"'>同期</span><span
+lang=EN-US>-&gt;</span><span style='font-family:"ＭＳ 明朝","serif"'>同期中の画面オン</span><span
+lang=EN-US>) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2013-12-13 Ver1.75 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Local-to-Remote</span><span style='font-family:
+"ＭＳ 明朝","serif"'>のケースで、コピーする必要のないファイルをコピーしてしまう場合があるバグの修正</span> </p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2013-12-01 Ver1.74 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Profile</span><span style='font-family:"ＭＳ 明朝","serif"'>の取込でここの項目を選択できるようにした</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Android 2.3</span><span style='font-family:"ＭＳ 明朝","serif"'>で設定を起動起動しようとすると強制終了するバグを解決</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2013-11-27 Ver1.73 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Local</span><span style='font-family:"ＭＳ 明朝","serif"'>から</span><span
+lang=EN-US>Local</span><span style='font-family:"ＭＳ 明朝","serif"'>への同期を追加</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2013-11-04 Ver1.72 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Profile</span><span style='font-family:"ＭＳ 明朝","serif"'>取込で取り込むファイルに有効なプロファイル項目が入っていない場合はエラーとした</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Android4.1</span><span style='font-family:"ＭＳ 明朝","serif"'>以降で</span><span
+lang=EN-US>WIFI AP</span><span style='font-family:"ＭＳ 明朝","serif"'>に接続していない場合に同期を実行しないように対応</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Android4.4 KitKat</span><span style='font-family:
+"ＭＳ 明朝","serif"'>で強制終了するバグを解決</span> </p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2013-09-16 Ver1.71 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Nexus10</span><span style='font-family:"ＭＳ 明朝","serif"'>等の大画面タブレットでの表示を最適化</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2013-08-03 Ver1.70 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Serializable</span><span style='font-family:
+"ＭＳ 明朝","serif"'>エラーの修正</span> </p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>JCIFS</span><span style='font-family:"ＭＳ 明朝","serif"'>オプションが設定できない場合があるバグを解決</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2013-07-29 Ver1.69 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>プロファイル作成ウィザードを追加</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>マウントポイント混在の検知を有効なローカルプロファイルに限定</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2013-07-05 Ver1.68 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Android4.0(ICS)</span><span style='font-family:
+"ＭＳ 明朝","serif"'>以上でダイアログの</span><span lang=EN-US>OK/CANCEL</span><span
+style='font-family:"ＭＳ 明朝","serif"'>の並びを</span><span lang=EN-US>CANCEL/OK</span><span
+style='font-family:"ＭＳ 明朝","serif"'>に変更（プラットフォームに合わせた）</span> </p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>IP</span><span style='font-family:"ＭＳ 明朝","serif"'>アドレス入力時に一部のキーボードで</span><span
+lang=EN-US>&quot;.&quot;</span><span style='font-family:"ＭＳ 明朝","serif"'>が入力できないバグを解決</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2013-06-08 Ver1.59-1.67 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>リモートホストの指定で</span><span
+lang=EN-US>hostname</span><span style='font-family:"ＭＳ 明朝","serif"'>を指定できるようにした</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>同期履歴が更新されなくなるバグ修正</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>一部のファイルが再コピーされる場合があるバグ修正</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>設定画面をタブレット対応にした</span><span
+lang=EN-US>(Android 3.0</span><span style='font-family:"ＭＳ 明朝","serif"'>以上</span><span
+lang=EN-US>) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>起動時に強制終了する場合があるバグ修正</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>オプションメニューでログ表示ができないバグ修正</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>同期履歴からログファイルを表示（同期時にログが有効な場合のみ</span><span
+lang=EN-US>) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>保持する</span><span
+lang=EN-US>Log</span><span style='font-family:"ＭＳ 明朝","serif"'>の世代指定</span> </p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Log</span><span style='font-family:"ＭＳ 明朝","serif"'>管理画面追加</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Log</span><span style='font-family:"ＭＳ 明朝","serif"'>オプション変更</span><span
+lang=EN-US>(</span><span style='font-family:"ＭＳ 明朝","serif"'>”作成しない”と”追記”のみ</span><span
+lang=EN-US>) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2013-05-07 Ver1.58 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>自動終了後に</span><span
+lang=EN-US>Notification message</span><span style='font-family:"ＭＳ 明朝","serif"'>をタップするとログ記録が有効でファイルが存在する場合にログを表示するようにした</span>
+<span style='font-family:"ＭＳ 明朝","serif"'>（テキストファイル表示アプリケーションの選択が求められます）</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>メッセージタブで自動スクロールを停止できるようにした（ただし、</span><span
+lang=EN-US>5000</span><span style='font-family:"ＭＳ 明朝","serif"'>行を超えたメッセージは削除されます）</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2013-04-29 Ver1.57 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>外部アプリケーションから起動するときに使用する</span><span
+lang=EN-US>Extra data</span><span style='font-family:"ＭＳ 明朝","serif"'>オプションを追加。</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:63.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>KEY=Background, Type=boolean, value=false/true</span><span
+style='font-family:"ＭＳ 明朝","serif"'>（バックグラウンド起動の有効</span><span lang=EN-US>/</span><span
+style='font-family:"ＭＳ 明朝","serif"'>無効</span><span lang=EN-US>) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:63.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>true</span><span style='font-family:"ＭＳ 明朝","serif"'>の場合、</span><span
+lang=EN-US>AutoStart=true</span><span style='font-family:"ＭＳ 明朝","serif"'>の時にアプリケーション起動時にバックグラウンドで実行するようにする。</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Background</span><span style='font-family:"ＭＳ 明朝","serif"'>実行オプション追加</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Menu</span><span style='font-family:"ＭＳ 明朝","serif"'>編成を再構成</span><span
+lang=EN-US>(</span><span style='font-family:"ＭＳ 明朝","serif"'>メッセージとログをまとめた）</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>ログのファイル記録オプションを追加</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Background</span><span style='font-family:"ＭＳ 明朝","serif"'>で終了した時の</span><span
+lang=EN-US>Notification</span><span style='font-family:"ＭＳ 明朝","serif"'>オプションを追加</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2013-02-15 Ver1.56 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>他のアプリケーションから起動するときに</span><span
+lang=EN-US>Extra data</span><span style='font-family:"ＭＳ 明朝","serif"'>でオプションを指定できるようにした。</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:63.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>KEY=AutoStart boolean value=false/true</span><span
+style='font-family:"ＭＳ 明朝","serif"'>（自動起動の有効</span><span lang=EN-US>/</span><span
+style='font-family:"ＭＳ 明朝","serif"'>無効</span><span lang=EN-US>) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:63.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>KEY=AutoTerm boolean value=false/true</span><span
+style='font-family:"ＭＳ 明朝","serif"'>（自動停止の有効</span><span lang=EN-US>/</span><span
+style='font-family:"ＭＳ 明朝","serif"'>無効</span><span lang=EN-US>) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:21.0pt'><span lang=EN-US>AutoStart=true</span><span
+style='font-family:"ＭＳ 明朝","serif"'>の時に有効</span> </p>
+
+<p class=MsoListParagraph align=left style='margin-left:84.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-US>KEY=AutoStart
+String[] value=</span><span style='font-family:"ＭＳ 明朝","serif"'>同期する同期プロファイル名</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:84.0pt;text-align:left'><span
+lang=EN-US>1</span><span style='font-family:"ＭＳ 明朝","serif"'>つの場合でも配列で指定、複数指定可能、選択されなかった場合または無指定の場合は全ての有効な同期プロファイルを同期する。</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-12-25 Ver1.55 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>バックグラウンドで同期が開始され、その後にフォアグラウンドに遷移したときに進捗ダイアログが表示されないバグを解決</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-12-24 Ver1.54 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>自動終了した時に</span><span
+lang=EN-US>Notification</span><span style='font-family:"ＭＳ 明朝","serif"'>メッセージが表示されないバグを解決</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-12-18 Ver1.53 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>まれにメニューから同期を二重に起動してしまうバグを解決</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-11-18 Ver1.51-1.52 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>メッセージリストのフォントを</span><span
+lang=EN-US>MONOSPACE</span><span style='font-family:"ＭＳ 明朝","serif"'>に変更</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>タブレット</span><span
+lang=EN-US>UI</span><span style='font-family:"ＭＳ 明朝","serif"'>を修復</span> </p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-11-17 Ver1.50 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Android 4.2</span><span style='font-family:"ＭＳ 明朝","serif"'>対応</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-11-06 Ver1.49 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>マウントポイントリストに</span><span
+lang=EN-US>READ</span><span style='font-family:"ＭＳ 明朝","serif"'>権限がある</span><span
+lang=EN-US>/Removable/SD,</span><span style='font-family:"ＭＳ 明朝","serif"'>　</span><span
+lang=EN-US>/Removable/MicroSD,</span><span style='font-family:"ＭＳ 明朝","serif"'>　</span><span
+lang=EN-US>/Removable/USBdisk1/Drive1,</span><span style='font-family:"ＭＳ 明朝","serif"'>　</span><span
+lang=EN-US>/Removable/USBdisk2/Drive1</span><span style='font-family:"ＭＳ 明朝","serif"'>を追加（したつもり。</span><span
+lang=EN-US>Asus TF</span><span style='font-family:"ＭＳ 明朝","serif"'>シリーズの実機が無いので未確認です</span><span
+lang=EN-US>) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-10-19 Ver1.48 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>同じローカルプロファイルを複数同期プロファイルで同期した場合にファイルがコピーされるのを回避するために、</span>
+<span style='font-family:"ＭＳ 明朝","serif"'>最終更新時間保持のためのリストを同期プロファイル毎からマウントポイント毎に変更。</span><span
+lang=EN-US> (</span><span style='font-family:"ＭＳ 明朝","serif"'>対象は内部</span><span
+lang=EN-US>SD</span><span style='font-family:"ＭＳ 明朝","serif"'>上のファイルの最終更新日時が設定できない機種</span><span
+lang=EN-US>) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>UI</span><span style='font-family:"ＭＳ 明朝","serif"'>の改善</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-10-11 Ver1.46-1.47 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>最終更新時間保持のためのリスト整合性チェックを行うようにした。</span><span
+lang=EN-US>(</span><span style='font-family:"ＭＳ 明朝","serif"'>対象は内部</span><span
+lang=EN-US>SD</span><span style='font-family:"ＭＳ 明朝","serif"'>上のファイルの最終更新日時が設定できない機種</span><span
+lang=EN-US>) </span><span style='font-family:"ＭＳ 明朝","serif"'>整合性が損なわれている場合は保守メニューを表示し、初期化またはリセットを行ってください。</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-10-09 Ver1.45 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>内部ＳＤ上のファイルの最終更新日時が設定できない機種</span><span
+lang=EN-US>(Google Nexusu7</span><span style='font-family:"ＭＳ 明朝","serif"'>や</span><span
+lang=EN-US>ASUS TF101</span><span style='font-family:"ＭＳ 明朝","serif"'>等</span><span
+lang=EN-US>)</span><span style='font-family:"ＭＳ 明朝","serif"'>に対応</span> </p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-10-05 Ver1.44 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>リモートファイルの上書きの前に確認ダイアログが表示されないバグを解決。</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-10-04 Ver1.43 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>ファイルの上書き</span><span
+lang=EN-US>/</span><span style='font-family:"ＭＳ 明朝","serif"'>削除の前に確認ダイアログを表示可能にした。確認ダイアログを表示する場合は同期プロファイルで「確認」をチェックしてください。</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>ファイルやディレクトリの選択ダイアログで選択できないバグを解決。</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-09-28 Ver1.42 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>プロファイル保存時の上書き確認ダイアログでキャンセルが表示されていない問題を解消</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-09-28 Ver1.41 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>同期実行中にホームボタンなどでバックグラウンドに遷移している際に同期が終了するとアプリケーションが終了できなくなるバグを解決</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-09-20 Ver1.40 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Android 4.1(JB)</span><span style='font-family:
+"ＭＳ 明朝","serif"'>で最初にインストールすると強制終了するバグを解決</span> </p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-09-19 Ver1.39 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Android 3.0(HC)</span><span style='font-family:
+"ＭＳ 明朝","serif"'>以上で</span><span lang=EN-US>UI</span><span style='font-family:
+"ＭＳ 明朝","serif"'>を改善</span> </p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-09-17 Ver1.38 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Android 4.1(JB)</span><span style='font-family:
+"ＭＳ 明朝","serif"'>でメニューキーが使用できない場合があるバグを解決</span> </p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-08-10 Ver1.37 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Android 4.0</span><span style='font-family:"ＭＳ 明朝","serif"'>で「Ｗｉｆｉ未接続時は同期しない」を有効にしても同期してしまうバグを解決。</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Android 4.0</span><span style='font-family:"ＭＳ 明朝","serif"'>対応のために実行できないオプションメニュー項目を非表示にした。</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-07-17 Ver1.36 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>自動同期起動オプションを有効にし設定画面から戻ったときに同期が開始されるバグを解決。</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>自動同期起動オプションが有効な場合はログファイルを強制的に追記するように変更。</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-07-10 Ver1.34 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>同期終了時に強制終了される場合があるバグを解決</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-07-03 Ver1.33 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>アプリケーション終了時に画面の向きが変わってしまう事があるバグを解決</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>SMB</span><span style='font-family:"ＭＳ 明朝","serif"'>パフォーマンスオプションを設定に追加</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-06-16 Ver1.31, 1.32 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>ローカルで</span><span
+lang=EN-US>/mnt/extsd</span><span style='font-family:"ＭＳ 明朝","serif"'>などを使用できるようにした</span><span
+lang=EN-US>(</span><span style='font-family:"ＭＳ 明朝","serif"'>ただし、</span><span
+lang=EN-US>READ</span><span style='font-family:"ＭＳ 明朝","serif"'>権限以上のマウントポイントのみ使用可能</span><span
+lang=EN-US>) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-06-03 Ver1.30 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Android 2.3(GB)</span><span style='font-family:
+"ＭＳ 明朝","serif"'>で、メディアストアにディレクトリを新規登録したとき最終更新時間にミリ秒を含んでいる現象に対応。</span> </p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>デバッグ用メッセージの追加。</span> </p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-06-03 Ver1.26 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>タブレットなどの大きな画面での表示文字サイズの最適化を行った</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>まれに</span><span
+lang=EN-US>MediaStore.Files</span><span style='font-family:"ＭＳ 明朝","serif"'>処理中に強制終了するバグを解決（</span><span
+lang=EN-US>HC</span><span style='font-family:"ＭＳ 明朝","serif"'>以上</span><span
+lang=EN-US>) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-05-29 Ver1.25 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>MediaStore.Files</span><span style='font-family:
+"ＭＳ 明朝","serif"'>に対応（</span><span lang=EN-US>HC</span><span style='font-family:
+"ＭＳ 明朝","serif"'>以上</span><span lang=EN-US>) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-05-22 Ver1.24 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>アプリケーション強制終了後の再起動でメッセージを復元</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>ローカルファイル削除時にメディアストアからも登録削除</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-05-08 Ver1.23 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>プロファイルの書き出し</span><span
+lang=EN-US>/</span><span style='font-family:"ＭＳ 明朝","serif"'>取り込みの</span><span
+lang=EN-US>UI</span><span style='font-family:"ＭＳ 明朝","serif"'>改善</span> </p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>インストール後の初回起動時にサンプルプロファイルを追加</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>ディレクトリフィルターで複数レベルのディレクトリーを指定可能にした（</span><span
+lang=EN-US>abc/a1</span><span style='font-family:"ＭＳ 明朝","serif"'>等）</span> </p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>リモートプロファイルでの</span><span
+lang=EN-US>IP</span><span style='font-family:"ＭＳ 明朝","serif"'>スキャン時に</span><span
+lang=EN-US>SMB</span><span style='font-family:"ＭＳ 明朝","serif"'>ホスト判別を行うようにした</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>通知メッセージの表示を改善</span> </p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-04-12 Ver1.22 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>サブディレクトリ数が多いディレクトリを処理する際のパフォーマンスを改善</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>ローカルの隠しディレクトリにファイルをコピー後、端末を再起動するとファイルが削除されるバグを解決</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-04-08 Ver1.21 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>リモートプロファイル追加・編集で</span><span
+lang=EN-US>Dir</span><span style='font-family:"ＭＳ 明朝","serif"'>に</span><span
+lang=EN-US>/</span><span style='font-family:"ＭＳ 明朝","serif"'>を使用できるようにした（バグ</span><span
+lang=EN-US> Fix</span><span style='font-family:"ＭＳ 明朝","serif"'>）</span> </p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-04-08 Ver1.20 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>ディレクトリ選択の</span><span
+lang=EN-US>UI</span><span style='font-family:"ＭＳ 明朝","serif"'>改善</span> </p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-04-06 Ver1.19 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>NAS</span><span style='font-family:"ＭＳ 明朝","serif"'>でユーザーとパスワードが不要な場合にログインできないバグを解決</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-04-04 Ver1.18 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>タブレットでダイアログ表示時に逆向きになるバグを解決</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-04-01 Ver1.17 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>&quot;[&quot;</span><span style='font-family:
+"ＭＳ 明朝","serif"'>、</span><span lang=EN-US>&quot;]&quot;</span><span
+style='font-family:"ＭＳ 明朝","serif"'>を使用可能にした。</span> </p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-03-29 Ver1.16 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>SMB</span><span style='font-family:"ＭＳ 明朝","serif"'>サーバーへのログイン方式の変更</span><span
+lang=EN-US>. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>無効な文字として</span><span
+lang=EN-US>&quot;[&quot;</span><span style='font-family:"ＭＳ 明朝","serif"'>、</span><span
+lang=EN-US>&quot;]&quot;</span><span style='font-family:"ＭＳ 明朝","serif"'>をチェックするようにした。</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-03-29 Ver1.15 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>デバッグコード削除</span> </p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-03-29 Ver1.14 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>一度ユーザー</span><span
+lang=EN-US>ID/</span><span style='font-family:"ＭＳ 明朝","serif"'>パスワードを間違えると、正しいユーザー</span><span
+lang=EN-US>ID/</span><span style='font-family:"ＭＳ 明朝","serif"'>パスワードを入力しても再起動するまでログオンできないバグを解決。</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-03-28 Ver1.13 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>大画面でのスクリーン回転バグの修正</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-03-27 Ver1.12 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>UI</span><span style='font-family:"ＭＳ 明朝","serif"'>の修正</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Android4.0</span><span style='font-family:"ＭＳ 明朝","serif"'>で強制終了する場合があるバグを解決</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-03-22 Ver1.11 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>リモートプロファイル追加</span><span
+lang=EN-US>/</span><span style='font-family:"ＭＳ 明朝","serif"'>編集にローカル</span><span
+lang=EN-US>IP</span><span style='font-family:"ＭＳ 明朝","serif"'>アドレスのスキャンを追加</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-03-18 Ver1.10 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>自動終了時の表示間違いを修正</span> </p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-03-18 Ver1.09 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>設定パラメーターが外部プロファイルから正しく取り込めない</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-03-18 Ver1.08 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>同期プロファイルの追加</span><span
+lang=EN-US>/</span><span style='font-family:"ＭＳ 明朝","serif"'>編集でマスター</span><span
+lang=EN-US>/</span><span style='font-family:"ＭＳ 明朝","serif"'>ターゲット</span><span
+lang=EN-US> ICON</span><span style='font-family:"ＭＳ 明朝","serif"'>が消えるバグ修正</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>同期プロファイルで指定されたローカル</span><span
+lang=EN-US>/</span><span style='font-family:"ＭＳ 明朝","serif"'>リモートプロファイルが存在しない場合に強制終了するバグ修正</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>SMB</span><span style='font-family:"ＭＳ 明朝","serif"'>アドレスの省略時値を現在の</span><span
+lang=EN-US>IP</span><span style='font-family:"ＭＳ 明朝","serif"'>アドレスにする</span> </p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-02-27 Ver1.07 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>強制終了後の再起動時のバグ修正</span> </p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-02-23 Ver1.05 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>メディアストアライブラリ</span> <span
+style='font-family:"ＭＳ 明朝","serif"'>ファイルについて最終更新時刻を無視した場合に警告メッセージ追加</span> </p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>設定に差分ファイル判定条件を追加</span><span
+lang=EN-US> (</span><span style='font-family:"ＭＳ 明朝","serif"'>端末再起動によるメディアストアフォルダーのファイルの最終更新時間が書き換わりファイルが毎回コピーされる場合は</span>
+<span style='font-family:"ＭＳ 明朝","serif"'>「最終更新日時」と「タイムゾーン」を試してください。</span><span
+lang=EN-US>) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>メニューでログファイル表示を追加</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>最終更新時刻の差を指定できるようにした</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>FAT</span><span style='font-family:"ＭＳ 明朝","serif"'>の時間精度を考慮して省略時の時間差を２秒から３秒に変更</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>デバッグ情報をログファイルだけに書出す</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-02-18 Ver1.04 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>UI</span><span style='font-family:"ＭＳ 明朝","serif"'>の変更</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Dir</span><span style='font-family:"ＭＳ 明朝","serif"'>フィルターの追加</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>設定でメディアストアフォルダー</span><span
+lang=EN-US>(DCIM</span><span style='font-family:"ＭＳ 明朝","serif"'>や</span><span
+lang=EN-US>Music</span><span style='font-family:"ＭＳ 明朝","serif"'>等</span><span
+lang=EN-US>)</span><span style='font-family:"ＭＳ 明朝","serif"'>の差分ファイル判定にファイルの最終更新時間を含めないことを</span>
+<span style='font-family:"ＭＳ 明朝","serif"'>可能とした。（端末の再起動でメディアストアフォルダーのファイルを全量コピーすることを回避</span><span
+lang=EN-US>) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-02-13 Ver1.03 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>リモートプロファイル追加時にユーザー無しを許可の修正漏れを解決</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-02-13 Ver1.02 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>内部での</span><span
+lang=EN-US>JCIFS</span><span style='font-family:"ＭＳ 明朝","serif"'>オプションの変更とリモートプロファイル追加時にユーザー無しを許可</span>
+</p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-02-09 Ver1.01 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>プロファイル追加のバグ修正</span> </p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_JA.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-02-08</span><span style='font-family:"ＭＳ 明朝","serif"'>　</span><span
+lang=EN-US>Ver1.00 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'><img
+width=13 height=13 src="SMBSync_Change_JA.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-family:"ＭＳ 明朝","serif"'>最初の公開</span> </p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

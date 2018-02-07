@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="msgs_dlg_ok_btn">了解</string>
+    <string name="msgs_dlg_save_btn">保存</string>
+    <string name="msgs_dlg_cancel_btn">キャンセル</string>
+    <string name="msgs_local_profile_dlg_active">プロファイルを有効にする</string>
+    <string name="msgs_local_profile_dlg_profile">プロファイル名</string>
+    <string name="msgs_local_profile_dlg_directory">ディレクトリ</string>
+    <string name="msgs_local_profile_dlg_dirlist">一覧表示</string>
+    <string name="msgs_local_profile_dlg_local_mount_point">マウント ポイント</string>
+    
+    <string name="msgs_local_profile_dlg_local_mount_changed_confirm_title">マウント ポイント変更確認</string>
+    <string name="msgs_local_profile_dlg_local_mount_changed_confirm_msg">マウント ポイントを変更すると同期したときに再コピーされる場合があります。変更を継続しますか？</string>
+    
+    <string name="msgs_remote_profile_dlg_active">プロファイルを有効にする</string>
+    <string name="msgs_remote_profile_dlg_profile">プロファイル名</string>
+    <string name="del_msgs_remote_profile_dlg_address">サーバ　IPアドレス</string>
+    <string name="msgs_remote_profile_dlg_remote_server">サーバ 名/アドレス</string>
+    <string name="msgs_remote_profile_dlg_username">ユーザー名</string>
+    <string name="msgs_remote_profile_dlg_password">パスワード</string>
+    <string name="msgs_remote_profile_dlg_share">共有名</string>
+    <string name="msgs_remote_profile_dlg_sharelist">一覧表示</string>
+    <string name="msgs_remote_profile_dlg_directory">ディレクトリ</string>
+    <string name="msgs_remote_profile_dlg_dirlist">一覧表示</string>
+    <string name="msgs_remote_profile_dlg_search_remote_list">リモートサーバーの検索</string>
+	<string name="del_msgs_remote_profile_dlg_use_computer_name">コンピュータ名を使用する</string>    
+	<string name="msgs_remote_profile_dlg_use_user_pass">ユーザーID/パスワードを使用する</string>
+	<string name="msgs_remote_profile_dlg_logon">ログオン</string>
+	<string name="msgs_remote_profile_dlg_logon_success">ログオンが正常に完了しました</string>
+	<string name="msgs_remote_profile_dlg_logon_error">ログオンエラーが発生しました</string>
+	<string name="msgs_remote_profile_dlg_logon_cancel">ログオンが中止されました</string>
+	<string name="msgs_remote_profile_dlg_port">ポート</string>
+	<string name="msgs_remote_profile_dlg_use_port_number">ポート番号を指定する</string>
+	
+    <string name="msgs_sync_profile_dlg_active">プロファイルを有効にする</string>
+    <string name="msgs_sync_profile_dlg_profile">プロファイル名</string>
+    <string name="msgs_sync_profile_dlg_change_master_and_target">マスターとターゲットを入れ替える</string>
+    <string name="msgs_sync_profile_dlg_save_and_sync">保存して同期する</string>
+    <string name="msgs_sync_profile_dlg_master">マスタープロファイル</string>
+    <string name="msgs_sync_profile_dlg_target">ターゲットプロファイル</string>
+    <string name="msgs_sync_profile_dlg_syncopt">同期方式</string>
+    <string name="msgs_sync_profile_dlg_syncopt_prompt">同期方式の選択</string>
+    <string name="msgs_sync_profile_dlg_mirror">ミラー</string> 
+    <string name="msgs_sync_profile_dlg_copy">コピー</string>
+    <string name="msgs_sync_profile_dlg_move">移動</string>
+    <string name="msgs_sync_profile_dlg_filter">フィルタ―</string>
+    <string name="msgs_sync_profile_dlg_filefltr">ファイル</string>
+    <string name="msgs_sync_profile_dlg_dirfltr">ディレクトリ</string>
+    <string name="msgs_sync_profile_sync_options">同期オプション:</string>
+    <string name="msgs_sync_profile_sync_master_root_dir_file">マスタープロファイルで指定されたディレクトリの直下に存在するファイルを処理する</string>
+    <string name="msgs_sync_profile_confirm_required">上書コピーまたは削除の前に確認する</string>
+    <string name="msgs_sync_profile_last_modified_smbsync">強制的にSMBSyncで最終更新日時を取得</string>
+    <string name="msgs_sync_profile_not_set_remote_file_last_modified">リモートファイルの最終更新時刻をローカルファイルに合わせない</string>
+    
+    <string name="msgs_sync_profile_retry_if_error_occured">同期中ネットワークエラーが発生した場合にリトライする</string>
+    
+    <string name="msgs_sync_profile_sync_empty_directory">空のディレクトリを同期する</string>
+    <string name="msgs_sync_profile_sync_hidden_directory">隠しディレクトリを同期する</string>
+    <string name="msgs_sync_profile_sync_hidden_file">隠しファイルを同期する</string>
+    <string name="msgs_sync_profile_sync_sub_dir">サブディレクトリーを同期する</string>
+    <string name="msgs_sync_profile_sync_use_small_ioarea">リモートファイル書き込み時のIOバッファーを16KBに制限する</string>
+    
+    <string name="msgs_filter_list_dlg_add">追加</string>
+    <string name="msgs_filter_list_dlg_delete">削除</string>
+    <string name="msgs_filter_list_dlg_include">選択</string>
+    <string name="msgs_filter_list_dlg_exclude">除外</string>
+    <string name="msgs_filter_list_dlg_file_filter">ファイル フィルター</string>
+    <string name="msgs_filter_list_dlg_dir_filter">ディレクトリー フィルター</string>
+    <string name="msgs_filter_list_dlg_add_dir_filter">ディレクトリー フィルター追加</string>
+    <string name="msgs_filter_list_dlg_dir_list">ディレクトリ一覧</string>
+    <string name="msgs_filter_list_filter_deleted">削除済み</string>
+    <string name="msgs_filter_list_duplicate_filter_specified">フィルターが重複しています。フィルター=%s</string>
+    <string name="msgs_filter_list_no_filter">---フィルターは空です---</string>
+    <string name="msgs_filter_list_dlg_not_specified">無指定</string>
+    <string name="msgs_filter_list_dlg_filter_added">フィルター %s 追加しました。</string>
+    <string name="msgs_filter_list_dlg_close">閉じる</string>
+    <string name="msgs_filter_list_dlg_master_prof_not_found">マスタープロファイル(%s)が見つかりません。</string>
+    <string name="msgs_filter_list_dlg_filter_hint">フィルター</string>
+    <string name="msgs_filter_edit_dlg_title">フィルター編集</string>
+    
+    <string name="msgs_progress_bar_dlg_aterm_terminating">自動終了</string>
+   	<string name="msgs_progress_bar_dlg_aterm_cancel">自動終了をキャンセル</string>
+   	<string name="msgs_progress_bar_dlg_aterm_immediate">即時終了</string>
+
+   	<string name="msgs_progress_bar_dlg_astart_starting">自動同期</string>
+   	<string name="msgs_progress_bar_dlg_astart_cancel">自動同期をキャンセル</string>
+   	<string name="msgs_progress_bar_dlg_astart_immediate">即時同期</string>
+   	
+   	<string name="msgs_progress_spin_dlg_syncronizing">同期処理中</string>
+   	<string name="msgs_progress_spin_dlg_sync_cancel">同期処理をキャンセル</string>
+   	
+   	<string name="msgs_progress_spin_dlg_addr_cancel">検索中止</string>
+   	<string name="msgs_scan_ip_address_select_title">リモートSMBホストの検索</string>
+	<string name="msgs_scan_ip_address_scan_btn">検索開始</string>
+	<string name="msgs_scan_ip_address_press_scan_btn">IPアドレスを指定して、検索ボタンを押してください。</string>
+	<string name="msgs_scan_ip_address_not_detected">リモートSMBホストが検知できませんでした。</string>
+	<string name="msgs_scan_ip_address_select_detected_host">検索結果のIPアドレスかホスト名をタップして選択してください。</string>
+	<string name="msgs_scan_ip_address_scan_result_title">検索結果</string>
+   	<string name="msgs_ip_address_scan_progress">リモートSMBホスト 検索が%s%% 終了</string>
+   	
+   	<string name="msgs_ip_address_range_dlg_begin">開始</string>
+   	<string name="msgs_ip_address_range_dlg_end">終了</string>
+   	
+   	<string name="msgs_ip_address_range_dlg_begin_notspecified">開始アドレスが指定されていません。</string>
+   	<string name="msgs_ip_address_range_dlg_addr_range_error">アドレスは0から255の範囲で指定してください。</string>
+   	<string name="msgs_ip_address_range_dlg_begin_range_error">開始アドレスは1から254の範囲で指定してください。</string>
+   	<string name="msgs_ip_address_range_dlg_end_notspecified">終了アドレスが指定されていません。</string>
+   	<string name="msgs_ip_address_range_dlg_end_range_error">終了アドレスは1から254の範囲で指定してください。</string>
+   	<string name="msgs_ip_address_range_dlg_begin_addr_gt_end_addr">開始アドレスが終了アドレスより大きい。</string>
+   	<string name="msgs_ip_address_range_dlg_not_private">グローバルアドレスのため検索できません。</string>
+   	
+   	<string name="msgs_progress_dlg_canceling">キャンセルしています</string>
+   	
+   	<string name="msgs_progress_spin_dlg_filelist_getting">ファイルリスト取得中</string>
+   	<string name="msgs_progress_spin_dlg_filelist_cancel">ファイルリスト取得を中止</string>
+   	
+   	<string name="msgs_progress_spin_dlg_test_logon">リモートにログオン中</string>
+   	<string name="msgs_progress_spin_dlg_test_logon_cancel">ログオンを中止</string>
+    
+   	<string name="msgs_tab_name_prof">プロファイル</string>
+   	<string name="msgs_tab_name_msg">メッセージ</string>
+   	<string name="msgs_tab_name_history">履歴</string>
+   	
+   	<string name="msgs_local_file_modified_maint_title">ローカルファイル最終更新時間データの保守</string>
+   	<string name="msgs_local_file_modified_maint_no_entry">対象がありません</string>
+   	<string name="msgs_local_file_modified_maint_close_btn">閉じる</string>
+   	<string name="msgs_local_file_modified_maint_init_btn">初期化</string>
+   	<string name="msgs_local_file_modified_maint_delete_btn">削除</string>
+   	<string name="msgs_local_file_modified_maint_reset_btn">リセット</string>
+	<string name="msgs_local_file_modified_maint_cleanup_btn">古い保持ファイルの削除</string>   	
+   	<string name="msgs_local_file_modified_maint_init_msg">
+   	    ローカルファイルの最終更新日時取得用のデータを初期化しますか？\n
+   	    次回の同期で初期化したマウントポイントの対象ファイルが全てコピーされます。</string>
+   	<string name="msgs_local_file_modified_maint_reset_msg">
+   	    ローカルファイルの最終更新日時取得用のデータをローカルファイルの最終更新時間に設定しますか？\n
+   	    次回の同期でリセットしたマウントポイントの対象ファイル全てに対して差分判定を行い、
+   	    リモートファイルとファイルサイズが違う、 またはローカルにファイルが存在しないリモートファイルがコピーされます。</string>
+   	<string name="msgs_local_file_modified_maint_status_init">初期化済み</string>
+   	<string name="msgs_local_file_modified_maint_status_reset">リセット済み</string>
+   	<string name="msgs_local_file_modified_maint_status_valid">正常</string>
+   	<string name="msgs_local_file_modified_maint_status_corrupted">異常</string>
+   	<string name="msgs_local_file_modified_maint_status_fileonly">未参照</string>
+   	<string name="msgs_local_file_modified_maint_status_not_created">未作成</string>
+   	
+   	<string name="msgs_local_file_modified_maint_validation_title">ローカルファイル最終更新時間リスト</string>
+   	<string name="msgs_local_file_modified_maint_validation_msg">下記のリストが壊れています。保守メニューを表示しますか？</string>
+    <string name="msgs_local_file_modified_maint_cleanup_msg">古い最終更新時刻保持ファイルを削除しますか？</string>
+    <string name="msgs_local_file_modified_maint_delete_msg">最終更新時刻保持ファイルを削除しますか？</string>
+    <string name="msgs_local_file_modified_maint_mixed_old_new_msg">
+        ローカルプロファイルに新旧のマウントポイント(/sdcard, /mnt/sdcardや/storage/sdcard0)が混在しています、
+        一つのマウントポイント名に統一してください。\n最終更新時刻の判定はマウントポイントを基準にしているため、
+同じディレクトリを違うマウントポイントで指定すると本来はコピーされないはずのファイルがコピーされます。</string>
+   	<string name="msgs_local_file_modified_maint_mixed_old_new_title">新旧マウントポイント名の混在</string>
+   	<string name="msgs_local_file_modified_maint_mixed_old_new_suppress">この警告を次回以降表示しない （ユーザーインターフェース設定で再表示できます）</string>
+
+   	
+    <string name="msgs_local_mount_point_app_specific_dir_used_msg">アプリケーション固有ディレクトリがファイルの保存先に使用されています。このディレクトリはアプリケーションがアンインストールされると削除され、保存しているデータも削除されます。ご注意ください。</string>
+   	<string name="msgs_local_mount_point_app_specific_dir_used_title">アプリケーション固有ディレクトリ使用についての警告</string>
+   	<string name="msgs_local_mount_point_app_specific_dir_used_suppress">この警告を次回以降表示しない （ユーザーインターフェース設定で再表示できます）</string>
+   	<string name="msgs_local_mount_point_app_specific_dir_used_ok">同期する</string>
+</resources>

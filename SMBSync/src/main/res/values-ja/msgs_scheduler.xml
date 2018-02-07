@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="msgs_menu_scheduler">スケジュール</string>
+    <string name="msgs_scheduler_main_dlg_hdr_title">スケジュール</string>
+    <string name="msgs_scheduler_main_dlg_hdr_enable">スケジュールを有効にする</string>
+    <string name="msgs_scheduler_main_dlg_hdr_edit_prof">同期リストの編集</string>
+	<string name="msgs_scheduler_main_dlg_hdr_sun">日</string>
+	<string name="msgs_scheduler_main_dlg_hdr_mon">月</string>
+	<string name="msgs_scheduler_main_dlg_hdr_tue">火</string>
+	<string name="msgs_scheduler_main_dlg_hdr_wed">水</string>
+	<string name="msgs_scheduler_main_dlg_hdr_thu">木</string>
+	<string name="msgs_scheduler_main_dlg_hdr_fri">金</string>
+	<string name="msgs_scheduler_main_dlg_hdr_sat">土</string>
+	<string name="msgs_scheduler_main_dlg_hdr_month">月</string>
+	<string name="msgs_scheduler_main_dlg_hdr_day">日</string>
+	<string name="msgs_scheduler_main_dlg_hdr_hour">時</string>
+	<string name="msgs_scheduler_main_dlg_hdr_minute">分</string>
+	<string name="msgs_scheduler_main_dlg_hdr_schedule_type">スケジュール方法</string>	
+	
+	<string name="msgs_scheduler_main_dlg_hdr_wifi_on">同期開始時にWi-FiがオフのときはWi-Fiをオンにする</string>
+	<string name="msgs_scheduler_main_dlg_hdr_wifi_on_delayed_time">Wi-Fiオンから同期するまでの待ち時間</string>
+	<string name="msgs_scheduler_main_dlg_hdr_wifi_on_delayed_1">5秒</string>
+	<string name="msgs_scheduler_main_dlg_hdr_wifi_on_delayed_2">10秒</string>
+	<string name="msgs_scheduler_main_dlg_hdr_wifi_on_delayed_3">30秒</string>
+	<string name="msgs_scheduler_main_dlg_hdr_wifi_off">同期終了後にWi-Fiをオフにする</string>
+	
+	<string name="msgs_scheduler_main_spinner_sched_type_prompt">スケジュール方法の選択</string>
+	<string name="msgs_scheduler_main_spinner_sched_type_every_hour">毎時</string>
+	<string name="msgs_scheduler_main_spinner_sched_type_every_day">毎日</string>
+	<string name="msgs_scheduler_main_spinner_sched_type_day_of_week">曜日</string>
+	<string name="msgs_scheduler_main_spinner_sched_type_interval">インターバル</string>
+	<string name="msgs_scheduler_main_spinner_sched_hours_prompt">時間の選択</string>
+	<string name="msgs_scheduler_main_spinner_sched_minutes_prompt">分の選択</string>
+	
+	<string name="msgs_scheduler_edit_synclist_dlg_hdr_title">同期プロファイルリスト</string>
+    <string name="msgs_scheduler_edit_synclist_dlg_hdr_sync_all_sync_profile">全ての有効なプロファイルを同期する</string>
+    <string name="msgs_scheduler_edit_synclist_dlg_hdr_show_active_profile">有効なプロファイルだけ表示する</string>
+    
+	<string name="msgs_scheduler_edit_sync_prof_list_not_specified">同期リストの編集ボタンを押して、同期するプロファイルを指定してください。</string>
+	    
+    <string name="msgs_scheduler_info_next_schedule_time">スケジュール同期　%s</string>
+    <string name="msgs_scheduler_info_schedule_disabled">スケジュール同期は無効</string>
+    <string name="msgs_scheduler_info_sync_all_active_profile">有効なプロファイル全て</string>
+    <string name="msgs_scheduler_info_sync_selected_profile">プロファイル %s を同期</string>
+    
+    <string name="msgs_scheduler_main_dw_not_selected">少なくても一つの曜日を選択してください</string>
+</resources>

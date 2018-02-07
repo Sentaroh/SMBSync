@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="msgs_dlg_ok_btn">OK</string>
+    <string name="msgs_dlg_save_btn">Save</string>
+    <string name="msgs_dlg_cancel_btn">Cancel</string>
+    <string name="msgs_local_profile_dlg_active">To active the profile</string>
+    <string name="msgs_local_profile_dlg_profile">Profile Name</string>
+    <string name="msgs_local_profile_dlg_directory">Directory</string>
+    <string name="msgs_local_profile_dlg_dirlist">Show list</string>
+    <string name="msgs_local_profile_dlg_local_mount_point">Mount Point</string>
+    <string name="msgs_local_profile_dlg_local_mount_changed_confirm_title">Confirm mount point change</string>
+    <string name="msgs_local_profile_dlg_local_mount_changed_confirm_msg">There is a case to be re-copied when you synchronize If you change the mount point. Are you sure you want to do the change?</string>
+    
+    <string name="msgs_remote_profile_dlg_active">To active the profile</string>
+    <string name="msgs_remote_profile_dlg_profile">Profile Name</string>
+    <string name="del_msgs_remote_profile_dlg_address">Server IP Address</string>
+    <string name="msgs_remote_profile_dlg_remote_server">Server Name/Address</string>
+    <string name="msgs_remote_profile_dlg_username">User name</string>
+    <string name="msgs_remote_profile_dlg_password">Password</string>
+    <string name="msgs_remote_profile_dlg_share">Share</string>
+    <string name="msgs_remote_profile_dlg_sharelist">Show list</string>
+    <string name="msgs_remote_profile_dlg_directory">Directory</string>
+    <string name="msgs_remote_profile_dlg_dirlist">Show list</string>
+    <string name="msgs_remote_profile_dlg_search_remote_list">Search remote server</string>
+    <string name="del_msgs_remote_profile_dlg_use_computer_name">Use computer name</string>
+    <string name="msgs_remote_profile_dlg_use_user_pass">Use remote host userid and password</string>
+    <string name="msgs_remote_profile_dlg_logon">Logon</string>
+	<string name="msgs_remote_profile_dlg_logon_success">Logon successfully completed</string>    
+	<string name="msgs_remote_profile_dlg_logon_error">Logon ended with error</string>
+	<string name="msgs_remote_profile_dlg_logon_cancel">Logon cancelled</string>
+	<string name="msgs_remote_profile_dlg_port">Port</string>
+	<string name="msgs_remote_profile_dlg_use_port_number">Use port number</string>
+    
+    <string name="msgs_sync_profile_dlg_active">To active the profile</string>
+    <string name="msgs_sync_profile_dlg_profile">Profile Name</string>
+    <string name="msgs_sync_profile_dlg_change_master_and_target">Swap to target and master</string>
+    <string name="msgs_sync_profile_dlg_save_and_sync">Save and Sync</string>
+    <string name="msgs_sync_profile_dlg_master">Master Profile</string>
+    <string name="msgs_sync_profile_dlg_target">Target Profile</string>
+    <string name="msgs_sync_profile_dlg_syncopt">Sync type</string>
+    <string name="msgs_sync_profile_dlg_syncopt_prompt">Select sync option</string>
+    <string name="msgs_sync_profile_dlg_mirror">Mirror</string>
+    <string name="msgs_sync_profile_dlg_copy">Copy</string>
+    <string name="msgs_sync_profile_dlg_move">Move</string>
+    <string name="msgs_sync_profile_dlg_filter">Filter</string>
+    <string name="msgs_sync_profile_dlg_filefltr">File</string>
+    <string name="msgs_sync_profile_dlg_dirfltr">Directory</string>
+    <string name="msgs_sync_profile_sync_options">Sync options:</string>
+    <string name="msgs_sync_profile_sync_master_root_dir_file">To process the files that exist directly under the directory that is specified in the master profile</string>
+    <string name="msgs_sync_profile_confirm_required">Confirm before override copy or delete</string>
+    <string name="msgs_sync_profile_last_modified_smbsync">Obtain the last modified date and time of the local file as SMBSync</string>
+	<string name="msgs_sync_profile_not_set_remote_file_last_modified">Do not reset remote file last modified time by local file last modified time</string>
+	
+	<string name="msgs_sync_profile_retry_if_error_occured">To retry if a network error occurs during sync</string>
+    
+    <string name="msgs_sync_profile_sync_empty_directory">Sync a empty directory</string>
+    <string name="msgs_sync_profile_sync_hidden_directory">Sync a hidden directory</string>
+    <string name="msgs_sync_profile_sync_hidden_file">Sync a hidden file</string>
+    <string name="msgs_sync_profile_sync_sub_dir">Sync a subdirectory</string>
+	<string name="msgs_sync_profile_sync_use_small_ioarea">It limits the IO buffer at the time of remote file writing to 16KB.</string>			
+	
+    <string name="msgs_filter_list_dlg_add">Add</string>
+    <string name="msgs_filter_list_dlg_delete">Delete</string>
+    <string name="msgs_filter_list_dlg_include">Include</string>
+    <string name="msgs_filter_list_dlg_exclude">Exclude</string>
+    <string name="msgs_filter_list_dlg_file_filter">File filter</string>
+    <string name="msgs_filter_list_dlg_dir_filter">Directory filter</string>
+    <string name="msgs_filter_list_dlg_add_dir_filter">Add directory filter</string>
+    <string name="msgs_filter_list_dlg_dir_list">Directory listing</string>
+    <string name="msgs_filter_list_filter_deleted">This entry was deleted.</string>
+    <string name="msgs_filter_list_duplicate_filter_specified">Duplicate filter was specified.filter=%s</string>
+    <string name="msgs_filter_list_no_filter">---Empty filter---</string>
+    <string name="msgs_filter_list_dlg_not_specified">Not specified</string>
+    <string name="msgs_filter_list_dlg_filter_added">Filter %s was added.</string>
+    <string name="msgs_filter_list_dlg_close">Close</string>
+    <string name="msgs_filter_list_dlg_master_prof_not_found">Master profile(%s) does not found.</string>
+    <string name="msgs_filter_list_dlg_filter_hint">filter</string>
+    
+    <string name="msgs_filter_edit_dlg_title">Edit filter</string>
+    
+    <string name="msgs_progress_bar_dlg_aterm_terminating">Auto termination</string>
+   	<string name="msgs_progress_bar_dlg_aterm_cancel">Cancel auto termination</string>
+   	<string name="msgs_progress_bar_dlg_aterm_immediate">Immediate termination</string>
+   	
+   	<string name="msgs_progress_bar_dlg_astart_starting">Auto synchronize</string>
+   	<string name="msgs_progress_bar_dlg_astart_cancel">Cancel auto synchronize</string>
+   	<string name="msgs_progress_bar_dlg_astart_immediate">Immediate synchronize</string>
+    
+   	<string name="msgs_progress_spin_dlg_syncronizing">Synchronizing</string>
+   	<string name="msgs_progress_spin_dlg_sync_cancel">Cancel synchronize</string>
+
+   	<string name="msgs_progress_spin_dlg_addr_cancel">Cancel Search</string>
+   	<string name="msgs_scan_ip_address_select_title">Search remote SMB host</string>
+	<string name="msgs_scan_ip_address_scan_btn">Search</string>
+	<string name="msgs_scan_ip_address_press_scan_btn">Specify IP adrress and press Search button.</string>
+	<string name="msgs_scan_ip_address_not_detected">Remote SMB host not detected.</string>
+	<string name="msgs_scan_ip_address_select_detected_host">Please tap the search result hostname or IP address for remote server choice.</string>
+	<string name="msgs_scan_ip_address_scan_result_title">Search result</string>
+   	<string name="msgs_ip_address_scan_progress">Remote SMB host search is %s%% Completed</string>
+   	
+   	<string name="msgs_ip_address_range_dlg_begin">Begin</string>
+   	<string name="msgs_ip_address_range_dlg_end">End</string>
+   	
+   	<string name="msgs_ip_address_range_dlg_begin_notspecified">Begin address was not specified.</string>
+   	<string name="msgs_ip_address_range_dlg_addr_range_error">Address range is must be 0 to 255.</string>
+   	<string name="msgs_ip_address_range_dlg_begin_range_error">Begin address range is must be 1 to 254.</string>
+   	<string name="msgs_ip_address_range_dlg_end_notspecified">End address was not specified.</string>
+   	<string name="msgs_ip_address_range_dlg_begin_addr_gt_end_addr">Begin address is greater than end address.</string>
+   	<string name="msgs_ip_address_range_dlg_end_range_error">End address range is must be 1 to 254.</string>
+   	<string name="msgs_ip_address_range_dlg_not_private">Global address was can not be search.</string>
+   		
+   	<string name="msgs_progress_dlg_canceling">Canceling</string>
+
+   	<string name="msgs_progress_spin_dlg_filelist_getting">Obtaining file list</string>
+   	<string name="msgs_progress_spin_dlg_filelist_cancel">Cancel</string>
+   	
+   	<string name="msgs_progress_spin_dlg_test_logon">Logon to remote</string>
+   	<string name="msgs_progress_spin_dlg_test_logon_cancel">Cancel logon</string>
+   	
+   	<string name="msgs_tab_name_prof">Profile</string>
+   	<string name="msgs_tab_name_msg">Messages</string>
+   	<string name="msgs_tab_name_history">History</string>
+   	
+   	<string name="msgs_local_file_modified_maint_title">Local file last modified maintenance</string>
+   	<string name="msgs_local_file_modified_maint_no_entry">No list</string>
+   	<string name="msgs_local_file_modified_maint_close_btn">Close</string>
+   	<string name="msgs_local_file_modified_maint_init_btn">Initialize</string>
+   	<string name="msgs_local_file_modified_maint_delete_btn">Delete</string>
+   	<string name="msgs_local_file_modified_maint_reset_btn">Reset</string>
+   	<string name="msgs_local_file_modified_maint_cleanup_btn">Delete old last modified time holder file</string>
+   	<string name="msgs_local_file_modified_maint_init_msg">
+Do you want to initialize the data for the acquisition of a local file last modified date?\n
+If you initialize the target file synchronization profile is copied to all on the next sync.</string>
+   	<string name="msgs_local_file_modified_maint_reset_msg">
+Do you want to reset to the last update time for retrieving data from a local file on the local file last modified date?\n
+Determination of the time since the last update are relative to the mount point,
+Files should not be copied and originally specified in the same mount point to a different directory will be copied.
+</string>
+   	<string name="msgs_local_file_modified_maint_status_init">Initialized</string>
+   	<string name="msgs_local_file_modified_maint_status_reset">Resetted</string>
+   	<string name="msgs_local_file_modified_maint_status_valid">Validated</string>
+   	<string name="msgs_local_file_modified_maint_status_corrupted">Corrupted</string>
+   	<string name="msgs_local_file_modified_maint_status_fileonly">Unreferenced</string>
+   	<string name="msgs_local_file_modified_maint_status_not_created">Not created</string>
+   	
+   	<string name="msgs_local_file_modified_maint_validation_title">Local file last modified list</string>
+   	<string name="msgs_local_file_modified_maint_validation_msg">Following list was corrupted, do you moved to maintenance menu?</string>
+   	<string name="msgs_local_file_modified_maint_cleanup_msg">Delete old last modified time holder files?</string>
+   	<string name="msgs_local_file_modified_maint_delete_msg">Delete last modified time holder files?</string>
+   	<string name="msgs_local_file_modified_maint_mixed_old_new_msg">Please be consistent with old and new mount point (/ sdcard, and / mnt / sdcard / storage/sdcard0) are mixed, the name of the mount point of the one with your local profile.</string>
+   	<string name="msgs_local_file_modified_maint_mixed_old_new_title">Mixed old and new mount point name</string>
+   	<string name="msgs_local_file_modified_maint_mixed_old_new_suppress">Do not show from the next time to this warning (You can re show the user interface settings)</string>
+   	
+    <string name="msgs_local_mount_point_app_specific_dir_used_msg">Application specific directory has been set As the storage location of the file. This directory is deleted when the application is uninstalled, the data you have saved will be deleted. Please be careful in your use.</string>
+   	<string name="msgs_local_mount_point_app_specific_dir_used_title">Warning about the application specific directory use</string>
+   	<string name="msgs_local_mount_point_app_specific_dir_used_suppress">Do not show from the next time to this warning (You can re show the user interface settings)</string>
+   	<string name="msgs_local_mount_point_app_specific_dir_used_ok">Sync</string>
+   	
+</resources>

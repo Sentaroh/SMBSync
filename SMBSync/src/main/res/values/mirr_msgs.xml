@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE string>
+<resources>
+    <string name="msgs_mirror_task_result_ok">Sync was successfully ended.</string>
+    <string name="msgs_mirror_task_result_cancel">Sync was cancelled.</string>
+    <string name="msgs_mirror_task_result_error_ignored">The sync was completed, an error occurred some or all of the sync profile.</string>
+    <string name="msgs_mirror_task_result_error_ended">Sync was ended with error.</string>
+    <string name="msgs_mirror_prof_file_deleted">File was deleted</string>
+    <string name="msgs_mirror_prof_started">Sync has been started.</string>
+    <string name="msgs_mirror_prof_invalid_mirror_type">invalid mirror type was specified.</string>
+    <string name="msgs_mirror_prof_was_failed">Sync was failed.</string>
+    <string name="msgs_mirror_prof_no_of_copy" formatted="false">No of copies=%s, No of deletes=%s, No of ignores=%s</string>
+    <string name="msgs_mirror_prof_avg_rate">Average transfer rate</string>
+    <string name="msgs_mirror_prof_success_end">was Successfully ended.</string>
+    <string name="msgs_mirror_prof_was_cancelled">was cancelled.</string>
+    <string name="msgs_mirror_prof_file_copied">File was copied.</string>
+    <string name="msgs_mirror_prof_file_replaced">File was overridden.</string>
+    <string name="msgs_mirror_prof_master_not_found">Master directory was not found.</string>
+    <string name="msgs_mirror_prof_dir_deleted">directory was deleted.</string>
+    <string name="msgs_mirror_prof_dir_create">directory was created.</string>
+    <string name="msgs_mirror_prof_dir_create_failed">directory create failed.</string>
+    <string name="msgs_mirror_prof_file_copying" >Copying file. %s %% complete.</string>
+    <string name="msgs_mirror_prof_file_bypass_media_store_change">The files last modification time was different, media store option was valid but ignores the update for.</string>
+    <string name="msgs_mirror_task_ended">Sync task was ended.</string>
+    <string name="msgs_mirror_task_started">Sync task has started.</string>
+    <string name="msgs_mirror_task_result_stats" formatted="false">No of copies=%s, No of deletes=%s, No of ignores=%s, No of warnings=%s, No of retries=%s, No of errors=%s</string>
+    <string name="msgs_mirror_prof_ms_different_file_last_mod" formatted="false">
+        Last modified time was different between local and MediaStore.  
+        Local file last modified=%s , MediaStore last modified=%s</string>
+    <string name="msgs_mirror_prof_ms_read_error">MediaStore information was not obtained.</string>
+	<string name="msgs_mirror_prof_sync_local_mount_point_unavailable" >Local mount point was unavailable.</string>    
+	<string name="msgs_mirror_confirm_copy_cancel">Copy cancelled by user request.</string>
+	<string name="msgs_mirror_confirm_delete_cancel">Delete cancelled by user request.</string>
+	<string name="msgs_mirror_confirm_copy_confirm">Do you want to overwrite the file?\n%s\n(Please uncheck the &#8220;Confirm&#8221; in the synchronization profile if confirmation is not required)</string>
+	<string name="msgs_mirror_confirm_delete_confirm">Do you want to delete the file?\n%s\n(Please uncheck the &#8220;Confirm&#8221; in the synchronization profile if confirmation is not required)</string>
+	<string name="msgs_mirror_confirm_no_btn">No</string>
+	<string name="msgs_mirror_confirm_noall_btn">No All subsequent</string>
+	<string name="msgs_mirror_confirm_yes_btn">Yes</string>
+	<string name="msgs_mirror_confirm_yesall_btn">Yes All subsequent</string>
+	<string name="msgs_mirror_confirm_task_cancel_btn">Cancel synchronize</string>
+	
+	<string name="msgs_mirror_prof_local_file_set_last_modified_failed">JAVA File#setLastModified() was failed, Please enable the option of sync profile &#8220;Obtain the last modified date and time of the local file as SMBSync&#8221; sync profile option.</string>
+	<string name="msgs_mirror_prof_remote_file_set_last_modified_failed">SmbFileFile#setLastModified() was failed, Please enable the option of sync profile &#8220;Do not reset remote file last modified time by local file last modified time&#8221; sync profile option.</string>
+
+	<string name="msgs_mirror_master_local_mount_point_not_readable">Master mount point can not read.</string>
+	<string name="msgs_mirror_target_local_mount_point_not_writable">Local mount point can not write.</string>
+	
+	<string name="msgs_mirror_physcal_access_to_same_dir" formatted="false">Mount point is different, but access to the same directory physical. Please specify the physical different mount point by target or master profile. Master=%s, target=%s</string>
+	<string name="msgs_mirror_physcal_access_check_create_error">File creation error has occurred when checking the physical access to the file. File path=%s</string>
+	
+	<string name="msgs_mirror_same_directory_ignored">I ignored the directory because the same directory can not be synchronized. Directory=%s</string>
+	
+	<string name="msgs_mirror_remote_name_not_found">Specified remote SMB host name was not found. Hostname=</string>
+	<string name="msgs_mirror_remote_addr_not_connected">Can not be connecting to specified remote SMB host. IP Address=%s</string>
+	<string name="msgs_mirror_remote_addr_not_connected_with_port" formatted="false">Can not be connecting to specified remote SMB host. IP Address=%s, Port=%s</string>
+							
+	<string name="msgs_mirror_remote_server_can_be_connected">Remote server %s is can be connected</string>
+	<string name="msgs_mirror_remote_server_the_connection_impossible">Remote server %s is the connection impossible</string>
+	
+	<string name="msgs_mirror_retry_issued">Sync is retried</string>
+	<string name="msgs_mirror_retry_ignored_by_limit">Abort the retry because exceeded the number of retries</string>
+	
+</resources>

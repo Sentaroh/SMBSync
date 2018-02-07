@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="msgs_aterm_terminate_after">Application terminate after %s second.</string>
+    <string name="msgs_aterm_started">Auto termination process has been started.</string>
+    <string name="msgs_aterm_canceling">Auto termination is canceling.</string>
+    <string name="msgs_aterm_cancelled">Auto termination was cancelled.</string>
+    <string name="msgs_aterm_expired">Auto termination timer has expired.</string>
+    <string name="msgs_aterm_terminated">SMBSync was auto terminated.</string>
+    <string name="msgs_aterm_back_ground_term">Auto terminate immediately. because application is in background.</string>
+</resources>

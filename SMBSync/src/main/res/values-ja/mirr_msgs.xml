@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE string>
+<resources>
+    <string name="msgs_mirror_task_result_ok">同期が正常終了しました。</string>
+    <string name="msgs_mirror_task_result_cancel">同期がキャンセルされました。</string>
+    <string name="msgs_mirror_task_result_error_ignored">同期が終了したが、一部または全ての同期プロファイルでエラーが発生しています。</string>
+    <string name="msgs_mirror_task_result_error_ended">同期はエラーで終了しました。</string>
+    <string name="msgs_mirror_prof_file_deleted">ファイルを削除しました。</string>
+    <string name="msgs_mirror_prof_started">同期を開始しました。</string>
+    <string name="msgs_mirror_prof_invalid_mirror_type">ミラータイプが無効です。</string>
+    <string name="msgs_mirror_prof_was_failed">同期は失敗しました。</string>
+    <string name="msgs_mirror_prof_no_of_copy" formatted="false">コピー=%s, 削除=%s, 無視=%s</string>
+    <string name="msgs_mirror_prof_avg_rate">平均転送率</string>
+    <string name="msgs_mirror_prof_success_end">正常終了しました。</string>
+    <string name="msgs_mirror_prof_was_cancelled">キャンセルされました。</string>
+    <string name="msgs_mirror_prof_file_copied">ファイルをコピーしました。</string>
+    <string name="msgs_mirror_prof_file_replaced">ファイルを上書きコピーしました。</string>
+    <string name="msgs_mirror_prof_master_not_found">マスターのディレクトリーが見つかりません。</string>
+    <string name="msgs_mirror_prof_dir_deleted">ディレクトリーを削除しました。</string>
+    <string name="msgs_mirror_prof_dir_create">ディレクトリーを作成しました。</string>
+    <string name="msgs_mirror_prof_dir_create_failed">ディレクトリー作成に失敗しました。</string>
+    <string name="msgs_mirror_prof_file_copying">ファイル コピー中、 %s%%終了。</string>
+    <string name="msgs_mirror_prof_file_bypass_media_store_change">ファイルの最終更新時間が違っていましたが、メディアストアオプションが有効なため更新を無視しました。</string>
+    <string name="msgs_mirror_task_ended">同期タスクが終了しました。</string>
+    <string name="msgs_mirror_task_started">同期タスクを開始しました。</string>
+    <string name="msgs_mirror_task_result_stats" formatted="false">コピー=%s, 削除=%s, 無視=%s, 警告=%s, リトライ=%s, エラー=%s</string>
+    <string name="msgs_mirror_prof_ms_different_file_last_mod" formatted="false">
+        	メディアストアとファイルで最終更新時間が違っています。 ファイル=%s , メディアストア=%s</string>
+    <string name="msgs_mirror_prof_ms_read_error">メディアストアから情報を取得できませんでした。</string>
+	<string name="msgs_mirror_prof_sync_local_mount_point_unavailable">ローカル マウントポイントが使用できません。</string>    
+    <string name="msgs_mirror_confirm_copy_cancel">コピーがユーザーによりキャンセルされました。</string>
+	<string name="msgs_mirror_confirm_delete_cancel">削除がユーザーによりキャンセルされました。</string>
+	<string name="msgs_mirror_confirm_copy_confirm">ファイルを上書きしますか？\n%s\n(確認が不要な場合は同期プロファイルで「確認」のチェックを外してください)</string>
+	<string name="msgs_mirror_confirm_delete_confirm">ファイルを削除しますか？\n%s\n(確認が不要な場合は同期プロファイルで「確認」のチェックを外してください)</string>
+	<string name="msgs_mirror_confirm_no_btn">取消</string>
+	<string name="msgs_mirror_confirm_noall_btn">以後全て取消</string>
+	<string name="msgs_mirror_confirm_yes_btn">了解</string>
+	<string name="msgs_mirror_confirm_yesall_btn">以後全て了解</string>
+	<string name="msgs_mirror_confirm_task_cancel_btn">同期キャンセル</string>
+
+	<string name="msgs_mirror_prof_local_file_set_last_modified_failed">Java File#setLastModified()が失敗しました。同期プロファイルの「強制的にSMBSyncで最終更新日時を取得」有効にしてください。</string>
+	
+	<string name="msgs_mirror_prof_remote_file_set_last_modified_failed">SmbFile#setLastModified()が失敗しました。同期プロファイルの「リモートファイルの最終更新時刻をローカルファイルに合わせない」を有効にしてください。</string>
+	
+	<string name="msgs_mirror_master_local_mount_point_not_readable">マスターのマウントポイントから読込できません。</string>
+	<string name="msgs_mirror_target_local_mount_point_not_writable">ターゲットのマウントポイントに書き込みできません。</string>
+	
+	<string name="msgs_mirror_physcal_access_to_same_dir" formatted="false">マウントポイントは違いますが物理的に同じディレクトリにアクセスしています。マスターまたはターゲットプロファイルで物理的に違うマウントポイントを指定してください。マスター=%s, ターゲット=%s</string>
+	<string name="msgs_mirror_physcal_access_check_create_error">ファイルへの物理アクセスチェックでファイル作成エラーが発生しました。ファイルパス=%s</string>
+	
+	<string name="msgs_mirror_same_directory_ignored">マスターとターゲットで同じディレクトリを同期できないため、ディレクトリを無視しました。ディレクトリ=%s</string>
+	
+	<string name="msgs_mirror_remote_name_not_found">リモートプロファイルで指定されているSMBホスト名が発見できませんでした。 ホスト名=</string>
+	<string name="msgs_mirror_remote_addr_not_connected">リモートプロファイルで指定されているSMBホストに接続できませんでした。 IPアドレス=%s</string>
+	<string name="msgs_mirror_remote_addr_not_connected_with_port" formatted="false">リモートプロファイルで指定されているSMBホストに接続できませんでした。 IPアドレス=%s, ポート=%s</string>
+	
+	<string name="msgs_mirror_remote_server_can_be_connected">リモートサーバー%sに接続できます</string>
+	<string name="msgs_mirror_remote_server_the_connection_impossible">リモートサーバー%sに接続できません</string>
+	
+	<string name="msgs_mirror_retry_issued">同期をリトライします</string>
+	<string name="msgs_mirror_retry_ignored_by_limit">同期リトライ回数を超えましたので、リトライを中止します</string>
+		
+</resources>

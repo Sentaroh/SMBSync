@@ -1,0 +1,2706 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<title>SMBSync Description</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"ＭＳ ゴシック";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"\@ＭＳ ゴシック";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:"\@ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+h1
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:21.25pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-21.25pt;
+	page-break-before:always;
+	page-break-after:avoid;
+	word-break:break-all;
+	font-size:16.0pt;
+	font-family:"Arial","sans-serif";
+	font-weight:normal;
+	text-decoration:underline;}
+h2
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Arial","sans-serif";
+	font-weight:normal;}
+h3
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Arial","sans-serif";
+	font-weight:normal;}
+h4
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+h5
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Arial","sans-serif";
+	font-weight:normal;}
+h6
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:10.5pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:21.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:18.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoList2, li.MsoList2, div.MsoList2
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:5.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.0pt;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoListBullet2, li.MsoListBullet2, div.MsoListBullet2
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:39.25pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:42.55pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoBodyTextFirstIndent, li.MsoBodyTextFirstIndent, div.MsoBodyTextFirstIndent
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:10.5pt;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoBodyTextFirstIndent2, li.MsoBodyTextFirstIndent2, div.MsoBodyTextFirstIndent2
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:42.55pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:10.5pt;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:9.0pt;
+	font-family:"Arial","sans-serif";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:42.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.148mm, li.148mm, div.148mm
+	{mso-style-name:"スタイル 左 \:  14\.8 mm";
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:42.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.2Century, li.2Century, div.2Century
+	{mso-style-name:"スタイル 見出し 2 + \(英数字\) Century \(日\) ＭＳ 明朝";
+	mso-style-link:"スタイル 見出し 2 + \(英数字\) Century \(日\) ＭＳ 明朝 \(文字\)";
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Century","serif";}
+span.2Century0
+	{mso-style-name:"スタイル 見出し 2 + \(英数字\) Century \(日\) ＭＳ 明朝 \(文字\)";
+	mso-style-link:"スタイル 見出し 2 + \(英数字\) Century \(日\) ＭＳ 明朝";
+	font-family:"Century","serif";}
+p.318pt, li.318pt, div.318pt
+	{mso-style-name:"スタイル 見出し 3 + 段落前 \:  18 pt";
+	margin-top:18.0pt;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Arial","sans-serif";
+	text-decoration:underline;}
+p.21, li.21, div.21
+	{mso-style-name:"スタイル 見出し 2 + 段落前 \:  1 行";
+	margin-top:18.0pt;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Arial","sans-serif";
+	text-decoration:underline;}
+span.hps
+	{mso-style-name:hps;}
+span.shorttext
+	{mso-style-name:short_text;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:41.2pt 30.0mm 49.65pt 30.0mm;
+	layout-grid:18.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0mm;}
+ul
+	{margin-bottom:0mm;}
+-->
+</style>
+
+</head>
+
+<body bgcolor=white lang=JA link=blue vlink=purple style='text-justify-trim:
+punctuation'>
+
+<div class=WordSection1 style='layout-grid:18.0pt'>
+
+<h1 style='margin-top:18.0pt;margin-right:0mm;margin-bottom:0mm;margin-left:
+0mm;margin-bottom:.0001pt;text-indent:0mm;word-break:normal'><a
+name="_Toc386446736"><span lang=EN-US>Change history</span></a></h1>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2016-11-29 Ver2.51</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Resolved bug that failed with loading profile
+with password</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2016-03-17 Ver2.50</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Supports external SDCARD (/storage/xxxx-xxxx) in
+Android6.0</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Resolve the bug to be killed in the profile of
+the incorporation</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2016-02-23 Ver2.49</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Resolve the bug to be killed in the external
+SDCARD (/ mnt / extSdCard)</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2016-01-26 Ver2.48</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that can not search the remote
+server in Android6.0</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-12-23 Ver2.47</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Some directory (/mnt/extSdCard) to resolve a bug
+that can not be recognized as an external SDCARD</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>To solve the local profile when adding mount
+point changes are not reflected in the bug</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-11-06 Ver2.45</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>It was resolved to crash the bug when you select
+the directories that exist in SDCARD in SDCARD selection.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-11-03 Ver2.44</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that can not import a profile.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-11-02 Ver2.43</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>As error handling in Windows server 2008, to add
+the option to limit the buffer at the time of remote file write to 16KB in
+synchronization profile.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-10-20 Ver2.42</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that synchronization does not start
+at the scheduled time.(Android 6.0)</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-09-09 Ver2.41</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that external SD card can not be
+selected.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-08-11 Ver2.40</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Performance improvement when the number of
+writing files to the external SD card is large.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that can not be canceled by the
+selection dialog of external SDCARD.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-06-23 Ver2.39</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Correct build error</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-06-23 Ver2.38</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Corresponding to the symptoms to kill when
+start-up in some models</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-06-22 Ver2.37</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>We had to perform the confirmed by the cancel
+sync.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>It made it possible to write to the external
+SDCARD in Android5.0 later. (/sdcard1/Sync and /storage/sdcard1/test, etc.)</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-05-17 Ver2.36</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>solve the bug to kill a directory editing screen
+display.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-04-26 Ver2.35</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug where screen theme is not reflected
+immediately in the Android 2.1-2.3</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-04-22 Ver2.34</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that  the display is disturbed in
+add and edit synchronization profile</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-04-22 Ver2.33</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed rarely forced to terminate bug in the
+message display</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-04-18 Ver2.32</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Change the check mark in the light theme</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-04-01 Ver2.31</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that screen turn on when key guard
+is disabled.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-03-15 Ver2.30</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Adjustment of text color</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-03-10 Ver2.29 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Adjustment of text color in the light theme </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that rarely killed during
+synchronization end</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-03-05 Ver2.28 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Tab switching by swipe</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Add light screen theme</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-02-06 Ver2.27 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that can not initialize and reset of
+the managing the last update time of the local file.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Add the addition and deletion of mount point</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-01-27 Ver2.26 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>(Android 4.4)Fixed a bug that notification does
+not display during synchronization in some model</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2015-01-24 Ver2.25 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>(Android 4.0/4.1/4.2)Fixed a bug that can start
+the synchronization when WiFi is not connected to the access point</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-12-16 Ver2.24 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug, synchronization may not be started
+when it is Schedule started when screen lock</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-12-11 Ver2.23 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Prevent duplicate starts menu and profile tab
+button</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug, that a hidden Directory / File can
+not mirror If you do not sync a hidden directory/file.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>To be able to switch the tab even during
+synchronization</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>The last sync date and time and the result I was
+to be displayed on a sync profile</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-11-14 Ver2.22 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bugs that may be crash at start sync or
+edit the local profile</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-11-12 Ver2.21 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Add the application specific directory to the
+mount point</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Change the appearance of the tab to the Action
+Bar style</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-10-30 Ver2.20 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that can not wake from Sleep state
+in the schedule start</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that can not be a copy of the sync
+profile</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-10-20 Ver2.19 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that mirror synchronization method
+becomes a copy in the Local-to-Local</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that may be forced termination start
+request from another application to be multiple requests in a short time</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Added an option to move to the top of the screen
+sync button (Settings -&gt; UI)</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-10-17 Ver2.18 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Improved UI</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-10-08 Ver2.17 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bugs that may be crash rarely at startup</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-10-07 Ver2.16 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bugs that may be crash during the
+rotation of the terminal</span><span style='font-family:"ＭＳ 明朝","serif"'>（</span><span
+lang=EN-US>Android 2.3</span><span style='font-family:"ＭＳ 明朝","serif"'>）</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bugs that may be killed when you specify
+a long File/Dir filter</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-10-03 Ver2.15 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that show the bottom of the profile
+tab icon is wrong after sync end.(Android 2.3)</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-10-03 Ver2.14 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that can not press the OK button
+when you the import profile</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Improved UI for context menu</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-09-24 Ver2.13 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class=hps><span lang=EN-US>Fixed</span></span><span
+lang=EN-US> <span class=hps>a bug, that</span> <span class=hps>can not</span> <span
+class=hps>import the</span> <span class=hps>profile that is</span> <span
+class=hps>password</span> <span class=hps>protected</span></span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span class=hps><span lang=EN-US style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span class=hps><span lang=EN-US>Improve the UI</span></span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Always show synchronization in the context menu of the Profiles
+tab(Displays in gray If you can not sync, was dimmed)</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Switch the selection and non-selection when you tap the check box at
+the right end in the History tab and Profiles tab</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Switch the selection and non-selection when you tap the line when
+the item is selected</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>The unselect all item by pressing the back button when the item is
+selected</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>The display multiple selection context menu when you press and hold
+the point that has been selected when multiple items are selected</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Display the single selection context menu is selected on the section
+you were pressed length multiple selection is canceled when you press and hold
+the points that have not been selected when more than one item is selected</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>When you tap an item when the item is not selected</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:84.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image004.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Move to edit screen in Profiles tab</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:84.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image004.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Move to log display screen in history tab</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class=hps><span lang=EN-US>Fixed a bug, that can not media
+scan the file copied from local to local</span></span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-09-18 Ver2.12 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Add synchronization options to sync profile</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Retry error during synchronization.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left'><span
+lang=EN-US>Three times a retry after 30 seconds when an error occurs</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>To sync empty directory</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>To sync hidden directory</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>To sync hidden file</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>To sync subdirectory</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-09-13 Ver2.11 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Bug fixed, to crash rarely when the application
+terminates.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-09-11 Ver2.10 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that may not be copied if you
+specify a directory filter when you have not set the directory in the Local or Remote
+profile.</span><span lang=EN-US> </span><span lang=EN-US>To force enable the
+&quot;Confirm&quot; of the existing sync profile for safety when first start
+application after upgrade.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Separating the schedule settings and system
+settings in the import profile.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug, cannot be imported correct
+schedule.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-09-09 Ver2.09 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed bug the file is not copied in sync to
+Local (only Ver2.08)</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-09-08 Ver2.08 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Show the error message when create failed to
+local directory.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-09-07 Ver2.07 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>modified to ignore the .android_secure folder</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-09-06 Ver2.06 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that ends up in the loop schedule
+starting day of the week specified</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-09-05 Ver2.05 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Added Wi-Fi ON and OFF to scheduling function.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Remove SMB default option.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>The options added and changed its name to screen
+off from the screen lock</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Allow the screen off during sync</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Disallow the screen off during sync(</span><span class=hps><span
+lang=EN-US>Equivalent to</span></span><span class=shorttext><span lang=EN-US> </span></span><span
+class=hps><span lang=EN-US>Ver2.04</span></span><span lang=EN-US>)</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:60.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image003.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Disallow the screen off if you start the sync when the screen is on</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-08-29 Ver2.04 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed the bug to crash when application restart
+by external application or schedule function after application forced
+termination in background.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-08-28 Ver2.03 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Optimization of the size of the button automatic
+start / stop</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>If the scheduling is enabled, show the next sync
+information(Scheduled date,  time and profile) to the profile tab.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-08-20 Ver2.02 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Resolved a bug that may occur when you forced
+termination in the search for a remote server</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-07-16 Ver2.01 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that can not be auto sync start when
+you enable auto sync start-up</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-07-12 Ver2.00 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Adding a schedule synchronization.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Add startup parameter(StartupParms) for external
+application.(Tasker, AutoMagic etc)</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-06-25 Ver1.97 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>To improve exit remote profile screen</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that sometimes duplicate occurs in
+the incorporation of profile</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-06-20 Ver1.96 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>To start the wizard that there is no profile</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-06-18 Ver1.95 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that synchronization of
+Local-To-Local is terminated with an error</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-06-18 Ver1.94 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that crash during logon to remote
+server(Create sync wizard)</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-06-17 Ver1.93 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that the format error in network connection
+error</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-06-05 Ver1.92 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>To reduce time for remote network scan</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Add a button to replace the target and master
+synchronization profile</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Check that it is not to copy the same file when
+Local-to-Local</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Can be specified by the port number of the remote
+SMB host</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-05-31 Ver1.91 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Improved UI for remote network scan</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that can not be synchronized with
+the SMB V1</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that crash in the synchronization
+profile add and edit</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-05-29 Ver1.89-90 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Show an alert to restart the application if the
+SMB parameter is changed</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-05-27 Ver1.88 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that can not be used by the host IP
+address in the configuration of the remote.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that can not read password-protected
+files in the import profile.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-05-24 Ver1.87 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Added an option to the original file is saved
+data transfer until you have completed the file copy to the local.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that some configuration parameters
+are not saved in a Save Profile</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Change to &quot;SMBSync.work.tmp&quot; the name
+of the temporary file to be used when you want to copy</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Added &quot;Do not use the last modified time to
+determine the difference of remote file&quot; in the synchronization profile (Some
+NAS, Corresponding to the problem last modification date and time change of
+remote file is an access violation).</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-05-20 Ver1.86</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Added an option to the original file is saved
+data transfer until you have completed the file copy to the remote.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-05-18 Ver1.85 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>To display the stack trace in the error message.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-05-18 Ver1.84 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Prefer Wi-Fi in the case of multiple network is
+present in the network scan</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that in some cases the handling of
+IP address and Host name is incorrect in the remote profile editing</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that &quot;lost + found&quot; in the
+filter does not work.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that crashes when you try to add a
+synchronization profile If the profile does not exist.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-05-13 Ver1.83 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Application to prevent it from being restarted
+on language change(EN-&gt; JA or JA-&gt; EN). However, messages and titles are
+viewing is not reflected until you restart the application.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>(Bug fixed)When I went to edit from the target
+profile edit screen synchronization profiles, target profile results in an
+error in the case of a local.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-04-26 Ver1.82 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug where the shared name list does not
+appear in the remote profile add/edit. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-04-25 Ver1.81 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Add sample and parameters when you want to start
+from other applications to help</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Change Notification icon during
+synchronization(Android 4.x) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Add password protection for the profile to be
+written to external media </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Change so as not to perform end confirmation.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Get Wi-Fi lock during synchronization (Settings
+-&gt; Sync) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-03-02 Ver1.79 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that determination method of the
+last update date is in error </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-02-10 Ver1.78 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Message is displayed when returning from the
+background is set to be at the bottom. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2014-01-06 Ver1.77 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Add processed file selection in Wizard. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2013-12-24 Ver1.76 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Added an option that does not screen off during
+synchronization. (Settings-&gt;Sync-&gt;Screen state during synchronization) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2013-12-13 Ver1.75 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug where some they may have to copy the
+files that do not need to be copied in the case of Local-to-Remote. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2013-12-01 Ver1.74 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:125.85pt;text-align:
+left;text-indent:-104.85pt'><span lang=EN-US style='font-family:Symbol'><img
+width=11 height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>To be able to select an item in the import
+profile. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that crash when you try to start the
+settings on Android 2.3.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2013-11-27 Ver1.73 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Add synchronization to the local from the local.
+</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2013-11-04 Ver1.72 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Was an error when a valid profile is not in the
+file to include in the acquisition profile. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Corresponding to not perform synchronization
+when not connected to WIFI AP in Android4.1 later. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that killed Android4.4 KitKat. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2013-09-16 Ver1.71 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>(Such as Nexus10)optimize the display on a large
+screen tablet. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2013-08-03 Ver1.70 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fix serializable error</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that may JCIFS option can not be set
+</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2013-07-29 Ver1.69 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Add profile creation wizard </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Detection of the mount point mixed with a valid
+local profile </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2013-07-05 Ver1.68 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Change to CANCEL/OK sequence of OK/CANCEL dialog
+in Android4.0 or more.(matched to platform) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that can not be entered
+&quot;.&quot; to the IP address input </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2013-06-08 Ver1.59-1.67 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>To be able to specify the hostname on the remote
+host </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Bug fixes the synchronization history will no
+longer be updated </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Bug fixes that some files are recopied </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>To the tablet corresponding setting screen.
+(Android 3.0 or higher) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Bug fixes that there is the case that is to kill
+at startup </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Bug fixes that can not be log display the
+options menu </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Added log management function </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2013-05-07 Ver1.58 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>-Was to display the log from the Notification
+Icon after automatic termination. However, only if the file exists logging is
+enabled. (Selection screen of text file display application is displayed.) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>-added the option to stop the automatic
+scrolling to the message tab. (However, messages that exceed the 5000 line will
+be deleted) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2013-02-15 Ver1.56 </span></p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US>To enable to specify options in the Extra data when you try to start
+other applications. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US></span><span lang=EN-US>EKEY=AutoStart boolean
+value=false/true</span><span lang=EN-US>iEnable/Disable AutoStart) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US></span><span lang=EN-US>EKEY=AutoTerm boolean
+value=false/true</span><span lang=EN-US>iEnable/Disable AutoTerm) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US>Valid when the &quot;&quot;AutoStart=true&quot; </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US></span><span lang=EN-US>EKEY=AutoStart String[]
+value=Sync-Profile-Name </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US>If not specified, or if the profile is not selected, the
+synchronization profiles to synchronize all valid. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-12-25 Ver1.55 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that the progress dialog does not
+appear when synchronization is started in the background, and then transitions
+to the foreground. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-12-24 Ver1.54 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that Notification messages are not
+displayed when you exit automatically. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-12-18 Ver1.53 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that start synchronization from the
+menu rarely double. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-11-18 Ver1.51-1.52 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Changed to &quot;MONOSPACE&quot; the font of the
+message list. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-11-17 Ver1.50 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>To support</span><span lang=EN-US>@Android 4.2 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-11-06 Ver1.49 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Added mount point list have permission to READ
+/Removable/SD, /Removable/MicroSD, /Removable/USBdisk1/Drive1,
+/Removable/USBdisk2/Drive1 (I was unconfirmed because there is no Asus TF
+series machine.) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-10-19 Ver1.48 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>To prevent files from being copied when you
+synchronize multiple local synchronization profiles the same profile, change
+every synchronization profiles for each mount point from the list in order to
+maintain the last update time. (For a model in last-modified date of a file on
+the internal SD can not be set) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Improve UI. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-10-11 Ver1.46-1.47 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Was to perform an integrity check of the list
+held last update time. (For a model in last-modified date of a file on the
+internal SD can not be set) If integrity has been impaired displays the
+maintenance menu, please do the initialization or reset. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-10-09 Ver1.45 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Corresponding to the model was last modified
+date can not be set for a file on the internal SD, such as ASUS TF101 and
+Google Nexusu7. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-10-05 Ver1.44 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that does not appear in the
+confirmation dialog before overwriting the remote file. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-10-04 Ver1.43 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Made it possible to display a confirmation
+dialog before deleting/overwriting the file. If you want to display a
+confirmation dialog, please check the &quot;Confirm&quot; in the
+synchronization profile. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that can not be selected in the
+dialog to select the file or directory. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-09-28 Ver1.42 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed the problem that the cancellation is not
+listed in the overwrite confirmation dialog when saving profiles. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-09-28 Ver1.41 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that the application can not be terminated
+when you transition to the background</span><span lang=EN-US>@synchronization
+is finish</span><span lang=EN-US>ed. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-09-20 Ver1.40 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Android 4.1(JB)Fixed a bug with crash when first
+installed. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-09-18 Ver1.39 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Improved UI Android 3.0 or higher </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-09-17 Ver1.38 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that may menu key is not available
+in Android4.1(JB) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-08-10 Ver1.37 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>(Android4.0)Fixed a bug &quot;when not connected
+to Wifi but does not run the sync&quot; will run as a synchronous enable. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>To hide the Options menu item can not be
+executed, depending on your environment. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-07-17 Ver1.36 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug synchronization is initiated when
+you return from the settings screen to enable the automatic synchronization
+option in the Settings screen. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>If Sync task auto start option are enabled , to
+force the log is append. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-07-10 Ver1.34 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that may be terminated at the end of
+synchronization uncommonly. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-07-03 Ver1.33 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed a bug that would change the orientation of
+the screen when the application terminates. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Added option to set the SMB performance. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-06-16 Ver1.31, 11.32 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Has to be able to use the local profile, such as
+a /mnt/extsd. (However, the only available mount point of authority over READ.)
+</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-06-08 Ver1.30 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Android 2.3(GB): Corresponds to the Symptom that
+contains the last update time in milliseconds when you register a new directory
+to store media. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-06-04 Ver1.27 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Add debug message. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-06-03 Ver1.26 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Were to optimize the size of large screen
+display characters such as a tablet. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Solve a bug that rarely crashes while processing
+MediaStore.Files. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-05-29 Ver1.25 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Corresponding to the MediaStore Files. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-05-22 Ver1.24 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>To restore a message after the forced restart
+the application. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Removed from the media may also be registered to
+delete the local file store. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-05-08 Ver1.23 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>UI improvement of export/import of profiles </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Add the sample profile during the first boot
+after installation </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Specify a directory that enables multiple levels
+of filters in the directory (such as abc/a1) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>SAMBA conducted to determine the host when the
+IP scan(Remote profile) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Improve the display of the notification message </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-04-12 Ver1.22 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Improve the performance of If you have a large
+number of sub-directory.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>(Bug fix)File is deleted after copying the files
+to a directory of local hidden, when you restart the terminal. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-04-08 Ver1.21 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed bug(Can not use /, when add/edit remote
+profile directory). </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-04-08 Ver1.20 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Directory Selection UI improvement. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-04-06 Ver1.19 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Resolve a bug with user and password can not log
+in to if you do not need on the NAS. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-04-04 Ver1.18 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Solve a bug that in the opposite direction when
+prompted for the tablet. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-04-01 Ver1.17 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Made it possible to use special characters
+&quot;[&quot;, &quot;]&quot;. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-03-29 Ver1.16 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Change SMB login method(url -&gt;
+NtlmPasswordAuthentication). </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Was an invalid character &quot;[&quot;,
+&quot;]&quot;. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-03-29 Ver1.15 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Delete debug code. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-03-29 Ver1.14 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Fixed bug: Can not log on until you restart when
+you enter the user ID / password correct the wrong user ID / password. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-03-28 Ver1.13 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Screen orientation bug fix(Xlarge screen) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-03-27 Ver1.12 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Improve UI </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Android4.0 Fixed a bug is abort. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-03-22 Ver1.11 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Add IP Address scan for Add/Edit remote profile </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-03-19 Ver1.10 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Bug fix(Correct auto termination message) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-03-18 Ver1.09 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Bug fix(Incorrect restore for some settings
+parameters) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-03-18 Ver1.08 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Bug fix(Add/Edit Sync profile) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Change default IP Address(Blank to current IP
+Address) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-02-27 Ver1.07 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Bug fixes after the restart when killed. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-02-23 Ver1.05 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Added warning message when you ignore the last
+modification time for the media stores library files </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Add a condition to determine the difference in
+the configuration file (Please try the &quot;time zone&quot; and &quot;Last
+Modified&quot; if the file\'s last modification time of the media file store
+folder by restarting the terminal is to be copied each time overwritten.) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Add a log file in the menu display </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Was to be able to specify the time of last
+update. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>From 2 to 3 seconds to change the time
+difference between the default time to consider the accuracy of FAT. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Written to the debug information to the log file
+only. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-02-18 Ver1.04 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Change UI </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Add Directory filter </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>About the file (such as Music folder or DCIM),
+to determine whether or not to include conditions is difference file last
+modification time file media store. (Avoid having to copy the media file store
+folder in the total amount of the restart of the terminal.) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-02-13 Ver1.03 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Bug fixed(Add remote profile) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-02-13 Ver1.02 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Apply JCIFS option when retrieve remote file
+list. Allow no user name for add remote profile. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-02-09 Ver1.01 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Bug fixed(Add profile) </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>2012-02-08 Ver1.00 </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Change_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Initial release</span></p>
+
+</div>
+
+</body>
+
+</html>

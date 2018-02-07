@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="msgs_astart_after">Application start after %s second.</string>
+    <string name="msgs_astart_canceling">Auto sync is canceling.</string>
+    <string name="msgs_astart_cancelled">Auto sync was cancelled.</string>
+    <string name="msgs_astart_expired_del">Auto sync timer has expired.</string>
+    <string name="msgs_astart_started">Auto sync start-up has been started.</string>
+    
+    <string name="msgs_astart_abort_external_storage_not_mounted">Auto sync was aborted due to the storage is not mounted.</string>
+    <string name="msgs_astart_abort_wifi_option_not_satisfied">Auto sync was aborted due to the condition of the wireless LAN option is not satisfied.</string>
+</resources>

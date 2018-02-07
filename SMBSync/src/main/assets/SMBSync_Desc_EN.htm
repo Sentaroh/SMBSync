@@ -1,0 +1,3259 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 12 (filtered)">
+<title>SMBSync Description</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"ＭＳ ゴシック";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"MS UI Gothic";
+	panose-1:2 11 6 0 7 2 5 8 2 4;}
+@font-face
+	{font-family:"\@ＭＳ 明朝";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"\@ＭＳ ゴシック";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:"\@MS UI Gothic";
+	panose-1:2 11 6 0 7 2 5 8 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+h1
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:21.25pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-21.25pt;
+	page-break-before:always;
+	page-break-after:avoid;
+	word-break:break-all;
+	font-size:16.0pt;
+	font-family:"Arial","sans-serif";
+	font-weight:normal;
+	text-decoration:underline;}
+h2
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Arial","sans-serif";
+	font-weight:normal;}
+h3
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Arial","sans-serif";
+	font-weight:normal;}
+h4
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+h5
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Arial","sans-serif";
+	font-weight:normal;}
+h6
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:10.5pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:21.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	layout-grid-mode:char;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:18.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoList2, li.MsoList2, div.MsoList2
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:5.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-10.0pt;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoListBullet2, li.MsoListBullet2, div.MsoListBullet2
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:39.25pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-18.0pt;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:42.55pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoBodyTextFirstIndent, li.MsoBodyTextFirstIndent, div.MsoBodyTextFirstIndent
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:10.5pt;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.MsoBodyTextFirstIndent2, li.MsoBodyTextFirstIndent2, div.MsoBodyTextFirstIndent2
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:42.55pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:10.5pt;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{mso-style-link:"見出しマップ \(文字\)";
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:9.0pt;
+	font-family:"MS UI Gothic";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:9.0pt;
+	font-family:"Arial","sans-serif";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:42.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.148mm, li.148mm, div.148mm
+	{mso-style-name:"スタイル 左 \:  14\.8 mm";
+	margin-top:0mm;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:42.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"Century","serif";}
+p.2Century, li.2Century, div.2Century
+	{mso-style-name:"スタイル 見出し 2 + \(英数字\) Century \(日\) ＭＳ 明朝";
+	mso-style-link:"スタイル 見出し 2 + \(英数字\) Century \(日\) ＭＳ 明朝 \(文字\)";
+	margin:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Century","serif";}
+span.2Century0
+	{mso-style-name:"スタイル 見出し 2 + \(英数字\) Century \(日\) ＭＳ 明朝 \(文字\)";
+	mso-style-link:"スタイル 見出し 2 + \(英数字\) Century \(日\) ＭＳ 明朝";
+	font-family:"Century","serif";}
+p.318pt, li.318pt, div.318pt
+	{mso-style-name:"スタイル 見出し 3 + 段落前 \:  18 pt";
+	margin-top:18.0pt;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Arial","sans-serif";
+	text-decoration:underline;}
+p.21, li.21, div.21
+	{mso-style-name:"スタイル 見出し 2 + 段落前 \:  1 行";
+	margin-top:18.0pt;
+	margin-right:0mm;
+	margin-bottom:0mm;
+	margin-left:0mm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	page-break-after:avoid;
+	font-size:10.5pt;
+	font-family:"Arial","sans-serif";
+	text-decoration:underline;}
+span.a
+	{mso-style-name:"見出しマップ \(文字\)";
+	mso-style-link:見出しマップ;
+	font-family:"MS UI Gothic";}
+.MsoChpDefault
+	{font-size:10.0pt;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:40.6pt 30.0mm 49.65pt 30.0mm;
+	layout-grid:18.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0mm;}
+ul
+	{margin-bottom:0mm;}
+-->
+</style>
+
+</head>
+
+<body lang=JA link=blue vlink=purple style='text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:18.0pt'>
+
+<p class=MsoToc1><a name="_top"></a><span
+lang=EN-US><a name="_1.機能"></a><span class=MsoHyperlink><a href="#_Toc451932323">1.<span
+style='color:windowtext;text-decoration:none'>    </span>Function<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>3</span></a></span></span></p>
+
+<p class=MsoToc1><span lang=EN-US><a href="#_Toc451932324">2.<span
+style='color:windowtext;text-decoration:none'>    </span>How to use<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>4</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc451932325">2.1 How to create a
+profile<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>6</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc451932326">2.2 Create profile
+by type<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>6</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc451932327">2.2.1 Create Local
+Profile<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>6</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc451932328">2.2.2 Create Remote
+Profile<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>7</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc451932329">2.2.3 Create synch
+profile<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>9</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc451932330">2.3 Profile creation
+by wizard<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>11</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc451932331">2.3.1 General<span
+style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>11</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc451932332">2.3.2 Master<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>12</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc451932333">2.3.3 Target<span
+style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>13</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc451932334">2.3.4 Sync<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>15</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc451932335">2.4 File selection
+filter<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>17</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc451932336">2.5 Directory
+selection filter<span style='color:windowtext;display:none;text-decoration:
+none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>19</span></a></span></p>
+
+<p class=MsoToc1><span lang=EN-US><a href="#_Toc451932337">3.<span
+style='color:windowtext;text-decoration:none'>    </span>Tab Description<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>23</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc451932338">3.1 Profile tab<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>23</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc451932339">3.1.1 Basic mode<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>23</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc451932340">3.1.2 Selection mode<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>24</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc451932341">3.2 Message tab<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>25</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc451932342">3.3 History tab<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>26</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc451932343">3.3.1 Basic mode<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>26</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc451932344">3.3.2 Selection mode<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>27</span></a></span></p>
+
+<p class=MsoToc1><span lang=EN-US><a href="#_Toc451932345">4.<span
+style='color:windowtext;text-decoration:none'>    </span>Description of the
+Menu<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>28</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc451932346">4.1 Sync<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>28</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc451932347">4.2 Schedule<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>28</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc451932348">4.2.1 Edit sync list<span
+style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>29</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc451932349">4.3 Show log<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>30</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc451932350">4.4 Export profile<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>30</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc451932351">4.5 Import profile<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>30</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc451932352">4.6 Manage log file<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>30</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc451932353">4.7 About SMBSync<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>30</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc451932354">4.8 Settings<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>30</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc451932355">4.8.1
+Synchronization<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>31</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc451932356">4.8.2 User interface<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>32</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc451932357">4.8.3 Log<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>33</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc451932358">4.8.4 MediaScanner<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>34</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc451932359">4.8.5 Difference
+determination of files<span style='color:windowtext;display:none;text-decoration:
+none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>35</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc451932360">4.8.6 SMB Settings<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>36</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc451932361">4.8.7 Miscellaneous<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>37</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc451932362">4.9Manage mount
+point<span style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>37</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc451932363">4.10 File last
+modified time<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>37</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc451932364">4.11 Kill the
+application<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>37</span></a></span></p>
+
+<p class=MsoToc1><span lang=EN-US><a href="#_Toc451932365">5.<span
+style='color:windowtext;text-decoration:none'>    </span>Starting from other
+applications<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>38</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc451932366">5.1 Startup
+parameters<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>38</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc451932367">5.1.1 AutoStart<span
+style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>38</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc451932368">5.1.2 AutoTerm<span
+style='color:windowtext;display:none;text-decoration:none'>.. </span><span
+style='color:windowtext;display:none;text-decoration:none'>38</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc451932369">5.1.3 Background<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>38</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc451932370">5.1.4 SyncProfile<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>38</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc451932371">5.1.5 StartupParms<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>39</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc451932372">5.1.6 Example for
+Tasker<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>40</span></a></span></p>
+
+<p class=MsoToc3><span lang=EN-US><a href="#_Toc451932373">5.1.7 Example for
+AutoMagic<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>41</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc451932374">5.2 Sample code<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>42</span></a></span></p>
+
+<p class=MsoToc1><span lang=EN-US><a href="#_Toc451932375">6.<span
+style='color:windowtext;text-decoration:none'>    </span>About sample profile<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>43</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc451932376">6.1 Network<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>43</span></a></span></p>
+
+<p class=MsoToc2><span lang=EN-US><a href="#_Toc451932377">6.2 Configuring remote<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>43</span></a></span></p>
+
+<p class=MsoToc1><span lang=EN-US><a href="#_Toc451932378">7.<span
+style='color:windowtext;text-decoration:none'>    </span>Library<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>44</span></a></span></p>
+
+<h1 align=left style='margin-top:18.0pt;text-align:left;word-break:normal'><span
+lang=EN-US style='text-decoration:none'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US><a name="_Toc451932323">Function</a></span></h1>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>To
+synchronize files between a PC/NAS and Android. It can be synchronized in one
+direction to the target from the master. Three Synchronization methods are
+available.</span><span style='font-family:"ＭＳ 明朝","serif"'>（</span><span
+lang=EN-US>mirror,  move,  copies</span><span style='font-family:"ＭＳ 明朝","serif"'>）</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>It is
+also possible synchronization of the SD Card and internal storage.*1</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>Can
+start the synchronization by external application (Tasker, AutoMagic etc) or
+SMBSync schedule. Please refer to the <a href="#_Starting_from_other">Starting
+from other applications</a> for interface with an external application.</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Mirror</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>If master and target files
+are different, to copied files from master to the target directory. To delete
+target files and directories if does not exist in the master.</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Move</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>If master and target files
+are different, to copied files from master to the target directory. To delete
+the master directories and files copied to the target.</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>However, the master and
+target same name, same file modification time and file size, to delete the file
+on the master without copying files.</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Copy</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>If master and target files
+are different, to copied files from master to the target directory. However,
+the same file modification time and file size with the same name does not copy
+the master and target.</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>If the
+determination is satisfied and the differential file one of the following three
+conditions.</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>File does not exist</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Different file sizes</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Different over when last updated 3 seconds</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:0mm;text-align:left;
+text-indent:0mm'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:0mm;text-align:left;
+text-indent:0mm'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:0mm;text-align:left;
+text-indent:0mm'><span lang=EN-US>*1: Android application-specific directory
+only can be synchronized in 4.4. Android 4.4 can be synchronized with an
+earlier and 5.0 All In the following directory.</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:0mm;text-align:left;
+text-indent:0mm'><span lang=EN-US><a href="#_top">Return to Index</a> </span></p>
+
+<h1 align=left style='margin-top:18.0pt;text-align:left;word-break:normal'><a
+name="_Toc451932324"><span lang=EN-US style='text-decoration:none'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>How to use</span></a></h1>
+
+<p class=MsoBodyText align=left style='text-align:left'><b><u><span lang=EN-US
+style='font-size:11.0pt;color:red'>If you have the wrong setting, move or
+mirror will delete the file, and copy will override the existing file. Please
+make sure to use a test folder for test run.</span></u></b></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>In
+order to synchronize the three profiles are required. </span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Local profile is specifies the local profile
+directory of Android. </span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Remote profiles is specifies the directory
+server, such as the SMB NAS/PC.</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Synchronization profile is defined a
+Remote/Local profile to the master/target.</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>Synchronization
+is performed for each synchronization profile. Order to synchronize is the
+order in which they appear in the Profiles tab. (This is in ascending order of
+the name of the synchronization profile)</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<span lang=EN-US style='font-size:10.5pt;font-family:"Century","serif"'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Example
+of profile </span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><img
+border=0 width=567 height=442 src="SMBSync_Desc_EN.files/image007.png"></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>The
+above shows the profile to synchronize files from a folder on the NAS PC and
+Android devices that are connected by WiFi.</span></p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>SYNC1 that synchronization in the mirror jpg
+files of the Local /mnt/sdcard/DCIM/DIR-PC from a folder on your PC.</span></p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>SYNC2 that synchronization in the mirror jpg
+files of the Local /mnt/sdcard/DCIM/DIR-NAS from a folder on your NAS.</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US><a
+href="#_top">Return to Index</a> </span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<span lang=EN-US style='font-size:10.5pt;font-family:"Century","serif"'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=21 align=left style='text-align:left'><a name="_Toc451932325"></a><a
+name="_Toc375829972"><span lang=EN-US>2.</span></a><span lang=EN-US>1 How to create
+a profile</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>There
+is a way that you create by starting the wizard or to create a separate
+profile.</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US><a
+href="#_top">Return to Index</a> <a name="_Toc375565437"></a><a
+name="_Toc375829974"></a></span></p>
+
+<p class=21 align=left style='text-align:left'><a name="_Toc451932326"><span
+lang=EN-US>2.</span></a><span lang=EN-US>2 Create profile by type</span><span
+lang=EN-US> </span></p>
+
+<p class=318pt align=left style='text-align:left'><a name="_Toc451932327"><span
+lang=EN-US>2.2.1 </span></a><span lang=EN-US>Create Local Profile</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>The
+long click the profile name line of the profile tab, select Add from the
+context menu of the local profile.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><img
+border=0 width=567 height=354 id="図 4" src="SMBSync_Desc_EN.files/image008.jpg"></span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>To activate the profile.</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:21.0pt'><span lang=EN-US>To activate the profile
+when checked.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Profile name</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:21.0pt'><span lang=EN-US>Specify profile name.</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><b><u><span lang=EN-US>The profile name is
+must be unique (SYNC=A1 and LOCAL=A1 are not allowed).</span></u></b></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Mount point</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:21.0pt'><span lang=EN-US>Select local mount point.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Listing</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:21.0pt'><span lang=EN-US>Show local directory list.
+</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>(It appears you can select
+the directory list by pressing the button, after clicking on the directory “select
+here” you can enter and press)</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Directory</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:21.0pt'><span lang=EN-US>Specify local directory.</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0mm;text-align:
+left;text-indent:0mm'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0mm;text-align:
+left;text-indent:0mm'><span lang=EN-US><a href="#_top">Return to Index</a> </span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0mm;text-align:
+left;text-indent:0mm'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=318pt align=left style='text-align:left'><a name="_Toc451932328"></a><a
+name="_Toc375565438"><span lang=EN-US>2.2.2 </span></a><span lang=EN-US>Create Remote
+Profile</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0mm;text-align:
+left;text-indent:0mm'><span lang=EN-US>The long click the first line of the
+profile tab, select Add from the context menu of the remote profile.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><img
+border=0 width=567 height=354 id="図 7" src="SMBSync_Desc_EN.files/image009.jpg"></span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>To activate the profile.</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:21.0pt'><span lang=EN-US>To activate the profile
+when checked.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Profile name</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:21.0pt'><span lang=EN-US>Specify profile name.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Search remote server</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:21.0pt'><span lang=EN-US>To scan the network for find
+the remote server</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Server name/Address</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:21.0pt'><span lang=EN-US>To specify remote server
+name or IP address</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Use port number</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:41.9pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Specify if the port number of
+the standard is not available. The standard port number is 139/tcp and 445/tcp.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Use remote host userid and password</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:21.0pt'><span lang=EN-US>It specifies whether to
+use the user ID / password.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>User name</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:21.0pt'><span lang=EN-US>To specify userid for
+host.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Password</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:21.0pt'><span lang=EN-US>To specify password for
+host.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Logon</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:0mm'><span lang=EN-US>Logon to specified remote host.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Show list(Share)</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:21.0pt'><span lang=EN-US>Show share name for host. </span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>(Selectable share name will
+be displayed when you press the listing button, click the share name, and then
+press the OK)</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Show list (Directory)</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:21.0pt'><span lang=EN-US>Show directory list for
+host. </span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>(Selectable directory will be
+displayed when you press the listing button, click the directory, and then
+press the OK)</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Directory</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:21.0pt'><span lang=EN-US>To specify directory for
+host.<a name="_Toc375565439"></a></span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0mm;text-align:
+left;text-indent:0mm'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0mm;text-align:
+left;text-indent:0mm'><a href="#_top"><span lang=EN-US>Return to Index</span></a><span
+lang=EN-US> </span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0mm;text-align:
+left;text-indent:0mm'><span lang=EN-US>&nbsp;</span></p>
+
+<u><span lang=EN-US style='font-size:10.5pt;font-family:"Arial","sans-serif"'><br
+clear=all style='page-break-before:always'>
+</span></u>
+
+<p class=318pt align=left style='text-align:left'><a name="_Toc451932329"><span
+lang=EN-US>2.</span></a><span lang=EN-US>2.3 Create synch profile</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>The
+long click the first line of the profile tab, select Add from the context menu
+of the synchronization profile.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US> <img
+border=0 width=568 height=354 id="オブジェクト 1"
+src="SMBSync_Desc_EN.files/image010.png"></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>*1:</span><span
+lang=EN-US style='font-size:10.0pt'> You can edit the profile when you tap the
+button.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>To activate the profile.</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:21.0pt'><span lang=EN-US>To activate the profile
+when checked.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Profile name</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:21.0pt'><span lang=EN-US>Specify profile name.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Master profile</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:41.9pt;
+text-align:left;text-indent:.05pt'><span lang=EN-US>To specify master profile. You
+can edit the selected profile by pressing the button on the left edge.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Target profile</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:41.9pt;
+text-align:left;text-indent:.05pt'><span lang=EN-US>To specify target profile. You
+can edit the selected profile by pressing the button on the left edge.</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Master and target need to be
+a combination of local and remote or local and local. For example, if you
+select a remote master and a combination of targeted local.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Sync option</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:21.0pt'><span lang=EN-US>To select sync
+method(Mirror, copy or move).</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Filter(File)</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:21.0pt'><span lang=EN-US>See “File select filter”</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Filter(Directory)</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:21.0pt'><span lang=EN-US>See “Directory select
+filter”</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:21.0pt'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Process file and directories immediately bellow
+master directory</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>It processes the files and
+directories that exist in the directory specified by the master profile when
+you check. (The checkbox is checked the default)</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>It handles only the presence
+directory to the directory specified in the master profile if you have not
+checked.</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Sync a subdirectory</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:41.95pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Sync the subdirectory if you
+check.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Confirm before override copy or delete</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>It will display a
+confirmation dialog when you want to overwrite and delete the file if you have
+checked.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Do not reset remote file last modified time by
+local file last modified time</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:0mm'><b><u><span lang=EN-US style='color:red'>Is not normally used</span></u></b></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:0mm'><span lang=EN-US>Please enable if SmbFile#setLastModified() to
+fail due to the limitation of the remote.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:0mm'><span lang=EN-US>As a result, the difference determination of
+local and remote files is determined by the file size and the file exists.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Obtain the last modified date and time of the
+local file as SMBSync</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:0mm'><b><u><span lang=EN-US style='color:red'>Is not normally used</span></u></b></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>To maintain last modified
+time of local file by the proprietary SMBSync(Do not use Java
+File#setLastModified()).</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>To retry if a network error occurs during sync</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left'><span
+lang=EN-US>Retry the sync only error on the remote side. Retry is done up to
+three times, is carried out after 30 seconds from the error occurred retry
+each.</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Sync a empty directory</span></p>
+
+<p class=MsoListParagraph align=left style='text-align:left'><span lang=EN-US>Sync
+the empty directory if you check.(Create a empty directory on the target)</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Sync a hidden directory</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left'><span
+lang=EN-US>Sync the hidden directory if you check.( The name of the hidden
+directory starts from &quot;.&quot; In Android, since it is represented by a
+bit in the directory and not the name of the directory on Samba and Windows, the
+directory that was created will not be in a hidden directory)</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Sync a hidden file</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:41.95pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Sync the hidden file if you
+check.( The name of the hidden file begins with &quot;.&quot; In Android, since
+it is represented by a bit in the directory and not the name of the file with
+Samba and Windows, the file that is created will not be hidden files)</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0mm;text-align:
+left;text-indent:0mm'><span lang=EN-US><a href="#_top">Return to Index</a> </span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0mm;text-align:
+left;text-indent:0mm'><span lang=EN-US>&nbsp;</span></p>
+
+<span lang=EN-US style='font-size:10.5pt;font-family:"Century","serif"'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=21 align=left style='text-align:left'><a name="_Toc451932330"></a><a
+name="_Toc375829978"><span lang=EN-US>2.3 </span></a><span lang=EN-US>Profile
+creation by wizard</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><a name="_Toc375829979"><span
+lang=EN-US>The long click the first line of the profile tab, select “Start new
+sync wizard” from the context menu.</span></a></p>
+
+<p class=318pt align=left style='text-align:left'><a name="_Toc451932331"><span
+lang=EN-US>2.3.1 </span></a><span lang=EN-US>General</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><img
+border=0 width=567 height=354 src="SMBSync_Desc_EN.files/image011.jpg"></span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Sync direction</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>To choose from among the
+local-to-remote, local-to-local or remote-to-local.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Profile name</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>To specifies the base name
+for the profile. Prefix, starting from AG is attached to each profile, but can
+be changed.</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Process all files</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left'><span
+lang=EN-US>If you checked, you want to process all the files. If it is not
+checked, to be processed only file format that you check the following.</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left'><span
+lang=EN-US>If you select a file format other than those listed below, please
+use the file selection filter of synchronization information and check &quot;Process
+all files.&quot;</span></p>
+
+<p class=MsoNormal align=left style='margin-left:63.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Image files</span></p>
+
+<p class=MsoNormal align=left style='margin-left:63.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Audio files</span></p>
+
+<p class=MsoNormal align=left style='margin-left:63.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Video files</span></p>
+
+<u><span lang=EN-US style='font-size:10.5pt;font-family:"Arial","sans-serif"'><br
+clear=all style='page-break-before:always'>
+</span></u>
+
+<p class=318pt align=left style='text-align:left'><a name="_Toc451932332"></a><a
+name="_Toc375829980"><span lang=EN-US>2.3.2 </span></a><span lang=EN-US>Master</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><img
+border=0 width=567 height=354 src="SMBSync_Desc_EN.files/image012.jpg"></span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Profile name</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>To specifies the master
+profile name. Prefix, starting from AGM-L- or AGM-R- is attached to each
+profile, but can be changed.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Mount point</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Select local mount point.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Listing</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Show local directory list. </span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>(It appears you can select
+the directory list by pressing the button, after clicking on the directory “select
+here” you can enter and press)</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Directory</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Specify local directory.</span></p>
+
+<u><span lang=EN-US style='font-size:10.5pt;font-family:"Arial","sans-serif"'><br
+clear=all style='page-break-before:always'>
+</span></u>
+
+<p class=318pt align=left style='text-align:left'><a name="_Toc451932333"></a><a
+name="_Toc375829981"><span lang=EN-US>2.3.3 </span></a><span lang=EN-US>Target</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><img
+border=0 width=567 height=354 src="SMBSync_Desc_EN.files/image013.jpg"></span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Profile name</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>To specifies the master
+profile name. Prefix, starting from AGT-L- or AGT-R- is attached to each
+profile, but can be changed.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Search remote server</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>To scan the network for find
+the remote server</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Server Name/Address</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>To specify the remote server
+name or IP address</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Use remote host userid and password</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>It specifies whether to use
+the user ID / password.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>User name</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>To specify userid for host.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Password</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>To specify password for host.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Logon</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:0mm'><span lang=EN-US>Logon to specified remote host.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Show list (Share)</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Show share name for host. </span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>(Selectable share name will
+be displayed when you press the listing button, click the share name, and then
+press the OK)</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Share</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>To specify share name.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Show list (Directory)</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Show directory list for host.
+</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>(Selectable directory will be
+displayed when you press the listing button, click the directory, and then
+press the OK)</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Directory</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>To specify directory for
+host.</span></p>
+
+<u><span lang=EN-US style='font-size:10.5pt;font-family:"Arial","sans-serif"'><br
+clear=all style='page-break-before:always'>
+</span></u>
+
+<p class=318pt align=left style='text-align:left'><a name="_Toc451932334"></a><a
+name="_Toc375829982"><span lang=EN-US>2.3.4 </span></a><span lang=EN-US>Sync</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><img
+border=0 width=567 height=354 src="SMBSync_Desc_EN.files/image014.jpg"></span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Profile name</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>To specifies the sync profile
+name. Prefix, starting from AG-S- is attached to each profile, but can be
+changed.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Sync option</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>To select sync method(Mirror,
+copy or move).</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Filter(File)</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US><a href="#_2.5_File_selection">See
+“File select filter”</a></span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Filter(Directory)</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US><a
+href="#_2.6_Directory_selection">See “Directory select filter”</a></span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Process file and directories immediately bellow
+master directory</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>It processes the files and
+directories that exist in the directory specified by the master profile when
+you check. (The checkbox is checked the default)</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>It handles only the presence
+directory to the directory specified in the master profile if you have not
+checked.</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Sync a subdirectory</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:41.95pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Sync the subdirectory if you
+check.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Confirm before override copy or delete</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>It will display a
+confirmation dialog when you want to overwrite and delete the file if you have
+checked.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Do not use last modified time for determine file
+difference by remote file.</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Maintaining Last Modified
+local files without using SmbFile# setLastModified().</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>(To determine the file size
+and the presence or absence of file difference detection)</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Obtain the last modified date and time of the
+local file as SMBSync</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Maintaining Last Modified
+local files without using Java File# setLastModified().</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>To retry if a network error occurs during sync</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left'><span
+lang=EN-US>Retry the sync only error on the remote side. Retry is done up to
+three times, is carried out after 30 seconds from the error occurred retry
+each.</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Sync a empty directory</span></p>
+
+<p class=MsoListParagraph align=left style='text-align:left'><span lang=EN-US>Sync
+the empty directory if you check.(Create a empty directory on the target)</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Sync a hidden directory</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:42.0pt;text-align:left'><span
+lang=EN-US>Sync the hidden directory if you check.( The name of the hidden
+directory starts from &quot;.&quot; In Android, since it is represented by a bit
+in the directory and not the name of the directory on Samba and Windows, the
+directory that was created will not be in a hidden directory)</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Sync a hidden file</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:41.95pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Sync the hidden file if you
+check.( The name of the hidden file begins with &quot;.&quot; In Android, since
+it is represented by a bit in the directory and not the name of the file with
+Samba and Windows, the file that is created will not be hidden files)</span></p>
+
+<u><span lang=EN-US style='font-size:10.5pt;font-family:"Arial","sans-serif"'><br
+clear=all style='page-break-before:always'>
+</span></u>
+
+<p class=21 align=left style='text-align:left'><a name="_2.5_ファイル選択フィルター"></a><a
+name="_2.5_File_selection"></a><a name="_Toc451932335"></a><a
+name="_Toc375829983"><span lang=EN-US>2.4 </span></a><span lang=EN-US>File
+selection filter</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0mm;text-align:
+left;text-indent:0mm'><span lang=EN-US>File selection filter is used to select
+the files you want to synchronize.</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0mm;text-align:
+left;text-indent:0mm'><span lang=EN-US>You can choose the selection and
+exclusion. If you enter both the selection and exclusion is a priority
+excluded.</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0mm;text-align:
+left;text-indent:0mm'><span lang=EN-US>If you enter two or more filters to
+select the file under the conditions OR.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><img
+border=0 width=566 height=318 id="図 9" src="SMBSync_Desc_EN.files/image015.jpg"></span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Delete</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>To delete the file filter</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Include/Exclude</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Specifies the exclusion
+filters or filter selection.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Add</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Added as a filter content
+input to the filter box.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Filter</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Please input such as DSC
+*.JPG. Please do not enter the directory selection filters with regular
+expressions.</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0mm;text-align:
+left;text-indent:0mm'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0mm;text-align:
+left;text-indent:0mm'><span lang=EN-US>&nbsp;</span></p>
+
+<span lang=EN-US style='font-size:10.5pt;font-family:"Century","serif"'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0mm;text-align:
+left;text-indent:0mm'><span lang=EN-US>Example of specifying file filter</span></p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US><img border=0 width=511 height=352 id="オブジェクト 6"
+src="SMBSync_Desc_EN.files/image016.png"></span></p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Specify following two filters.</span></p>
+
+<p class=MsoList2 align=left style='margin-left:39.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>“FILE*.*” as inclusion</span></p>
+
+<p class=MsoList2 align=left style='margin-left:39.0pt;text-align:left;
+text-indent:-18.0pt'><span lang=EN-US>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>“FILE*.JPG” as exclusion</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>File to be processed will be
+FIIL-2.mpg FIILE01.TXT, and FIILE02.TXT.</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0mm;text-align:
+left;text-indent:0mm'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0mm;text-align:
+left;text-indent:0mm'><span lang=EN-US><a href="#_top">Return to Index</a></span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0mm;text-align:
+left;text-indent:0mm'><span lang=EN-US>&nbsp;</span></p>
+
+<u><span lang=EN-US style='font-size:10.5pt;font-family:"Arial","sans-serif"'><br
+clear=all style='page-break-before:always'>
+</span></u>
+
+<p class=21 align=left style='text-align:left'><a name="_2.6_ディレクトリー選択フィルター"></a><a
+name="_2.6_Directory_selection"></a><a name="_Toc451932336"></a><a
+name="_Toc375829984"><span lang=EN-US>2.5 </span></a><span lang=EN-US>Directory
+selection filter</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0mm;text-align:
+left;text-indent:0mm'><span lang=EN-US>Directory selection filter is used to
+select the directories you want to synchronize.(You can choose the selection
+and exclusion. Exclusion takes precedence If you enter both the selection and
+exclusion filters.)</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0mm;text-align:
+left;text-indent:0mm'><span lang=EN-US>If you enter two or more filters to select
+the file under the conditions OR.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><img
+border=0 width=566 height=318 src="SMBSync_Desc_EN.files/image017.jpg"></span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Delete</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>To delete the directory
+filter</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Include/Exclude</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Specifies the exclusion
+filters or filter selection.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Directory listing</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Show the directory list.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Add</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Added as a filter content
+input to the filter box.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Filter</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>A filter value. Please input
+such as DIR* or DIR-A. Please do not enter the file selection filters with
+regular expressions. </span></p>
+
+<span lang=EN-US style='font-size:10.5pt;font-family:"Century","serif"'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>List of directory</span></p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US><img border=0 width=567 height=354
+src="SMBSync_Desc_EN.files/image018.jpg"></span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Add a filter by checking the
+check box on the right, and press the Add button.</span></p>
+
+<span lang=EN-US style='font-size:10.5pt;font-family:"Century","serif"'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>Example
+of specifying directory filter(#1)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><img
+border=0 width=502 height=306 id="オブジェクト 7"
+src="SMBSync_Desc_EN.files/image019.png"></span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>The
+above is a representation of how files and directories are included to /DIR-A
+is specified DIR filter in the case of unchecked “Handling files and
+directories master directory” is to be selected.</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>The
+results are processed DIR-AB, only DIR-AC is selected.</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US><a
+href="#_top">Return to Index</a> </span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<span lang=EN-US style='font-size:10.5pt;font-family:"Century","serif"'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>Example
+of specifying directory filter(#2)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><img
+border=0 width=502 height=313 id="オブジェクト 8"
+src="SMBSync_Desc_EN.files/image020.png"></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>The
+above is a representation of how the directories and files that are included to
+/DIR-A is specified DIR filter in the case of Checked “Handling files and
+directories master directory” is to be selected.</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>The
+results are processed only file FILE-01.TXT DIR-AB, and DIR-AC is selected.</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US><a
+href="#_top">Return to Index</a> </span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=21 align=left style='text-align:left'><span lang=EN-US><span
+ style='text-decoration:none'>&nbsp;</span></span></p>
+
+<h1 align=left style='margin-top:18.0pt;text-align:left;word-break:normal'><a
+name="_Toc451932337"><span lang=EN-US style='text-decoration:none'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Tab Description</span></a></h1>
+
+<h2 align=left style='margin-top:12.0pt;text-align:left'><a name="_Toc451932338"></a><a
+name="_Toc399593478"><span lang=EN-US>3.1 </span></a><span lang=EN-US>Profile
+tab</span></h2>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>This is
+a list of the profile. You can do perform sync of valid sync profile, Edit
+Profile, delete, enable, disable, and add a profile.</span></p>
+
+<h2 align=left style='margin-top:12.0pt;text-align:left'><a name="_Toc451932339"><span
+lang=EN-US>3.1.1 Basic mode</span></a></h2>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>You can
+edit the profile and tap the name of the profile. It also can be operated by
+pressing the button at the bottom.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><img
+border=0 width=567 height=354 src="SMBSync_Desc_EN.files/image021.jpg"></span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US><img border=0 width=18 height=18
+src="SMBSync_Desc_EN.files/image022.png"></span><span lang=EN-US> Sync valid
+sync all profiles</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US><img border=0 width=16 height=16
+src="SMBSync_Desc_EN.files/image023.png"></span><span lang=EN-US> Start profile
+creation wizard</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US><img border=0 width=18 height=18
+src="SMBSync_Desc_EN.files/image024.png"></span><span lang=EN-US> Add local
+profile</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US><img border=0 width=18 height=18
+src="SMBSync_Desc_EN.files/image025.png"></span><span lang=EN-US> Add remote
+profile</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US><img border=0 width=16 height=16
+src="SMBSync_Desc_EN.files/image026.png"></span><span lang=EN-US> Add sync
+profile</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US><img border=0 width=19 height=19 id="図 20"
+src="SMBSync_Desc_EN.files/image027.png" alt="*"></span><span lang=EN-US> Select
+all profiles</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US>&nbsp;</span></p>
+
+<span lang=EN-US style='font-size:10.5pt;font-family:"Century","serif"'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'><u><span lang=EN-US
+style='font-size:14.0pt;font-family:"Arial","sans-serif"'><span
+ style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<h2 align=left style='margin-top:12.0pt;text-align:left'><a name="_Toc451932340"><span
+lang=EN-US>3.1.2 Selection mode</span></a></h2>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>All or
+selected icon<img border=0 width=19 height=19
+src="SMBSync_Desc_EN.files/image027.png"> and the screen switches to the
+selection mode by long click the profile name. Press the done<img border=0
+width=19 height=19 id="図 53" src="SMBSync_Desc_EN.files/image028.png"> or
+return key to the basic display mode.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><img
+border=0 width=567 height=354 src="SMBSync_Desc_EN.files/image029.jpg"></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>You can
+switch the selection and non-selection when you tap the check box on the right.
+You can also switch If the user taps the profile name. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US><img border=0 width=18 height=18
+src="SMBSync_Desc_EN.files/image022.png"></span><span lang=EN-US> Sync selected
+valid sync profile</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US><img border=0 width=19 height=19 id="図 29"
+src="SMBSync_Desc_EN.files/image030.png"></span><span lang=EN-US> To active
+selected profile</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US><img border=0 width=18 height=18 id="図 38"
+src="SMBSync_Desc_EN.files/image031.png"></span><span lang=EN-US> To inactive selected
+profile</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US><img border=0 width=16 height=16 id="図 39"
+src="SMBSync_Desc_EN.files/image032.png"></span><span lang=EN-US> To copy
+selected profile(Disabled when multiple selected)</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US><img border=0 width=18 height=18 id="図 40"
+src="SMBSync_Desc_EN.files/image033.png"></span><span lang=EN-US> To rename
+selected profile(Disabled when multiple selected)</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US><img border=0 width=18 height=18
+src="SMBSync_Desc_EN.files/image034.png"></span><span lang=EN-US> To delete
+selected profile</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US><img border=0 width=19 height=19
+src="SMBSync_Desc_EN.files/image027.png" alt="*"> </span><span lang=EN-US>Select
+all profiles</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US><img border=0 width=16 height=16 id="図 17"
+src="SMBSync_Desc_EN.files/image035.png" alt="*"> </span><span lang=EN-US>Unselect
+all items</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt'><span
+lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0mm;text-align:
+left;text-indent:0mm'><span lang=EN-US><a href="#_top">Return to Index</a> </span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=21 align=left style='text-align:left'><a name="_Toc451932341"><span
+lang=EN-US>3.2 Message tab</span></a></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US><img
+border=0 width=567 height=354 id="図 19" src="SMBSync_Desc_EN.files/image036.jpg"></span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>Display
+synchronization results and error message.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US><img border=0 width=18 height=18 id="図 15"
+src="SMBSync_Desc_EN.files/image037.png"> Disable auto scroll(Tap to enable
+auto scroll)</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US><img border=0 width=18 height=18 id="図 16"
+src="SMBSync_Desc_EN.files/image038.png"> Enable auto scroll(Tap to disable
+auto scaroll)</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US><img border=0 width=18 height=18
+src="SMBSync_Desc_EN.files/image039.png"> Move to to</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US><img border=0 width=18 height=18 id="図 18"
+src="SMBSync_Desc_EN.files/image040.png"> Move to bottom</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US><img border=0 width=13 height=13 id="図 42"
+src="SMBSync_Desc_EN.files/image041.png"></span><span lang=EN-US> Clear message</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0mm;text-align:
+left;text-indent:0mm'><span lang=EN-US><a href="#_top">Return to Index</a> </span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>&nbsp;</span></p>
+
+<span lang=EN-US style='font-size:10.5pt;font-family:"Century","serif"'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'><a name="_Toc399593480"><span
+lang=EN-US style='font-family:"Arial","sans-serif"'>&nbsp;</span></a></p>
+
+<h2 align=left style='margin-top:12.0pt;text-align:left'><a name="_Toc451932342"><span
+lang=EN-US>3.3 </span></a><span lang=EN-US>History tab</span></h2>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Show
+sync result history.</span></p>
+
+<h2 align=left style='margin-top:12.0pt;text-align:left'><a name="_Toc451932343"><span
+lang=EN-US>3.3.1 Basic mode</span></a></h2>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Log is
+displayed when the log file is saved when you tap the history if logging is
+enabled.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><img
+border=0 width=567 height=354 src="SMBSync_Desc_EN.files/image042.jpg"></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt'><span
+lang=EN-US><img border=0 width=16 height=16
+src="SMBSync_Desc_EN.files/image043.png"></span><span lang=EN-US> Move to top</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt'><span
+lang=EN-US><img border=0 width=16 height=16
+src="SMBSync_Desc_EN.files/image044.png"></span><span lang=EN-US> Move to
+bottom</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US><img border=0 width=19 height=19
+src="SMBSync_Desc_EN.files/image045.png" alt="*"></span><span lang=EN-US> Select
+all items</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<span lang=EN-US style='font-size:10.5pt;font-family:"Century","serif"'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'><u><span lang=EN-US
+style='font-size:14.0pt;font-family:"Arial","sans-serif"'><span
+ style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<h2 align=left style='margin-top:12.0pt;text-align:left'><a name="_Toc451932344"><span
+lang=EN-US>3.3.2 Selection mode</span></a></h2>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>All or
+selected icon and the screen switches to the selection mode by pressing and
+holding the history. Press the key to return to the basic display mode.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><img
+border=0 width=567 height=354 src="SMBSync_Desc_EN.files/image046.jpg"></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt'><span
+lang=EN-US><img border=0 width=16 height=16 id="図 55"
+src="SMBSync_Desc_EN.files/image043.png"></span><span lang=EN-US> Move to top</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt'><span
+lang=EN-US><img border=0 width=16 height=16 id="図 56"
+src="SMBSync_Desc_EN.files/image044.png"></span><span lang=EN-US> Move to
+bottom</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US><img border=0 width=18 height=18 id="図 41"
+src="SMBSync_Desc_EN.files/image034.png"></span><span lang=EN-US> Delete
+selected history</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt'><span
+lang=EN-US><img border=0 width=19 height=19 id="図 58"
+src="SMBSync_Desc_EN.files/image047.png"></span><span lang=EN-US> Copy selected
+history to clipboard</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US><img border=0 width=19 height=19
+src="SMBSync_Desc_EN.files/image045.png" alt="*"></span><span lang=EN-US> Select
+all items</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt'><span
+lang=EN-US><img border=0 width=16 height=16
+src="SMBSync_Desc_EN.files/image035.png" alt="*"></span><span lang=EN-US> Unselect
+all items</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:0mm;text-align:
+left;text-indent:0mm'><span lang=EN-US><a href="#_top">Return to Index</a> </span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>&nbsp;</span></p>
+
+<h1 align=left style='margin-top:18.0pt;text-align:left;word-break:normal'><a
+name="_Toc451932345"><span lang=EN-US style='text-decoration:none'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Description of the Menu</span></a></h1>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><img
+border=0 width=567 height=354 src="SMBSync_Desc_EN.files/image048.jpg"></span></p>
+
+<p class=21 align=left style='text-align:left'><a name="_Toc451932346"><span
+lang=EN-US>4.1 Sync</span></a></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>To start
+sync.</span></p>
+
+<p class=21 align=left style='text-align:left'><a name="_Toc451932347"><span
+lang=EN-US>4.2 Schedule</span></a></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>To
+schedule sync.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><img
+border=0 width=567 height=354 id="図 31" src="SMBSync_Desc_EN.files/image049.jpg"></span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Enable scheduler</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left'><span
+lang=EN-US>If checked, enable schedule.</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Schedule timing</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left'><span
+lang=EN-US>Schedule can be specified following</span></p>
+
+<p class=MsoNormal align=left style='margin-left:63.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Every hours(Ex. Sync start at every hours and xx
+minutes)</span></p>
+
+<p class=MsoNormal align=left style='margin-left:63.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Every day(Ex. Sync start at xx:xx every day)</span></p>
+
+<p class=MsoNormal align=left style='margin-left:63.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Day of week(Ex. Sync start at xx:xx Monday and
+Friday)</span></p>
+
+<p class=MsoNormal align=left style='margin-left:63.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Interval (for example, run 10 minutes from the
+terminal is reboot, the increments every 5 minutes)</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Application will be terminated after sync task
+end</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Run in the background</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Sync all active sync profile</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left'><span
+lang=EN-US>If not checked, you can edit sync profile list.</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Edit sync list</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left'><span
+lang=EN-US>To show edit screen.</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>To turn on the Wi-Fi when sync started</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Delay time</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left'><span
+lang=EN-US>Start the SMBSync specified time after you turn on the Wi-Fi has
+elapsed.</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>To turn off the Wi-Fi when sync ended</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-family:"Arial","sans-serif"'>&nbsp;</span></p>
+
+<h3 align=left style='margin-top:18.0pt;text-align:left'><a name="_Toc451932348"><span
+lang=EN-US>4.2.1 Edit sync list</span></a></h3>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>To
+select sync profile</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><img
+border=0 width=567 height=354 src="SMBSync_Desc_EN.files/image050.jpg"></span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Show active profile only</span></p>
+
+<p class=MsoNormal align=left style='margin-left:42.0pt;text-align:left'><span
+lang=EN-US>Displays all profiles If unchecked.</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US><a
+href="#_top">Return to Index</a> </span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=21 align=left style='text-align:left'><a name="_Toc451932349"><span
+lang=EN-US>4.3 Show log</span></a></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>Log
+file display application selection screen is displayed when you select, select
+the application, please view.</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US><a
+href="#_top">Return to Index</a> </span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=21 align=left style='text-align:left'><a name="_Toc451932350"><span
+lang=EN-US>4.4 Export profile</span></a></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>Writes
+profile to the file.</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US><a
+href="#_top">Return to Index</a> </span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=21 align=left style='text-align:left'><a name="_Toc451932351"><span
+lang=EN-US>4.5 Import profile</span></a></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>Load
+the profile from the file.</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US><a
+href="#_top">Return to Index</a> </span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=21 align=left style='text-align:left'><a name="_Toc451932352"><span
+lang=EN-US>4.6 Manage log file</span></a></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>Delete
+or send a log file..</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US><a
+href="#_top">Return to Index</a> </span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=21 align=left style='text-align:left'><a name="_Toc451932353"><span
+lang=EN-US>4.7 About SMBSync</span></a></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>Load
+the profile from the file.</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US><a
+href="#_top">Return to Index</a> </span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=21 align=left style='text-align:left'><a name="_Toc451932354"><span
+lang=EN-US>4.8 Settings</span></a></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>Configure
+the following items.</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Synchronization</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>User interface</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Log</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>MediaScanner option</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>How to determine files that have been update</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>SMB settings</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Miscellaneous</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:0mm;text-align:left;
+text-indent:0mm'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US><a
+href="#_top">Return to Index</a> </span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><a name="_Toc375487399"><u><span
+lang=EN-US style='font-family:"Arial","sans-serif"'><span style='text-decoration:
+ none'>&nbsp;</span></span></u></a></p>
+
+<p class=318pt align=left style='text-align:left'><a name="_Toc451932355"><span
+lang=EN-US>4.8.1 </span></a><span lang=EN-US>Synchronization</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:0mm;text-align:left;
+text-indent:0mm'><span lang=EN-US><img border=0 width=567 height=354 id="図 10"
+src="SMBSync_Desc_EN.files/image051.jpg"></span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Wireless LAN option</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Specify the conditions under
+which to run the synchronization state of the wireless LAN.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:63.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Synchronization can be used when Wireless LAN is
+disabled.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:63.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Synchronization can be used when Wireless LAN is
+enabled and access point was not connected.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:63.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Synchronization can be used when Wireless LAN is
+enabled and access point was connected. </span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Sync task Auto start</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Synchronization of all the
+active profile after the application starts.</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Auto termination(If “Sync task Auto start” is
+enabled)</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Exit the application after
+the end of automatic synchronization.</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Background execution(If “Sync task Auto start”
+is enabled)</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>If enabled, Application was
+run in the background.(Show home screen after application started)</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Error process option</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Ignore errors that occur
+during synchronization.</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Screen lock</span></p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US>To specify the screen off option of running synchronization. (Screen
+will turn off by pressing the power button, regardless of the specification.)</span></p>
+
+<p class=MsoNormal align=left style='margin-left:63.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Allow the screen off during sync</span></p>
+
+<p class=MsoNormal align=left style='margin-left:63.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Disallow the screen off during sync</span></p>
+
+<p class=MsoNormal align=left style='margin-left:63.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Disallow the screen off when you start the
+synchronization when the screen is on.</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Wi-Fi lock</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left;text-indent:21.0pt'><span
+lang=EN-US>If checked, acquire Wi-Fi lock during synchronization.</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Keep the remote destination file</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:0mm'><span lang=EN-US>If enable, Keep destination file until file
+copy was ended(Contents of the file will not be changed if the copy is aborted).</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Keep the local destination file</span></p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US>If enable, Keep destination file until file copy was ended(Contents
+of the file will not be changed if the copy is aborted).</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US><a
+href="#_top">Return to Index</a> </span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=318pt align=left style='text-align:left'><a name="_Toc451932356"></a><a
+name="_Toc375487400"><span lang=EN-US>4.8.2 </span></a><span lang=EN-US>User
+interface</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:0mm;text-align:left;
+text-indent:0mm'><span lang=EN-US><img border=0 width=566 height=354
+src="SMBSync_Desc_EN.files/image052.jpg"></span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Alternate UI</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Show/hide debug message</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>If enabled, show debug
+message at message tab.</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Suppress mixed mount point name</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>If enabled, Suppress mixed
+mount point name warning message.</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Background termination notification</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US><a
+href="#_top">Return to Index</a> </span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=318pt align=left style='text-align:left'><a name="_Toc451932357"></a><a
+name="_Toc375487401"><span lang=EN-US>4.8.3 </span></a><span lang=EN-US>Log</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:0mm;text-align:left;
+text-indent:0mm'><span lang=EN-US><img border=0 width=566 height=354 id="図 21"
+src="SMBSync_Desc_EN.files/image053.jpg"></span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Message logging option</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Decide how to save log
+messages to a file.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>No</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>It with the date (log-yyyy_mm_dd.txt) in the
+file name, (create the file if it does not exist) </span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Log file generation</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Log</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Determine the type of
+messages written to the log message.</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Log message directory</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Determine the message log
+file directory. (Default is /mnt/sdcard/SMBSync)</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US><a
+href="#_top">Return to Index</a> </span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=318pt align=left style='text-align:left'><a name="_Toc451932358"></a><a
+name="_Toc375487402"><span lang=EN-US>4.8.4 MediaScanner</span></a></p>
+
+<p class=MsoListBullet align=left style='margin-left:0mm;text-align:left;
+text-indent:0mm'><span lang=EN-US><img border=0 width=566 height=354 id="図 22"
+src="SMBSync_Desc_EN.files/image054.jpg"></span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Scan for Non-media file</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Specify that you want to scan
+in the Media Scanner to copy at the end of the non media files.</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Scan for external storage</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Specify that you want to scan
+in the Media Scanner to copy at the end of the external media to SD-CARD, such
+as USB.</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US><a
+href="#_top">Return to Index</a> </span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=318pt align=left style='text-align:left'><a name="_Toc451932359"></a><a
+name="_Toc375487403"><span lang=EN-US>4.8.5 </span></a><span lang=EN-US>Difference
+determination of files</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:0mm;text-align:left;
+text-indent:0mm'><span lang=EN-US><img border=0 width=566 height=354 id="図 23"
+src="SMBSync_Desc_EN.files/image055.jpg"></span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Allowable value of last modified</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Specifies the number of
+seconds the difference between remote and local file last modification time of
+a file and the difference. (Default is 3 seconds)</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>MediaStore file last modification time</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>About the file (such as Music
+folder or DCIM), select the handling of media files store the last modification
+time.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Determine the difference in only the last
+modification time</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Determine the difference in time and last update
+time + time zone last updated</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Do not use the last modified file time</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>If the file’s last
+modification time of the media file store folder by restarting the terminal
+rewritten to be copied each time, please try the (Do not use the last modified
+file time).</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US><a
+href="#_top">Return to Index</a> </span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:42.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=318pt align=left style='text-align:left'><a name="_Toc451932360"></a><a
+name="_Toc375487404"><span lang=EN-US>4.8.6 SMB</span></a><span lang=EN-US>
+Settings</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:0mm;text-align:left;
+text-indent:0mm'><span lang=EN-US><img border=0 width=567 height=354 id="図 13"
+src="SMBSync_Desc_EN.files/image056.jpg"></span></p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>jcifs.smb.lmCompatibility</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:21.0pt'><span
+lang=EN-US>Specify JCIFS LMcompatibility.(Initial value:0)</span></p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>jcifs.smb.client.useExtendedSecurity</span></p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left'><span
+lang=EN-US>Specify JCIFS ExtendedSecurity.(Initial : Not checked)</span></p>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>SMB performance</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Select the performance class(Low,
+Medium, High etc). </span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Please select the SMB tuning
+parameters in order to specify the details.</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>SMB tuning parameters</span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>Not used.</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US><a
+href="#_top">Return to Index</a> </span></p>
+
+<p class=MsoBodyTextFirstIndent2 align=left style='margin-left:21.0pt;
+text-align:left;text-indent:0mm'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=318pt align=left style='text-align:left'><a name="_Toc451932361"></a><a
+name="_Toc375487405"><span lang=EN-US>4.8.7 </span></a><span lang=EN-US>Miscellaneous</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:0mm;text-align:left;
+text-indent:0mm'><span lang=EN-US><img border=0 width=566 height=354 id="図 25"
+src="SMBSync_Desc_EN.files/image057.jpg"></span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image001.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Exit cleanly</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:0mm'><span lang=EN-US>You can not specify currently.</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:0mm'><span lang=EN-US>&nbsp;</span></p>
+
+<h2 align=left style='margin-top:12.0pt;text-align:left'><a name="_Toc451932362"><span
+lang=EN-US>4.9Manage mount point</span></a><span lang=EN-US> </span></h2>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Add or
+remove the mount point of the local file to be used in the management of local
+files by SMBSync. <b><span style='color:red'>(Please do not use is usually)</span></b></span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US><a
+href="#_top">Return to Index</a> </span></p>
+
+<p class=21 align=left style='text-align:left'><a name="_Toc451932363"><span
+lang=EN-US>4.10 File last modified time</span></a></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US>This
+menu item is displayed when you are managing the last update time of the local
+file in SMBSync. <b><span style='color:red'>(Please do not use is usually)</span></b>
+</span></p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>To initialize the last update time of local
+files, the results all the files are copied when next sync executed.</span></p>
+
+<p class=MsoBodyText align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>To reset the last update time of local files.
+Assume there is no difference in the last update time of local and remote
+files, to avoid all the files copy when next sync executed.</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US><a
+href="#_top">Return to Index</a> </span></p>
+
+<h2 align=left style='margin-top:12.0pt;text-align:left'><a name="_Toc451932364"><span
+lang=EN-US>4.11 Kill the application</span></a></h2>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Kill the
+SMBSync.</span></p>
+
+<p class=MsoBodyText align=left style='text-align:left'><span lang=EN-US><a
+href="#_top">Return to Index</a> </span></p>
+
+<h1 align=left style='margin-top:18.0pt;text-align:left;word-break:normal'><a
+name="_Toc451932365"></a><a name="_Starting_from_other"></a><span lang=EN-US
+style='text-decoration:none'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Starting from other applications</span></h1>
+
+<p class=21 align=left style='text-align:left'><a name="_Toc451932366"><span
+lang=EN-US>5.1 Startup parameters</span></a></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>You can
+specify the parameters at startup. Setting will take effect If you do not
+specify.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Value
+that is specified in the StartupParms is take effect when you specified at the
+same time such as AutoStart / AutoTerm with StartupParms.</span></p>
+
+<p class=318pt align=left style='text-align:left'><a name="_Toc451932367"><span
+lang=EN-US>5.1.1 AutoStart</span></a></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>To
+enable or disable the automatic synchronization regardless of the setting.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Type:boolean</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Value:true=To
+enabled automatic synchronization</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><a
+href="#_top">Return to Index</a></span></p>
+
+<p class=318pt align=left style='text-align:left'><a name="_Toc451932368"><span
+lang=EN-US>5.1.2 AutoTerm</span></a></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>If AutoStart
+is specified, To enable or disable the automatic termination regardless of the
+setting.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Type:boolean</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Value:true=To
+enabled automatic termination</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><a
+href="#_top">Return to Index</a></span></p>
+
+<p class=318pt align=left style='text-align:left'><a name="_Toc451932369"><span
+lang=EN-US>5.1.3 Background</span></a></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>If
+AutoStart is specified, To enable or disable the background execution
+regardless of the setting.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Type:boolean</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Value:true=To
+enabled background execution</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><a
+href="#_top">Return to Index</a></span></p>
+
+<p class=318pt align=left style='text-align:left'><a name="_Toc451932370"><span
+lang=EN-US>5.1.4 SyncProfile</span></a></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>If
+AutoStart is specified, you can specify the profile to be synchronized.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>When it
+is ready to profile is not selected an invalid profile and profile that does
+not exist, all valid profile will be synchronized.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Type:String[]</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Value:Valid
+sync profile name</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><a
+href="#_top">Return to Index</a></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=318pt align=left style='text-align:left'><a name="_Toc451932371"><span
+lang=EN-US>5.1.5 StartupParms</span></a></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Specified
+in one of the four options above. Each option is specified, separated by
+commas.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Type:String</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Value:”true/false,true/false,true/false,SyncProf”</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Item1:AutoStart=true
+or false</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Item2:AutoTerm=true
+or false</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Item3:Background=true
+or false</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Item4: A
+comma-separated the profile name of the SyncProfile</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span style='font-family:
+"ＭＳ 明朝","serif"'>例：</span><span lang=EN-US>StartupParms=”true,false,true,SPROF1,S-PROF2”</span></p>
+
+<p class=MsoNormal align=left style='margin-left:5.25pt;text-align:left;
+text-indent:-5.25pt'><span lang=EN-US>(AutoStart is Enabled</span><span
+style='font-family:"ＭＳ 明朝","serif"'>、</span><span lang=EN-US>AutoTerm is
+Disabled</span><span style='font-family:"ＭＳ 明朝","serif"'>、</span><span
+lang=EN-US>Background is Enabled, Sync profile is SPROF1 and S-PROF2)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><a
+href="#_top">Return to Index</a></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<span lang=EN-US style='font-size:10.5pt;font-family:"Century","serif"'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<h3 align=left style='margin-top:18.0pt;text-align:left'><a name="_Toc451932372"><span
+lang=EN-US>5.1.6 Example for Tasker</span></a></h3>
+
+<h3 align=left style='margin-top:18.0pt;text-align:left'><span lang=EN-US><img
+border=0 width=396 height=634 id="図 5" src="SMBSync_Desc_EN.files/image058.jpg"></span></h3>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Action:</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:41.95pt'><span
+lang=EN-US>android.intent.action.MAIN</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Cat:</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:41.95pt'><span
+lang=EN-US>Launcher</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Extra: </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:41.95pt'><span
+lang=EN-US>Specify your StartupParms</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Package:</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:41.95pt'><span
+lang=EN-US>com.sentaroh.android.SMBSync</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Target:</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>              Activity</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><a
+href="#_top">Return to Index</a></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<h3 align=left style='margin-top:18.0pt;text-align:left'><a name="_Toc451932373"><span
+lang=EN-US>5.1.7 Example for AutoMagic</span></a><span lang=EN-US> </span></h3>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><img
+border=0 width=408 height=653 id="図 11" src="SMBSync_Desc_EN.files/image059.jpg"></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><a
+href="#_top">Return to Index</a></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<u><span lang=EN-US style='font-size:10.5pt;font-family:"Arial","sans-serif"'><br
+clear=all style='page-break-before:always'>
+</span></u>
+
+<p class=21 align=left style='text-align:left'><a name="_Toc451932374"><span
+lang=EN-US>5.2 Sample code</span></a></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>The
+following code sample to start SMBSync from Activity.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-size:10.0pt'>public class MainActivity extends Activity {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-size:10.0pt'>@Override</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-size:10.0pt'>protected void onCreate(Bundle savedInstanceState) {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:20.0pt'><span
+lang=EN-US style='font-size:10.0pt'>super.onCreate(savedInstanceState);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:20.0pt'><span
+lang=EN-US style='font-size:10.0pt'>setContentView(R.layout.activity_main);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-size:10.0pt'>}</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-size:10.0pt'>@Override</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-size:10.0pt'>protected void onResume() {</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:20.0pt'><span
+lang=EN-US style='font-size:10.0pt'>super.onResume();</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:20.0pt'><span
+lang=EN-US style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:20.0pt'><span
+lang=EN-US style='font-size:10.0pt'>PackageManager pm = getPackageManager();</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:20.0pt'><span
+lang=EN-US style='font-size:10.0pt'>Intent
+in=pm.getLaunchIntentForPackage(&quot;com.sentaroh.android.SMBSync&quot;);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:20.0pt'><span
+lang=EN-US style='font-size:10.0pt'>in.setAction(Intent.ACTION_MAIN);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:20.0pt'><span
+lang=EN-US style='font-size:10.0pt'>in.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:20.0pt'><span
+lang=EN-US style='font-size:10.0pt'>in.putExtra(&quot;AutoStart&quot;, true);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:20.0pt'><span
+lang=EN-US style='font-size:10.0pt'>in.putExtra(&quot;AutoTerm&quot;, true);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:20.0pt'><span
+lang=EN-US style='font-size:10.0pt'>in.putExtra(&quot;Background&quot;, true);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:20.0pt'><span
+lang=EN-US style='font-size:10.0pt'>String[] prof=new String[]
+{&quot;S-PGMS&quot;,&quot;S-Pictures&quot;};</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:20.0pt'><span
+lang=EN-US style='font-size:10.0pt'>in.putExtra(&quot;SyncProfile&quot;, prof);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:20.0pt'><span
+lang=EN-US style='font-size:10.0pt'>startActivity(in);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:20.0pt'><span
+lang=EN-US style='font-size:10.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;text-indent:10.0pt'><span
+lang=EN-US style='font-size:10.0pt'>}</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>}</span></p>
+
+<h1 align=left style='margin-top:18.0pt;text-align:left;word-break:normal'><a
+name="_Toc451932375"><span lang=EN-US style='text-decoration:none'>6.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>About sample profile</span></a></h1>
+
+<p class=MsoListBullet align=left style='text-align:left'><span lang=EN-US>To provides
+a profile for the synchronization of the three types.</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Remote to local by mirror(S- DOWNLOAD-MY-PICTURE)</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Local to local by mirror(S-BACKUP-TO-USB-MEMORY)</span></p>
+
+<p class=MsoListBullet2 align=left style='margin-left:42.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Symbol'><img width=11
+height=11 src="SMBSync_Desc_EN.files/image002.png" alt="*"><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>Local to remote by mirror(S-BACKUP-MY-PICTURE)</span></p>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:0mm'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=21 align=left style='text-align:left'><a name="_Toc451932376"><span
+lang=EN-US>6.1 Network</span></a></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>To
+assume share files via SMB / Samba and PC / NAS in Wi-Fi. Sample profile IP
+address is 192.168.0.2 assumed, please change the IP address for your
+environment.</span></p>
+
+<p class=21 align=left style='text-align:left'><a name="_Toc451932377"><span
+lang=EN-US>6.2 Configuring remote</span></a></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>It is
+assumed in the following file sharing settings on the remote side, please
+change the  remote profile(R-SAMP-UPLOAD and R-SAMP-DOWNLOAD) to suit the
+environment of the user.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>UserID                :
+TESTUSER</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Password            :
+PSWD</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Share
+Name        : SHARE</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>Directory             :
+\Android\Picture and \Android\DCIM*1</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>*1 You
+must have been created \Android\Picture, \Android\DCIM will be created in the
+sample </span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><a
+href="#_top">Return to Index</a> </span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<h1 align=left style='margin-top:18.0pt;text-align:left;word-break:normal'><a
+name="_Toc451932378"><span lang=EN-US style='text-decoration:none'>7.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US>Library</span></a></h1>
+
+<p class=MsoListBullet align=left style='margin-left:21.0pt;text-align:left;
+text-indent:-21.0pt'><span lang=EN-US style='font-family:Wingdings'>l<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-US><a
+href="http://jcifs.samba.org/">jcifs-1.3.17<span lang=EN-US style='font-family:
+"ＭＳ 明朝","serif"'><span lang=EN-US>　</span></span>Client Library</a></span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US><a
+href="#_top">Return to Index</a> </span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

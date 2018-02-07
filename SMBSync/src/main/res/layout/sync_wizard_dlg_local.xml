@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:text="@string/msgs_sync_wizard_title_profname"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+        <EditText
+            android:id="@+id/sync_wizard_dlg_local_prof_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1.0"
+            android:ems="10"
+            android:hint="@string/msgs_remote_profile_dlg_profile"
+            android:inputType="text"
+            android:scrollHorizontally="true" />
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:orientation="horizontal"
+        android:textAppearance="?android:attr/textAppearanceSmall" >
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="1dp"
+            android:text="@string/msgs_local_profile_dlg_local_mount_point" />
+
+        <TextView
+            android:layout_width="15dp"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/sync_wizard_dlg_local_spinner_lmp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:minHeight="30dp"
+            android:paddingLeft="5dp"
+            android:text="@string/msgs_local_profile_dlg_local_mount_point" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:orientation="horizontal"
+        android:textAppearance="?android:attr/textAppearanceSmall" >
+
+        <Button
+            android:id="@+id/sync_wizard_dlg_local_dir_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:text="@string/msgs_local_profile_dlg_dirlist" />
+
+        <EditText
+            android:id="@+id/sync_wizard_dlg_local_dir"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="2.54"
+            android:hint="@string/msgs_local_profile_dlg_directory"
+            android:inputType="text"/>
+    </LinearLayout>
+    
+</LinearLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="SpUsage" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:text="@string/msgs_sync_wizard_title_profname"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/sync_wizard_dlg_remote_prof_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1.0"
+            android:ems="10"
+            android:hint="@string/msgs_remote_profile_dlg_profile"
+            android:inputType="text"
+            android:scrollHorizontally="true" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/sync_wizard_dlg_remote_get_addr_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:text="@string/msgs_remote_profile_dlg_search_remote_list"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/sync_wizard_dlg_remote_server"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+	    android:layout_marginLeft="5dp"
+	    android:layout_marginTop="3dp"
+        android:layout_marginRight="5dp"
+        android:hint="@string/msgs_remote_profile_dlg_remote_server"
+        android:imeOptions="actionNone"
+        android:inputType="text" />
+
+    <CheckedTextView
+        android:id="@+id/sync_wizard_dlg_ctv_remote_use_user_pass"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:gravity="center_vertical"
+        android:text="@string/msgs_remote_profile_dlg_use_user_pass"
+        />
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:orientation="horizontal"
+        android:textAppearance="?android:attr/textAppearanceSmall" >
+
+        <EditText
+            android:id="@+id/sync_wizard_dlg_remote_user"
+            android:layout_width="145dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:hint="@string/msgs_remote_profile_dlg_username"
+            android:imeOptions="actionNone"
+            android:inputType="text" >
+        </EditText>
+
+        <EditText
+            android:id="@+id/sync_wizard_dlg_remote_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:hint="@string/msgs_remote_profile_dlg_password"
+            android:imeOptions="actionNone"
+            android:inputType="textPassword" >
+        </EditText>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/sync_wizard_dlg_remote_logon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/msgs_remote_profile_dlg_logon" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/sync_wizard_dlg_remote_share_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="1dp"
+            android:text="@string/msgs_remote_profile_dlg_sharelist" />
+
+        <EditText
+            android:id="@+id/sync_wizard_dlg_remote_share"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:hint="@string/msgs_remote_profile_dlg_share"
+            android:imeOptions="actionNone"
+            android:inputType="text" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/sync_wizard_dlg_remote_dir_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="1dp"
+            android:text="@string/msgs_remote_profile_dlg_dirlist" />
+
+        <EditText
+            android:id="@+id/sync_wizard_dlg_remote_dir"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:hint="@string/msgs_remote_profile_dlg_directory"
+            android:imeOptions="actionNone"
+            android:inputType="text" >
+
+            <requestFocus />
+        </EditText>
+    </LinearLayout>
+
+</LinearLayout>

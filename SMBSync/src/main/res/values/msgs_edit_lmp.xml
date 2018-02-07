@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="msgs_edit_mp_no_lmp_entry">Does not exist user-defined mount point</string>    
+    <string name="msgs_edit_mp_confirm_delete_lmp">Are you sure you want to delete a user-defined mount point?</string>
+    <string name="msgs_edit_mp_dialog_title">Manage Mount point</string>
+    <string name="msgs_edit_mp_button_title_find_directory">Find directory</string>
+    <string name="msgs_edit_mp_button_title_delete">Delete user-defined mount point</string>
+    <string name="msgs_edit_mp_button_title_select_all">Select all item</string>
+    <string name="msgs_edit_mp_button_title_unselect_all">Uselect all item</string>
+    
+    <string name="msgs_edit_mp_dialog_btn_add">Add</string>
+    <string name="msgs_edit_mp_dialog_hint_new_path">User-defined mount point</string>
+    
+    <string name="msgs_edit_mp_select_dir_for_lmp">Select directory</string>
+    
+    <string name="msgs_edit_mp_msg_dup_system_mpl">Duplicated with the system mount point</string>
+    <string name="msgs_edit_mp_msg_dup_add_mpl">Duplicated with the user-defined mount point</string>
+    <string name="msgs_edit_mp_msg_must_start_slash">Mount point does not begin with /</string>
+</resources>

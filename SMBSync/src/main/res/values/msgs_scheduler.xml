@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="msgs_menu_scheduler">Schedule</string>
+    <string name="msgs_scheduler_main_dlg_hdr_title">Schedule</string>
+    <string name="msgs_scheduler_main_dlg_hdr_enable">To enable schedule</string>
+    <string name="msgs_scheduler_main_dlg_hdr_edit_prof">Edit sync list</string>
+	<string name="msgs_scheduler_main_dlg_hdr_sun">Sun</string>
+	<string name="msgs_scheduler_main_dlg_hdr_mon">Mon</string>
+	<string name="msgs_scheduler_main_dlg_hdr_tue">Tue</string>
+	<string name="msgs_scheduler_main_dlg_hdr_wed">Wed</string>
+	<string name="msgs_scheduler_main_dlg_hdr_thu">Thu</string>
+	<string name="msgs_scheduler_main_dlg_hdr_fri">Fri</string>
+	<string name="msgs_scheduler_main_dlg_hdr_sat">Sat</string>
+	<string name="msgs_scheduler_main_dlg_hdr_year">Year</string>
+	<string name="msgs_scheduler_main_dlg_hdr_month">Month</string>
+	<string name="msgs_scheduler_main_dlg_hdr_day">Day</string>
+	<string name="msgs_scheduler_main_dlg_hdr_hour">Hour</string>
+	<string name="msgs_scheduler_main_dlg_hdr_minute">Minute</string>
+	<string name="msgs_scheduler_main_dlg_hdr_schedule_type">Schedule Type</string>
+	
+	<string name="msgs_scheduler_main_dlg_hdr_wifi_on">To turn on the Wi-Fi If Wi-Fi is turned off before sync has start</string>
+	<string name="msgs_scheduler_main_dlg_hdr_wifi_on_delayed_time">Wait time to perform sync after Wi-Fi turn on</string>
+	<string name="msgs_scheduler_main_dlg_hdr_wifi_on_delayed_1">5 Sec</string>
+	<string name="msgs_scheduler_main_dlg_hdr_wifi_on_delayed_2">10 Sec</string>
+	<string name="msgs_scheduler_main_dlg_hdr_wifi_on_delayed_3">30 Sec</string>
+	<string name="msgs_scheduler_main_dlg_hdr_wifi_off">To turn off the Wi-Fi when sync ended.</string>
+	
+	<string name="msgs_scheduler_main_spinner_sched_type_prompt">Select schedule type</string>
+	<string name="msgs_scheduler_main_spinner_sched_type_every_hour">Every hours</string>
+	<string name="msgs_scheduler_main_spinner_sched_type_every_day">Every day</string>
+	<string name="msgs_scheduler_main_spinner_sched_type_day_of_week">Day of week</string>
+	<string name="msgs_scheduler_main_spinner_sched_type_interval">Interval</string>
+	<string name="msgs_scheduler_main_spinner_sched_hours_prompt">Select schedule hours</string>
+	<string name="msgs_scheduler_main_spinner_sched_minutes_prompt">Select schedule minutes</string>
+	
+	<string name="msgs_scheduler_edit_synclist_dlg_hdr_title">Sync profile list</string>
+    <string name="msgs_scheduler_edit_synclist_dlg_hdr_sync_all_sync_profile">Sync all active sync profile</string>
+    <string name="msgs_scheduler_edit_synclist_dlg_hdr_show_active_profile">Show active profile only</string>
+    
+    <string name="msgs_scheduler_edit_sync_prof_list_not_specified">Please specify the profile to be sync by pressing the &#8216;Edit sync list&#8217; button in the .</string>
+    
+    <string name="msgs_scheduler_info_next_schedule_time">Scheduled sync is %s</string>
+    <string name="msgs_scheduler_info_schedule_disabled">Schedule sync is disabled</string>
+    <string name="msgs_scheduler_info_sync_all_active_profile">Sync all active profiles</string>
+    <string name="msgs_scheduler_info_sync_selected_profile">Sync profile(s) %s</string>
+    
+    <string name="msgs_scheduler_main_dw_not_selected">Please select at least one day of the week.</string>
+</resources>

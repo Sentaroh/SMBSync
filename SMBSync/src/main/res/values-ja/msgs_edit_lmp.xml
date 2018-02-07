@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="msgs_edit_mp_no_lmp_entry">ユーザー定義マウントポイントが存在しません、システムマウントポイントは削除できません。</string>    
+    <string name="msgs_edit_mp_confirm_delete_lmp">ユーザー定義マウントポイントを削除しますか？</string>
+    <string name="msgs_edit_mp_dialog_title">マウントポイント管理</string>
+    <string name="msgs_edit_mp_button_title_find_directory">ディレクトリーの検索</string>
+    <string name="msgs_edit_mp_button_title_delete">ユーザー定義マウントポイントの削除</string>
+    <string name="msgs_edit_mp_button_title_select_all">全てを選択</string>
+    <string name="msgs_edit_mp_button_title_unselect_all">全ての選択を解除</string>
+    
+    <string name="msgs_edit_mp_dialog_btn_add">追加</string>
+    <string name="msgs_edit_mp_dialog_hint_new_path">ユーザー定義マウントポイント</string>
+    
+    <string name="msgs_edit_mp_select_dir_for_lmp">ディレクトリーの選択</string>
+    
+    <string name="msgs_edit_mp_msg_dup_system_mpl">システムマウントポイントと重複しています</string>
+    <string name="msgs_edit_mp_msg_dup_add_mpl">ユーザー定義マウントポイントと重複しています</string>
+    <string name="msgs_edit_mp_msg_must_start_slash">マウントポイントは/で始まっていません</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="msgs_aterm_terminate_after">SMBSyncは残り %s 秒で自動終了します。</string>
+    <string name="msgs_aterm_started">自動終了処理を開始しました。</string>
+    <string name="msgs_aterm_canceling">自動終了処理をキャンセル中。</string>
+    <string name="msgs_aterm_cancelled">自動終了処理がキャンセルされました。</string>
+    <string name="msgs_aterm_expired">自動終了タイマーが満了し終了します。</string>
+    <string name="msgs_aterm_terminated">SMBSyncは自動終了しました。</string>
+    <string name="msgs_aterm_back_ground_term">バックグラウンドのため、タイマー無しで自動終了します。</string>
+</resources>

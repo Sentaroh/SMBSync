@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_main_title">Settings</string>
+    
+    <string name="settings_sync_title">Synchronization</string>
+
+	<string name="settings_network_wifi_option">settings_network_wifi_option</string>
+	<string name="settings_network_wifi_option_title">Wireless LAN Option</string>
+	<string name="settings_network_wifi_option_summary_adapter_off">Synchronization can be used when Wireless LAN is disabled</string>
+	<string name="settings_network_wifi_option_summary_adapter_on">Synchronization can be used when Wireless LAN is enabled and access point was not connected</string>
+	<string name="settings_network_wifi_option_summary_connected_any_ap">Synchronization can be used when Wireless LAN is enabled and access point was connected</string>
+	<string name="settings_network_wifi_option_summary_connected_spec_ap">Synchronization can be used when Wireless LAN is enabled and specific access point was connected</string>
+	<string name="settings_network_wifi_option_dialog_title">Select Wireless LAN Option</string>
+    
+	<string-array name="settings_network_wifi_option_list_entries">
+		<item>Synchronization can be used when Wireless LAN is disabled.</item>
+		<item>Synchronization can be used when Wireless LAN is enabled and access point was not connected.</item>
+		<item>Synchronization can be used when Wireless LAN is enabled and access point was connected.</item>
+<!--         
+		<item>Synchronization can be used when Wireless LAN is enabled and specific access point was connected.</item>
+ -->        
+    </string-array>
+    <string-array name="settings_network_wifi_option_list_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>	    
+	
+    <string name="settings_auto_start_title">Auto Sync start-up</string>
+    <string name="settings_auto_start_summary_ena">Performs sync of all active profiles after application startup</string>
+	<string name="settings_auto_start">settings_auto_start</string>
+	
+    <string name="settings_auto_term_title">Auto termination</string>
+	<string name="settings_auto_term_summary_ena">Application will be terminated after sync task end</string>
+	<string name="settings_auto_term">settings_auto_term</string>
+
+    <string name="settings_backgroound_execution_title">Background execution</string>
+	<string name="settings_backgroound_execution_summary_ena">Application run in the background(Show home screen after application started)</string>
+	<string name="settings_backgroound_execution">settings_backgroound_execution</string>
+
+    <string name="settings_ui_title">User interface</string>
+
+    <string name="settings_keep_screen_on">settings_keep_screen_on</string>
+	<string name="settings_keep_screen_on_title">Screen off</string>
+	<string name="settings_keep_screen_on_dialog_title">Select Screen off Option</string>
+	<string-array name="settings_keep_screen_on_list_entries">
+	    <item>Allow the screen off during sync</item>
+		<item>Disallow the screen off during sync</item>
+		<item>Disallow the screen off if you start the sync when the screen is on</item>
+    </string-array>
+    <string-array name="settings_keep_screen_on_list_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>	    
+	
+	
+    <string name="settings_wifi_lock_title">Wi-Fi lock</string>
+    <string name="settings_wifi_lock_summary_ena">Acquire Wi-Fi lock during synchronization</string>
+	<string name="settings_wifi_lock">settings_wifi_lock</string>	
+
+    <string name="settings_remote_file_copy_by_rename_title">Copying files to remote</string>
+    <string name="settings_remote_file_copy_by_rename_summary_ena">Contents of the file will not be changed if the copy is aborted</string>
+	<string name="settings_remote_file_copy_by_rename">settings_remote_file_copy_by_rename</string>	
+
+    <string name="settings_local_file_copy_by_rename_title">Copying files to local</string>
+    <string name="settings_local_file_copy_by_rename_summary_ena">Contents of the file will not be changed if the copy is aborted</string>
+	<string name="settings_local_file_copy_by_rename">settings_local_file_copy_by_rename</string>	
+		
+    <string name="settings_debug_msg_diplay_title">Show/hide debug message</string>
+	<string name="settings_debug_msg_diplay_summary_ena">Show debug message to message tab</string>
+	<string name="settings_debug_msg_diplay">settings_debug_msg_diplay</string>
+
+	<string name="settings_suppress_warning_mixed_mp_title">Mixed mount point name</string>
+    <string name="settings_suppress_warning_mixed_mp_summary_ena">Do not show the warning of mixed mount point name used</string>
+	<string name="settings_suppress_warning_mixed_mp">settings_suppress_warning_mixed_mp</string>	
+
+	<string name="settings_suppress_warning_app_specific_dir_title">Application specific directory use</string>
+    <string name="settings_suppress_warning_app_specific_dir_summary_ena">Do not show the warning of application specific directory use</string>
+	<string name="settings_suppress_warning_app_specific_dir">settings_suppress_warning_app_specific_dir</string>	
+					
+    <string name="settings_error_option_title">Error process option</string>
+	<string name="settings_error_option_summary_ena">Ignore error, processing continued</string>
+	<string name="settings_error_option">settings_error_option</string>
+
+	<string name="settings_background_termination_notification_title">Termination notice in background execution</string>
+	<string name="settings_background_termination_notification_summary_always">Always shows notification message</string>
+	<string name="settings_background_termination_notification_summary_error">Show notification message when error detected</string>
+	<string name="settings_background_termination_notification_summary_no">Notification message not show</string>
+	<string name="settings_background_termination_notification_dialog_title">Select termination notice of application run in background</string>
+	<string name="settings_background_termination_notification">settings_background_termination_notification</string>
+	<string-array name="settings_background_termination_notification_list_entries">
+        <item>Always shows notification message</item>
+        <item>Show notification message when error detected</item>
+        <item>Notification message not show</item>
+    </string-array>
+    <string-array name="settings_background_termination_notification_list_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>	    
+
+	<string name="settings_playback_ringtone_when_sync_ended_title">Playback notification</string>
+	<string name="settings_playback_ringtone_when_sync_ended_summary_always">To playback default notification when sync was ended</string>
+	<string name="settings_playback_ringtone_when_sync_ended_summary_error">To playback default notification when sync was ended with error</string>
+	<string name="settings_playback_ringtone_when_sync_ended_summary_success">To playback default notification when sync was ended successfully</string>
+	<string name="settings_playback_ringtone_when_sync_ended_summary_no">Do not playback default notification</string>
+	<string name="settings_playback_ringtone_when_sync_ended_dialog_title">Select playback condition</string>
+	<string name="settings_playback_ringtone_when_sync_ended">settings_playback_ringtone_when_sync_ended</string>
+	<string-array name="settings_playback_ringtone_when_sync_ended_list_entries">
+        <item>Do not playback default notification</item>
+        <item>To playback default notification when sync was ended</item>
+        <item>To playback default notification when sync was ended without error</item>
+        <item>To playback default notification when sync was ended with error</item>
+    </string-array>
+    <string-array name="settings_playback_ringtone_when_sync_ended_list_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>	    
+
+	<string name="settings_vibrate_when_sync_ended_title">Vibration</string>
+	<string name="settings_vibrate_when_sync_ended_summary_always">Always vibrate when sync was ended</string>
+	<string name="settings_vibrate_when_sync_ended_summary_success">Vibrate when sync was ended successfully</string>
+	<string name="settings_vibrate_when_sync_ended_summary_error">Vibrate when sync was ended with error</string>
+	<string name="settings_vibrate_when_sync_ended_summary_no">Do not vibrate</string>
+	<string name="settings_vibrate_when_sync_ended_dialog_title">Select vibration condition</string>
+	<string name="settings_vibrate_when_sync_ended">settings_vibrate_when_sync_ended</string>
+	<string-array name="settings_vibrate_when_sync_ended_list_entries">
+        <item>Do not vibrate</item>
+        <item>Always vibrate when sync was ended</item>
+        <item>Vibrate when sync was ended successfully</item>
+        <item>Vibrate when sync was ended with error</item>
+    </string-array>
+    <string-array name="settings_vibrate_when_sync_ended_list_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>	    
+
+	<string name="settings_show_sync_on_action_bar_title">Show of the sync button</string>
+    <string name="settings_show_sync_on_action_bar_summary_ena">Show the sync button in menu at the top of screen.</string>
+	<string name="settings_show_sync_on_action_bar">settings_show_sync_on_action_bar</string>
+	
+	<string name="settings_use_light_theme_title">Screen theme</string>
+    <string name="settings_use_light_theme_summary_ena">Use light theme</string>
+	<string name="settings_use_light_theme">settings_use_light_theme</string>
+			
+	<string name="settings_log_title">Log</string>	    
+	<string name="settings_log_preference_screen_title">Log</string>
+	
+	<string name="settings_log_option_title">Log file</string>
+	<string name="settings_log_option_summary_no">Do not create a log file</string>
+	<string name="settings_log_option_summary_date_time">Create a log file</string>
+	<string name="settings_log_option_dialog_title">Message Logging option</string>
+	<string name="settings_log_option">settings_log_option</string>
+	<string-array name="settings_log_option_list_entries">
+        <item>Do not create a log file</item>
+        <item>Create a log file</item>
+    </string-array>
+    <string-array name="settings_log_option_list_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>	    
+
+	<string name="settings_log_generation_title">Generation of log files</string>
+	<string name="settings_log_generation_summary">keep for %s Generation(s)</string>
+	<string name="settings_log_generation_dialog_title">Select Generation</string>
+	<string name="settings_log_generation">settings_log_generation</string>
+	<string-array name="settings_log_generation_list_entries">
+        <item>1 Generation</item>
+        <item>2 Generation</item>
+        <item>3 Generation</item>
+        <item>5 Generation</item>
+        <item>7 Generation</item>
+        <item>10 Generation</item>
+        <item>15 Generation</item>
+        <item>20 Generation</item>
+        <item>30 Generation</item>
+        <item>50 Generation</item>
+    </string-array>
+    <string-array name="settings_log_generation_list_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>5</item>
+        <item>7</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>30</item>
+        <item>50</item>
+    </string-array>	    
+    	    
+    <string name="settings_log_dir">settings_log_dir</string>
+	<string name="settings_log_dir_title">Log message directory</string>        
+    <string name="settings_log_dir_summary">Not specified=</string>        
+        
+	<string name="settings_log_level_title">Debug message level</string>
+	<string name="settings_log_level_summary">Current debug message level=0</string>
+	<string name="settings_log_level_dialog_title">Select debug message level</string>
+	<string name="settings_log_level">settings_log_level</string>
+	<string-array name="settings_log_level_list_entries">
+        <item>0:No Debug message</item>
+        <item>1:Debug message</item>
+        <item>2:Detail debug message</item>
+        <item>3:File compare message</item>
+        <item>9:All debug message(Password is also output)</item>
+    </string-array>
+    <string-array name="settings_log_level_list_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>9</item>
+    </string-array>
+    
+    <string name="settings_default_current_setting">current settings=</string>
+
+    <string name="settings_media_scanner_option_title">MediaScanner</string>
+
+	<string name="settings_media_scanner_non_media_files_scan_title">Scan for non-media file </string>
+	<string name="settings_media_scanner_non_media_files_scan_summary_ena">Scan　text, PDF, etc</string>
+	<string name="settings_media_scanner_non_media_files_scan">settings_media_scanner_non_media_files_scan</string>
+	
+	<string name="settings_media_scanner_scan_extstg_title">Scan for external storage</string>
+	<string name="settings_media_scanner_scan_extstg_summary_ena">Scan /mnt/extsd etc</string>
+	<string name="settings_media_scanner_scan_extstg">settings_media_scanner_scan_extstg</string>
+    
+    <string name="settings_file_diff_condition_title">Difference determination of files</string>
+	
+	<string name="settings_file_diff_time_title">Allowable value of Last Modified</string>
+	<string name="settings_file_diff_time_summary">current settings=%s Second</string>
+	<string name="settings_file_diff_time_dialog_title">Select time of difference</string>
+	<string name="settings_file_diff_time_seconds">settings_file_diff_time_seconds</string>
+	<string-array name="settings_file_diff_time_list_entries">
+        <item>2 Second</item>
+        <item>3 Second</item>
+        <item>4 Second</item>
+        <item>5 Second</item>
+    </string-array>
+    <string-array name="settings_file_diff_time_list_values">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+	<!--  <string name="settings_media_store_title">MediaStore Library File handling</string> -->
+	<string name="settings_media_store_last_mod_time_title">Media store file last modified time</string>
+	<string name="settings_media_store_last_mod_time_summary">Handling of the last update time of the media store file</string>
+	<string name="settings_media_store_last_mod_time_dialog_title">Select condition</string>
+	<string name="settings_media_store_last_mod_time">settings_media_store</string>
+	<string name="settings_media_store_last_mod_time_0">Checking last modified time</string>
+	<string name="settings_media_store_last_mod_time_1">Checking last modified time and TimeZone</string>
+	<string name="settings_media_store_last_mod_time_2">No checking last modified time</string>
+	<string-array name="settings_media_store_last_mod_time_list_entries">
+	    <item>Checking last modified time.</item>
+	    <item>Checking last modified time and TimeZone.</item>
+        <item>No checking last modified time.</item>
+    </string-array>
+    <string-array name="settings_media_store_last_mod_time_list_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string name="settings_smb_title">SMB settings</string>
+    
+    <string name="settings_other_title">Other</string>
+    
+    <string name="settings_exit_clean_title">Exit cleanly</string>
+    <string name="settings_exit_clean_summary_dis">Do not kill application process</string>
+    <string name="settings_exit_clean_summary_ena">Kill application process after application cleanup</string>
+	<string name="settings_exit_clean">settings_exit_clean</string>
+    
+    <string name="settings_smb_tuning">settings_smb_tuning</string>
+    <string name="settings_smb_tuning_title">SMB tuning parameters</string>
+    <string name="settings_smb_tuning_summary"></string>
+
+    <string name="settings_smb_use_extended_security_title">jcifs.smb.client.useExtendedSecurity</string>
+    <string name="settings_smb_use_extended_security_summary_ena">Use extended security</string>
+	<string name="settings_smb_use_extended_security">settings_smb_use_extended_security</string>	
+
+	<string name="settings_smb_lm_compatibility_title">jcifs.smb.lmCompatibility</string>
+	<string name="settings_smb_lm_compatibility_summary">jcifs.smb.lmCompatibility</string>
+	<string name="settings_smb_lm_compatibility_dialog_title">Select jcifs.smb.lmCompatibility value</string>
+	<string name="settings_smb_lm_compatibility">settings_smb_lm_compatibility</string>
+	<string-array name="settings_smb_lm_compatibility_list_entries">
+	    <item>0(Default)</item>
+	    <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="settings_smb_lm_compatibility_list_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+		
+	<string name="settings_smb_perform_class_title">SMB Performance</string>
+	<string name="settings_smb_perform_class_summary">SMB Performance class</string>
+	<string name="settings_smb_perform_class_dialog_title">Select performance class</string>
+	<string name="settings_smb_perform_class">settings_smb_perform_class</string>
+	<string name="settings_smb_perform_class_0">Low(for Phone)</string>
+	<string name="settings_smb_perform_class_1">Medium(for Tablet)</string>
+	<string name="settings_smb_perform_class_2">High(for large mem and cpu)</string>
+	<string name="settings_smb_perform_class_3">Use SMB tuning parameters</string>
+	<string-array name="settings_smb_perform_class_list_entries">
+	    <item>Low(for phone)</item>
+	    <item>Medium(for Tablet)</item>
+        <item>High(for large mem and cpu)</item>
+        <item>Use SMB tuning parameters</item>
+    </string-array>
+    <string-array name="settings_smb_perform_class_list_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    
+    <string name="settings_smb_log_level">settings_smb_log_level</string>
+	<string name="settings_smb_log_level_title">JCIFS log level</string>        
+    <string name="settings_smb_log_level_summary">Not specified</string>
+    
+    <string name="settings_smb_rcv_buf_size">settings_smb_rcv_buf_size</string>
+	<string name="settings_smb_rcv_buf_size_title">JCIFS rcv_buf_size</string>        
+    <string name="settings_smb_rcv_buf_size_summary">Not specified</string>
+    
+    <string name="settings_smb_snd_buf_size">settings_smb_snd_buf_size</string>
+	<string name="settings_smb_snd_buf_size_title">JCIFS snd_buf_size</string>        
+    <string name="settings_smb_snd_buf_size_summary">Not specified</string>
+    
+    <string name="settings_smb_listSize">settings_smb_listSize</string>
+	<string name="settings_smb_listSize_title">JCIFS listSize</string>        
+    <string name="settings_smb_listSize_summary">Not specified</string>
+
+    <string name="settings_smb_tcp_nodelay_title">JCIFS TCP_NODELAY</string>
+	<string name="settings_smb_tcp_nodelay_summary_false">false</string>
+	<string name="settings_smb_tcp_nodelay_summary_true">true</string>
+	<string name="settings_smb_tcp_nodelay_dialog_title">JCIFS TCP_NODELAY</string>
+	<string name="settings_smb_tcp_nodelay">settings_smb_tcp_nodelay</string>
+	<string-array name="settings_smb_tcp_nodelay_list_entries">
+        <item>false(JCIFS Default)</item>
+        <item>true</item>
+    </string-array>
+    <string-array name="settings_smb_tcp_nodelay_list_values">
+        <item>false</item>
+        <item>true</item>
+    </string-array>	    
+    
+    
+    <string name="settings_smb_maxBuffers">settings_smb_maxBuffers</string>
+	<string name="settings_smb_maxBuffers_title">JCIFS maxBuffers</string>        
+    <string name="settings_smb_maxBuffers_summary">Not specified</string>
+    
+    <string name="settings_io_buffers">settings_io_buffers</string>
+	<string name="settings_io_buffers_title">MirrorIO buffers(64K x n)</string>        
+    <string name="settings_io_buffers_summary">Not specified</string>
+    
+    <string name="settings_misc_title">Miscellaneous</string>
+    
+    <string name="settings_exported_profile_encryption_title">Profiles stored on external media</string>
+    <string name="settings_exported_profile_encryption_summary_ena">Password protected</string>
+	<string name="settings_exported_profile_encryption">settings_exported_profile_encryption</string>
+    
+</resources>

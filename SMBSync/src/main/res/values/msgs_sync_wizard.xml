@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="msgs_sync_wizard_ok_btn">Create</string>
+    <string name="msgs_sync_wizard_cancel_btn">Cancel</string>
+    <string name="msgs_sync_wizard_back_btn">Back</string>
+    <string name="msgs_sync_wizard_next_btn">Next</string>
+    
+    <string name="msgs_sync_wizard_title_type_overall">General</string>
+    <string name="msgs_sync_wizard_title_type_master">Master</string>
+    <string name="msgs_sync_wizard_title_type_target">Target</string>
+    <string name="msgs_sync_wizard_title_type_sync">Sync</string>
+    
+    <string name="msgs_sync_wizard_title">Create synchronization wizard</string>
+
+    <string name="msgs_sync_wizard_sync_direction">Sync Direction</string>
+    <string name="msgs_sync_wizard_sync_direction_not_selected">Not selected</string>
+    <string name="msgs_sync_wizard_sync_direction_remote_to_local">Sync to local folder from remote folder</string>
+    <string name="msgs_sync_wizard_sync_direction_local_to_remote">Sync to remote folder from local folder</string>
+    <string name="msgs_sync_wizard_sync_direction_local_to_local">Sync to local folder from local folder</string>
+    
+    <string name="msgs_sync_wizard_sync_audio">Audio files</string>
+    <string name="msgs_sync_wizard_sync_image">Image files</string>
+    <string name="msgs_sync_wizard_sync_video">Video files</string>
+    <string name="msgs_sync_wizard_sync_desc_file_ext">Processed the files with the following extensions.</string>
+    <string name="msgs_sync_wizard_sync_audio_file_ext">*.aac, *.aif, *.aifc, *.aiff, *.kar, *.m3u, *.m4a, *.mid, *.midi, *.mp2, *.mp3, *.mpga, *.ra, *.ram, *.wav</string>
+    <string name="msgs_sync_wizard_sync_image_file_ext">*.bmp, *.cgm, *.djv, *.djvu, *.gif, *.ico, *.ief, *.jpe, *.jpeg, *.jpg, *.pbm, *.pgm, *.png, *.pnm, *.ppm, *.ras, *.rgb, *.svg, *.tif, *.tiff, *.wbmp, *.xbm, *.xpm, *.xwd</string>
+    <string name="msgs_sync_wizard_sync_video_file_ext">*.avi, *.m4u, *.mov, *.movie, *.mpe, *.mpeg, *.mpg, *.mxu, *.qt, *.wmv</string>
+    
+    <string name="msgs_sync_wizard_sync_all_files">Process all files</string>
+    <string name="msgs_sync_wizard_sync_select_processed_file">To select a file to be processed.</string>
+    
+    <string name="msgs_sync_wizard_specify_sync_direction">Select sync direction</string>
+	<string name="msgs_sync_wizard_profname_invalid">Specified profile name is already used, respecify new name.</string>    
+	<string name="msgs_sync_wizard_specify_profname">Specify profile name</string>
+	<string name="msgs_sync_wizard_title_profname">Profile name</string>
+	
+	<string name="msgs_sync_wizard_specify_local_dir">Specify local directory or press Next button</string>
+	<string name="msgs_sync_wizard_specify_another_local_dir">ローカル ディレクトリーはマスターとして使用されています、違うローカル ディレクトリーを指定してください</string>
+	
+	<string name="msgs_sync_wizard_specify_server">Specify remote server name, IP address or press Search remote server button</string>
+	<string name="msgs_sync_wizard_specify_user_pass">Specify user and/or password</string>
+	<string name="msgs_sync_wizard_specify_remote_share">Press show list button for Share</string>
+	<string name="msgs_sync_wizard_logon_required">Logon required, press Logon button</string>
+	<string name="msgs_sync_wizard_specify_remote_dir">Specify remote directory or press next buton</string>
+	
+	<string name="msgs_sync_wizard_specify_other_option">Specify other option or press Create button.</string>
+	
+	
+	<string name="msgs_sync_wizard_press_next">Press next button</string>
+	
+	<string name="msgs_sync_wizard_confirm_title">Do you want to create a profile?\n</string>
+	<string name="msgs_sync_wizard_confirm_profile_created">Profile was created.</string>
+	<string name="msgs_sync_wizard_confirm_list_remote_serverid">Remote Server:%s</string>
+	<string name="msgs_sync_wizard_confirm_list_remote_userid">User name:%s</string>
+	<string name="msgs_sync_wizard_confirm_list_remote_share">Share name:%s</string>
+	<string name="msgs_sync_wizard_confirm_list_remote_directory">Directory name:%s</string>
+	<string name="msgs_sync_wizard_confirm_list_local_mount_point">Mount point:%s</string>
+	<string name="msgs_sync_wizard_confirm_list_local_directory">Directory name:%s</string>
+	<string name="del_msgs_sync_wizard_confirm_list_sync_prof_name">Sync profile name:%s</string>
+	<string name="msgs_sync_wizard_confirm_list_sync_master_name" formatted="false">Master profile name:%s\n%s</string>
+	<string name="msgs_sync_wizard_confirm_list_sync_target_name" formatted="false">Target profile name:%s\n%s</string>
+	<string name="del_msgs_sync_wizard_confirm_list_sync_direction">Sync direction:%s</string>
+	<string name="msgs_sync_wizard_confirm_list_sync_type">Mirror type:%s</string>
+	<string name="msgs_sync_wizard_confirm_list_sync_file_filter">File filter</string>
+	<string name="msgs_sync_wizard_confirm_list_sync_dir_filter">Directory filter</string>
+	
+		
+</resources>
