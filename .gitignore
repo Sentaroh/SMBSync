@@ -58,3 +58,5 @@ freeline/
 freeline_project_description.json
 
 SMBSync/release/
+
+.idea/inspectionProfiles/Project_Default.xml
