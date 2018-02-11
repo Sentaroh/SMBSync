@@ -284,7 +284,7 @@ public class SMBSyncMain extends AppCompatActivity {
 			}
 		});
 		checkSafExternalSdcardTreeUri(ntfy);
-		
+
 //		Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
 //	    startActivityForResult(intent, REQUEST_CODE_STORAGE_ACCESS);
 

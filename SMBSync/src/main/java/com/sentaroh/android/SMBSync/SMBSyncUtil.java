@@ -31,6 +31,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.net.Inet4Address;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
@@ -161,72 +162,62 @@ public class SMBSyncUtil {
 		return result;
 	};
 
-	public static String getLocalIpAddress() {
-		String result="";
-		boolean exit=false;
-	    try {
-	        for (Enumeration<NetworkInterface> en = 
-	        		NetworkInterface.getNetworkInterfaces();
-	        		en.hasMoreElements();) {
-	            NetworkInterface intf = en.nextElement();
-	            for (Enumeration<InetAddress> enumIpAddr = 
-	            		intf.getInetAddresses(); 
-	            		enumIpAddr.hasMoreElements();) {
-	            	InetAddress inetAddress = enumIpAddr.nextElement();
-//	                if (!inetAddress.isLoopbackAddress() && !(inetAddress.toString().indexOf(":")>=0)) {
-//	                    return inetAddress.getHostAddress().toString();
-//	                }
+    public static String getLocalIpAddress() {
+        String result="192.168.0.1";
+        boolean exit=false;
+        try {
+            for (Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces();
+                 en.hasMoreElements();) {
+                NetworkInterface intf = en.nextElement();
+                for (Enumeration<InetAddress> enumIpAddr = intf.getInetAddresses(); enumIpAddr.hasMoreElements();) {
+                    InetAddress inetAddress = enumIpAddr.nextElement();
 //	            	Log.v("","ip="+inetAddress.getHostAddress()+
-//	            			", name="+intf.getName());
-	            	if (inetAddress.isSiteLocalAddress()) {
-	                    result=inetAddress.getHostAddress();
-//	                    Log.v("","result="+result+", name="+intf.getName()+"-");
-	                    if (intf.getName().equals("wlan0")) {
-	                    	exit=true;
-	                    	break;
-	                    }
-	            	}
-	            }
-	            if (exit) break;
-	        }
-	    } catch (SocketException ex) {
-	        Log.e(APPLICATION_TAG, ex.toString());
-	        result="192.168.0.1";
-	    }
-//		Log.v("","getLocalIpAddress result="+result);
-	    if (result.equals("")) result="192.168.0.1";
-	    return result;
-	};
+//	            			", name="+intf.getName()+", v4="+(inetAddress instanceof Inet4Address ? "Yes":"No"));
+                    if (inetAddress.isSiteLocalAddress() &&  (inetAddress instanceof Inet4Address)) {
+                        if (intf.getName().equals("wlan0")) {
+                            exit=true;
+                            result=inetAddress.getHostAddress();
+                            break;
+                        }
+                    }
+                }
+                if (exit) break;
+            }
+        } catch (SocketException ex) {
+            Log.e(APPLICATION_TAG, ex.toString());
+        }
+        return result;
+    };
 
-	public static String getIfIpAddress() {
-		String result="";
-	    try {
-	        for (Enumeration<NetworkInterface> en = 
-	        		NetworkInterface.getNetworkInterfaces();
-	        		en.hasMoreElements();) {
-	            NetworkInterface intf = en.nextElement();
-	            for (Enumeration<InetAddress> enumIpAddr = 
-	            		intf.getInetAddresses(); 
-	            		enumIpAddr.hasMoreElements();) {
-	            	InetAddress inetAddress = enumIpAddr.nextElement();
-//	            	Log.v("","ip="+inetAddress.getHostAddress());
-	            	if (!inetAddress.isLoopbackAddress() &&
-	            			(inetAddress.getHostAddress().startsWith("0") || 
-	            					inetAddress.getHostAddress().startsWith("1") || 
-	            					inetAddress.getHostAddress().startsWith("2"))) {
-	                    result=inetAddress.getHostAddress();
-	                    break;
-	            	}
-	            }
-	        }
-	    } catch (SocketException ex) {
-	        Log.e(APPLICATION_TAG, ex.toString());
-	        result="192.168.0.1";
-	    }
-//		Log.v("","getIfIpAddress result="+result);
-	    if (result.equals("")) result="192.168.0.1";
-	    return result;
-	};
+//	public static String getIfIpAddress() {
+//		String result="";
+//	    try {
+//	        for (Enumeration<NetworkInterface> en =
+//	        		NetworkInterface.getNetworkInterfaces();
+//	        		en.hasMoreElements();) {
+//	            NetworkInterface intf = en.nextElement();
+//	            for (Enumeration<InetAddress> enumIpAddr =
+//	            		intf.getInetAddresses();
+//	            		enumIpAddr.hasMoreElements();) {
+//	            	InetAddress inetAddress = enumIpAddr.nextElement();
+////	            	Log.v("","ip="+inetAddress.getHostAddress());
+//	            	if (!inetAddress.isLoopbackAddress() &&
+//	            			(inetAddress.getHostAddress().startsWith("0") ||
+//	            					inetAddress.getHostAddress().startsWith("1") ||
+//	            					inetAddress.getHostAddress().startsWith("2"))) {
+//	                    result=inetAddress.getHostAddress();
+//	                    break;
+//	            	}
+//	            }
+//	        }
+//	    } catch (SocketException ex) {
+//	        Log.e(APPLICATION_TAG, ex.toString());
+//	        result="192.168.0.1";
+//	    }
+////		Log.v("","getIfIpAddress result="+result);
+//	    if (result.equals("")) result="192.168.0.1";
+//	    return result;
+//	};
 
 	private StringBuilder mSbForaddMsgToProgDlg = new StringBuilder(256);
 	final public void addMsgToProgDlg(boolean log, String log_cat, long when, String syncProfName, 
