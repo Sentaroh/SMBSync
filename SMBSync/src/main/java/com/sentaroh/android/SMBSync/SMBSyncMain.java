@@ -3901,7 +3901,7 @@ public class SMBSyncMain extends AppCompatActivity {
 		setUiDisabled();
 		mGp.mirrorThreadActive=true;
 		try {
-			mSvcClient.aidlStartThread();
+            if (mSvcClient!=null) mSvcClient.aidlStartThread();
 		} catch (RemoteException e) {
 			e.printStackTrace();
 		}
@@ -3966,7 +3966,7 @@ public class SMBSyncMain extends AppCompatActivity {
 	
 	private void setScreenOn() {
 		try {
-			mSvcClient.aidlAcqWakeLock();
+            if (mSvcClient!=null) mSvcClient.aidlAcqWakeLock();
 		} catch (RemoteException e) {
 			e.printStackTrace();
 		}
@@ -4241,7 +4241,7 @@ public class SMBSyncMain extends AppCompatActivity {
 	final private void setCallbackListener() {
 		util.addDebugLogMsg(1, "I", "setCallbackListener entered");
 		try{
-			mSvcClient.setCallBack(mSvcCallbackStub);
+            if (mSvcClient!=null) mSvcClient.setCallBack(mSvcCallbackStub);
 		} catch (RemoteException e){
 			e.printStackTrace();
 			util.addDebugLogMsg(0,"E", "setCallbackListener error :"+e.toString());
@@ -4251,7 +4251,7 @@ public class SMBSyncMain extends AppCompatActivity {
 	final private void unsetCallbackListener() {
 		if (mSvcClient!=null) {
 			try{
-				mSvcClient.removeCallBack(mSvcCallbackStub);
+                if (mSvcClient!=null) mSvcClient.removeCallBack(mSvcCallbackStub);
 			} catch (RemoteException e){
 				e.printStackTrace();
 				util.addDebugLogMsg(0,"E", "unsetCallbackListener error :"+e.toString());
@@ -4271,7 +4271,7 @@ public class SMBSyncMain extends AppCompatActivity {
 			public void positiveResponse(Context c, Object[] o) {
 				mGp.confirmDialogShowed=false;
 				try {
-					mSvcClient.aidlConfirmResponse((Integer)o[0]);
+                    if (mSvcClient!=null) mSvcClient.aidlConfirmResponse((Integer)o[0]);
 				} catch (RemoteException e) {
 					e.printStackTrace();
 				}
@@ -4290,7 +4290,7 @@ public class SMBSyncMain extends AppCompatActivity {
 			public void negativeResponse(Context c, Object[] o) {
 				mGp.confirmDialogShowed=false;
 				try {
-					mSvcClient.aidlConfirmResponse((Integer)o[0]);
+                    if (mSvcClient!=null) mSvcClient.aidlConfirmResponse((Integer)o[0]);
 				} catch (RemoteException e) {
 					e.printStackTrace();
 				}
@@ -4616,7 +4616,8 @@ public class SMBSyncMain extends AppCompatActivity {
 	
 	private void showNotificationMsg(String msg ) {
 		try {
-			mSvcClient.aidlShowNotificationMsg("","",msg);
+		    if (mSvcClient!=null)
+			    mSvcClient.aidlShowNotificationMsg("","",msg);
 		} catch (RemoteException e) {
 			e.printStackTrace();
 		}
@@ -4625,7 +4626,7 @@ public class SMBSyncMain extends AppCompatActivity {
 	@SuppressWarnings("unused")
 	private void showNotificationMsg(String prof, String msg ) {
 		try {
-			mSvcClient.aidlShowNotificationMsg(prof,"",msg);
+            if (mSvcClient!=null) mSvcClient.aidlShowNotificationMsg(prof,"",msg);
 		} catch (RemoteException e) {
 			e.printStackTrace();
 		}
@@ -4633,7 +4634,7 @@ public class SMBSyncMain extends AppCompatActivity {
 	@SuppressWarnings("unused")
 	private void showNotificationMsg(String prof, String fp, String msg ) {
 		try {
-			mSvcClient.aidlShowNotificationMsg(prof,fp,msg);
+            if (mSvcClient!=null) mSvcClient.aidlShowNotificationMsg(prof,fp,msg);
 		} catch (RemoteException e) {
 			e.printStackTrace();
 		}
