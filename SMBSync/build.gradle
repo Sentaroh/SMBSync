@@ -8,8 +8,8 @@ android {
         minSdkVersion 7
         targetSdkVersion 11
 
-        versionCode 178
-        versionName "2.53"
+        versionCode 179
+        versionName "2.54"
     }
 
     lintOptions {
