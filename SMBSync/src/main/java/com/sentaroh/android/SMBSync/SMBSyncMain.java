@@ -625,15 +625,15 @@ public class SMBSyncMain extends AppCompatActivity {
 //			unsetCallbackListener();
 			//closeService();
     		//mSvcClient=null;
+            if (mGp.debugLevel>0) {
+                util.addLogMsg("W","Unpredictable onDestroy was called" +
+                        ", isFinishing="+isFinishing()+
+                        ", changingConfigurations="+String.format("0x%08x", getChangingConfigurations())+
+                        ", onLowMemory="+mGp.onLowMemory);
+            }
+            LogUtil.flushLogFile(mGp);
     		unbindService(mSvcConnection);
 	    	mSvcConnection=null;
-	    	if (mGp.debugLevel>0) {
-				util.addLogMsg("W","Unpredictable onDestroy was called" +
-						", isFinishing="+isFinishing()+
-						", changingConfigurations="+String.format("0x%08x", getChangingConfigurations())+
-						", onLowMemory="+mGp.onLowMemory);
-	    	}
-	    	LogUtil.flushLogFile(mGp);
 		}
 		//move to service
 //		if (mGp.settingExitClean) {
