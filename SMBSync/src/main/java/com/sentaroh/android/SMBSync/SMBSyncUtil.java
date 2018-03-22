@@ -54,7 +54,6 @@ import android.widget.CheckedTextView;
 import android.widget.Spinner;
 
 import com.sentaroh.android.Utilities.StringUtil;
-import com.sentaroh.android.Utilities.NetworkUtil;
 
 @SuppressLint("SimpleDateFormat")
 public class SMBSyncUtil {

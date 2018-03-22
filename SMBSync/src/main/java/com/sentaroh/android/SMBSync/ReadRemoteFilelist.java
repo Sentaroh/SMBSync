@@ -32,7 +32,6 @@ import jcifs.smb.SmbException;
 import jcifs.smb.SmbFile;
 import android.content.Context;
 
-import com.sentaroh.android.Utilities.NetworkUtil;
 import com.sentaroh.android.Utilities.NotifyEvent;
 import com.sentaroh.android.Utilities.ThreadCtrl;
 import com.sentaroh.android.Utilities.TreeFilelist.TreeFilelistItem;
