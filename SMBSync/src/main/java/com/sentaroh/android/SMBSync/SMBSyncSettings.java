@@ -55,8 +55,6 @@ import android.preference.PreferenceManager;
 import android.text.InputType;
 import android.util.Log;
 
-import com.sentaroh.android.Utilities.LocalMountPoint;
-
 @SuppressLint("NewApi")
 public class SMBSyncSettings extends PreferenceActivity{
 	private static boolean DEBUG_ENABLE=false;

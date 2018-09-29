@@ -62,11 +62,7 @@ import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.webkit.MimeTypeMap;
 
-import com.sentaroh.android.Utilities.SafCommonArea;
-import com.sentaroh.android.Utilities.SafFile;
-import com.sentaroh.android.Utilities.SafUtil;
 import com.sentaroh.android.Utilities.StringUtil;
-import com.sentaroh.android.Utilities.LocalMountPoint;
 import com.sentaroh.android.Utilities.MiscUtil;
 import com.sentaroh.android.Utilities.NotifyEvent;
 import com.sentaroh.android.Utilities.ThreadCtrl;

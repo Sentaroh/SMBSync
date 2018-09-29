@@ -95,11 +95,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.sentaroh.android.Utilities.CallBackListener;
-import com.sentaroh.android.Utilities.SafUtil;
-import com.sentaroh.android.Utilities.SafCommonArea;
 import com.sentaroh.android.Utilities.ThemeUtil;
 import com.sentaroh.android.Utilities.StringUtil;
-import com.sentaroh.android.Utilities.LocalMountPoint;
 import com.sentaroh.android.Utilities.NotifyEvent;
 import com.sentaroh.android.Utilities.NotifyEvent.NotifyEventListener;
 import com.sentaroh.android.Utilities.ThreadCtrl;

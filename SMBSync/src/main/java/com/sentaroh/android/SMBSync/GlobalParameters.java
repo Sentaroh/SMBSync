@@ -29,7 +29,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 import com.sentaroh.android.SMBSync.SMBSyncMain.ViewSaveArea;
-import com.sentaroh.android.Utilities.LocalMountPoint;
 import com.sentaroh.android.Utilities.ThemeColorList;
 
 import android.annotation.SuppressLint;

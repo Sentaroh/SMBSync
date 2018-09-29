@@ -2,12 +2,6 @@ package com.sentaroh.android.SMBSync;
 
 import static com.sentaroh.android.SMBSync.Constants.*;
 
-import com.sentaroh.android.Utilities.LocalMountPoint;
-import com.sentaroh.android.Utilities.NotifyEvent;
-import com.sentaroh.android.Utilities.SafUtil;
-import com.sentaroh.android.Utilities.SafCommonArea;
-import com.sentaroh.android.Utilities.Dialog.CommonDialog;
-import com.sentaroh.android.Utilities.NotifyEvent.NotifyEventListener;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -41,6 +35,9 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.sentaroh.android.Utilities.Dialog.CommonDialog;
+import com.sentaroh.android.Utilities.NotifyEvent;
 
 public class ProfileMaintLocalFragment extends DialogFragment{
 	private final static boolean DEBUG_ENABLE=false;
@@ -364,7 +361,7 @@ public class ProfileMaintLocalFragment extends DialogFragment{
 
 				NotifyEvent ntfy=new NotifyEvent(mContext);
 				//Listen setRemoteShare response 
-				ntfy.setListener(new NotifyEventListener() {
+				ntfy.setListener(new NotifyEvent.NotifyEventListener() {
 					@Override
 					public void positiveResponse(Context arg0, Object[] arg1) {
 						editdir.setText((String)arg1[0]);
@@ -519,7 +516,7 @@ public class ProfileMaintLocalFragment extends DialogFragment{
 				if (SafUtil.hasSafExternalSdcard(mSafCA) && !SafUtil.isValidSafExternalSdcardRootTreeUri(mSafCA)) {
 					final Activity actv=getActivity();
 	        		NotifyEvent ntfy=new NotifyEvent(mContext);
-	        		ntfy.setListener(new NotifyEventListener(){
+	        		ntfy.setListener(new NotifyEvent.NotifyEventListener(){
 						@Override
 						public void positiveResponse(Context c, Object[] o) {
 							Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
@@ -613,7 +610,7 @@ public class ProfileMaintLocalFragment extends DialogFragment{
 				String p_dir=editdir.getText().toString();
 				NotifyEvent ntfy=new NotifyEvent(mContext);
 				//Listen setRemoteShare response 
-				ntfy.setListener(new NotifyEventListener() {
+				ntfy.setListener(new NotifyEvent.NotifyEventListener() {
 					@Override
 					public void positiveResponse(Context arg0, Object[] arg1) {
 						editdir.setText((String)arg1[0]);
@@ -712,7 +709,7 @@ public class ProfileMaintLocalFragment extends DialogFragment{
 						final String t_prof_lmp=prof_lmp;
 						final String t_prof_dir=prof_dir;
 						NotifyEvent ntfy=new NotifyEvent(null);
-						ntfy.setListener(new NotifyEventListener(){
+						ntfy.setListener(new NotifyEvent.NotifyEventListener(){
 							@Override
 							public void positiveResponse(Context c,Object[] o) {
 								mDialog.dismiss();
